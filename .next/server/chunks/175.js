@@ -3,6 +3,76 @@ exports.id = 175;
 exports.ids = [175];
 exports.modules = {
 
+/***/ 6734:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "b": () => (/* binding */ MessageName)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6689);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3377);
+/* harmony import */ var _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7101);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_store__WEBPACK_IMPORTED_MODULE_1__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__]);
+([_store__WEBPACK_IMPORTED_MODULE_1__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+
+
+
+const MessageName = ({
+  id,
+  className
+}) => {
+  const {
+    data: savedMessages
+  } = (0,_store__WEBPACK_IMPORTED_MODULE_1__/* .useGetAllSaveMessageQuery */ .HH)();
+  const message = savedMessages?.find(message => message._id === id);
+  if (!message) return null;
+  return _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx("span", {
+    className: className,
+    children: message.message
+  });
+};
+__webpack_async_result__();
+} catch(e) { __webpack_async_result__(e); } });
+
+/***/ }),
+
+/***/ 8498:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "r": () => (/* binding */ VoiceName)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6689);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _store_api_voice_getAllVoicesRecorded__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2156);
+/* harmony import */ var _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7101);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_store_api_voice_getAllVoicesRecorded__WEBPACK_IMPORTED_MODULE_1__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__]);
+([_store_api_voice_getAllVoicesRecorded__WEBPACK_IMPORTED_MODULE_1__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+
+
+
+const VoiceName = ({
+  id,
+  className
+}) => {
+  const {
+    data: savedVoices
+  } = (0,_store_api_voice_getAllVoicesRecorded__WEBPACK_IMPORTED_MODULE_1__/* .useGetAllVoicesRecordedQuery */ .ks)();
+  const voice = savedVoices?.find(voice => voice._id === id);
+  if (!voice) return null;
+  return _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx("span", {
+    className: className,
+    children: voice.fileName
+  });
+};
+__webpack_async_result__();
+} catch(e) { __webpack_async_result__(e); } });
+
+/***/ }),
+
 /***/ 2011:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
@@ -326,34 +396,97 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(8473);
 /* harmony import */ var _features_sound__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4019);
-/* harmony import */ var _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(7101);
-var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_features_sound__WEBPACK_IMPORTED_MODULE_3__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__]);
-([_features_sound__WEBPACK_IMPORTED_MODULE_3__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+/* harmony import */ var _features_message_MessageName__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(6734);
+/* harmony import */ var _features_message_VoiceName__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(8498);
+/* harmony import */ var _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(7101);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_features_sound__WEBPACK_IMPORTED_MODULE_3__, _features_message_MessageName__WEBPACK_IMPORTED_MODULE_4__, _features_message_VoiceName__WEBPACK_IMPORTED_MODULE_5__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__]);
+([_features_sound__WEBPACK_IMPORTED_MODULE_3__, _features_message_MessageName__WEBPACK_IMPORTED_MODULE_4__, _features_message_VoiceName__WEBPACK_IMPORTED_MODULE_5__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+function _EMOTION_STRINGIFIED_CSS_ERROR__() { return "You have tried to stringify object returned from `css` function. It isn't supposed to be used directly (e.g. as value of the `className` prop), but rather handed to emotion so it can handle it (e.g. as value of `css` prop)."; }
 
 
 
 
 
+
+
+
+
+
+var _ref =  true ? {
+  name: "1jwcxx3",
+  styles: "font-style:italic"
+} : 0;
+
+var _ref2 =  true ? {
+  name: "1jwcxx3",
+  styles: "font-style:italic"
+} : 0;
+
+var _ref3 =  true ? {
+  name: "1jwcxx3",
+  styles: "font-style:italic"
+} : 0;
+
+var _ref4 =  true ? {
+  name: "1jwcxx3",
+  styles: "font-style:italic"
+} : 0;
 
 const EventDescription = ({
   className = '',
   event
 }) => {
-  const eventDate = dayjs__WEBPACK_IMPORTED_MODULE_1___default()(`${dayjs__WEBPACK_IMPORTED_MODULE_1___default()().format('YYYY-MM-DD')} ${event.time}`).format('LTS');
+  const eventDate = dayjs__WEBPACK_IMPORTED_MODULE_1___default()(`${dayjs__WEBPACK_IMPORTED_MODULE_1___default()().format('YYYY-MM-DD')} ${event.time}`).format('HH:mm:ss');
   const soundId = event.data?.soundId;
   const playlistId = event.data?.playlistId;
-  return (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("span", {
+  const textToAudioId = event.data?.textToAudioId;
+  const voiceId = event.data?.voiceId;
+
+  const renderDescription = () => {
+    switch (event.jobType) {
+      case _types__WEBPACK_IMPORTED_MODULE_2__.JobType.PlaySound:
+        return soundId ? (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("span", {
+          children: ["sound: ", _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx(_features_sound__WEBPACK_IMPORTED_MODULE_3__/* .SoundName */ .gH, {
+            soundId: soundId,
+            css: _ref
+          })]
+        }) : null;
+
+      case _types__WEBPACK_IMPORTED_MODULE_2__.JobType.PlayMusic:
+        return playlistId ? (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("span", {
+          children: ["playlist: ", _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx(_features_sound__WEBPACK_IMPORTED_MODULE_3__/* .SoundName */ .gH, {
+            soundId: playlistId,
+            css: _ref2
+          })]
+        }) : null;
+
+      case _types__WEBPACK_IMPORTED_MODULE_2__.JobType.PlayTextToAudio:
+        return textToAudioId ? (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("span", {
+          children: ["message: ", _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx(_features_message_MessageName__WEBPACK_IMPORTED_MODULE_4__/* .MessageName */ .b, {
+            id: textToAudioId,
+            css: _ref3
+          })]
+        }) : null;
+
+      case _types__WEBPACK_IMPORTED_MODULE_2__.JobType.PlayVoiceRecorded:
+        return voiceId ? (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("span", {
+          children: ["voice: ", _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx(_features_message_VoiceName__WEBPACK_IMPORTED_MODULE_5__/* .VoiceName */ .r, {
+            id: voiceId,
+            css: _ref4
+          })]
+        }) : null;
+
+      default:
+        return null;
+    }
+  };
+
+  return (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("span", {
     className: `EventDescription ${className}`,
-    children: [(0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("span", {
-      children: [event.name, " - "]
-    }), _types__WEBPACK_IMPORTED_MODULE_2__.JobType.PlaySound === event.jobType && soundId && (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("span", {
-      children: ["Playing ", _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(_features_sound__WEBPACK_IMPORTED_MODULE_3__/* .SoundName */ .gH, {
-        soundId: soundId
-      }), " sound at ", eventDate]
-    }), _types__WEBPACK_IMPORTED_MODULE_2__.JobType.PlayMusic === event.jobType && playlistId && (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("span", {
-      children: ["Playing ", _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(_features_sound__WEBPACK_IMPORTED_MODULE_3__/* .SoundName */ .gH, {
-        soundId: playlistId
-      }), " playlist at ", eventDate]
+    children: [(0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("span", {
+      children: [event.name, " - Playing "]
+    }), renderDescription(), (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("span", {
+      children: [" at ", eventDate]
     })]
   });
 };
@@ -754,73 +887,6 @@ __webpack_async_result__();
 
 /***/ }),
 
-/***/ 3570:
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "n": () => (/* binding */ EventData)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6689);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5725);
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(antd__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _utils_stringHelpers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(8519);
-/* harmony import */ var _features_sound__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4019);
-/* harmony import */ var _features_music__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(942);
-/* harmony import */ var _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(7101);
-var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_features_sound__WEBPACK_IMPORTED_MODULE_3__, _features_music__WEBPACK_IMPORTED_MODULE_4__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__]);
-([_features_sound__WEBPACK_IMPORTED_MODULE_3__, _features_music__WEBPACK_IMPORTED_MODULE_4__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
-
-
-
-
-
-
-const excludeKeys = ['fileName'];
-const EventData = ({
-  className,
-  data
-}) => {
-  if (!data) {
-    return null;
-  }
-
-  const renderDescriptionItem = (key, value) => {
-    switch (key) {
-      case 'soundId':
-        return _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Descriptions.Item, {
-          label: "Sound",
-          children: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(_features_sound__WEBPACK_IMPORTED_MODULE_3__/* .SoundName */ .gH, {
-            soundId: value
-          }, key)
-        }, key);
-
-      case 'playlistId':
-        return _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Descriptions.Item, {
-          label: "Playlist",
-          children: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(_features_music__WEBPACK_IMPORTED_MODULE_4__/* .PlaylistName */ .fG, {
-            playlistId: value
-          }, key)
-        }, key);
-
-      default:
-        return _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Descriptions.Item, {
-          label: (0,_utils_stringHelpers__WEBPACK_IMPORTED_MODULE_2__/* .normalizeString */ .U)(key),
-          children: value || 'N/A'
-        }, key);
-    }
-  };
-
-  return _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Descriptions, {
-    children: Object.entries(data).filter(([key]) => !excludeKeys.includes(key)).map(([key, value]) => renderDescriptionItem(key, value))
-  });
-};
-__webpack_async_result__();
-} catch(e) { __webpack_async_result__(e); } });
-
-/***/ }),
-
 /***/ 2704:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
@@ -834,12 +900,15 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(antd__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1635);
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _EventData__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(3570);
-/* harmony import */ var _EventListDeleteButton__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(7135);
-/* harmony import */ var _EventListEditButton__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(1030);
-/* harmony import */ var _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(7101);
-var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_EventData__WEBPACK_IMPORTED_MODULE_3__, _EventListDeleteButton__WEBPACK_IMPORTED_MODULE_4__, _EventListEditButton__WEBPACK_IMPORTED_MODULE_5__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__]);
-([_EventData__WEBPACK_IMPORTED_MODULE_3__, _EventListDeleteButton__WEBPACK_IMPORTED_MODULE_4__, _EventListEditButton__WEBPACK_IMPORTED_MODULE_5__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+/* harmony import */ var _features_sound__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4019);
+/* harmony import */ var _features_music__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(942);
+/* harmony import */ var _features_message_MessageName__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(6734);
+/* harmony import */ var _features_message_VoiceName__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(8498);
+/* harmony import */ var _EventListDeleteButton__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(7135);
+/* harmony import */ var _EventListEditButton__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(1030);
+/* harmony import */ var _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(7101);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_features_sound__WEBPACK_IMPORTED_MODULE_3__, _features_music__WEBPACK_IMPORTED_MODULE_4__, _features_message_MessageName__WEBPACK_IMPORTED_MODULE_5__, _features_message_VoiceName__WEBPACK_IMPORTED_MODULE_6__, _EventListDeleteButton__WEBPACK_IMPORTED_MODULE_7__, _EventListEditButton__WEBPACK_IMPORTED_MODULE_8__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__]);
+([_features_sound__WEBPACK_IMPORTED_MODULE_3__, _features_music__WEBPACK_IMPORTED_MODULE_4__, _features_message_MessageName__WEBPACK_IMPORTED_MODULE_5__, _features_message_VoiceName__WEBPACK_IMPORTED_MODULE_6__, _EventListDeleteButton__WEBPACK_IMPORTED_MODULE_7__, _EventListEditButton__WEBPACK_IMPORTED_MODULE_8__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
 
 
 
@@ -848,9 +917,16 @@ var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_Eve
 
 
 
-const {
-  Title
-} = antd__WEBPACK_IMPORTED_MODULE_1__.Typography;
+
+
+
+
+// a function to spit string by capital letter
+// e.g. 'EventList' => 'Event List'
+function splitStringByCapitalLetter(str) {
+  return str.replace(/([A-Z])/g, ' $1').trim();
+}
+
 const EventList = ({
   className,
   events,
@@ -861,40 +937,60 @@ const EventList = ({
     title: 'Name',
     dataIndex: 'name',
     key: 'name',
-    render: text => _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx("span", {
+    render: text => _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx("span", {
       children: text
     })
   }, {
     title: 'Time',
     dataIndex: 'time',
     key: 'time',
-    render: time => _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Tag, {
+    render: time => _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Tag, {
       children: time
     })
   }, {
     title: 'Type',
     dataIndex: 'jobType',
     key: 'jobType',
-    render: jobType => _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Tag, {
+    render: jobType => _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Tag, {
       color: "purple",
-      children: jobType
+      children: splitStringByCapitalLetter(jobType)
     })
   }, {
     title: 'Info',
     dataIndex: 'data',
-    key: 'data',
-    render: data => _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx(_EventData__WEBPACK_IMPORTED_MODULE_3__/* .EventData */ .n, {
-      data: data
-    })
+    key: 'info',
+    render: data => {
+      if (data?.['soundId']) return _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx(_features_sound__WEBPACK_IMPORTED_MODULE_3__/* .SoundName */ .gH, {
+        soundId: data?.['soundId']
+      });
+      if (data?.['playlistId']) return _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx(_features_music__WEBPACK_IMPORTED_MODULE_4__/* .PlaylistName */ .fG, {
+        playlistId: data?.['playlistId']
+      });
+      if (data?.['textToAudioId']) return _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx(_features_message_MessageName__WEBPACK_IMPORTED_MODULE_5__/* .MessageName */ .b, {
+        id: data?.['textToAudioId']
+      });
+      if (data?.['voiceId']) return _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx(_features_message_VoiceName__WEBPACK_IMPORTED_MODULE_6__/* .VoiceName */ .r, {
+        id: data?.['voiceId']
+      });
+      return null;
+    }
+  }, {
+    title: 'Duration',
+    dataIndex: 'data',
+    key: 'duration',
+    render: data => {
+      if (data?.['durationInSecond']) return `${data?.['durationInSecond']}s`;
+      return 'N/A';
+    }
   }, {
     title: 'Actions',
     key: 'actions',
-    render: (_, record) => (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(antd__WEBPACK_IMPORTED_MODULE_1__.Space, {
+    render: (_, record) => (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(antd__WEBPACK_IMPORTED_MODULE_1__.Space, {
       size: "middle",
-      children: [_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx(_EventListEditButton__WEBPACK_IMPORTED_MODULE_5__/* .EventListEditButton */ .U, {
+      children: [_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx(_EventListEditButton__WEBPACK_IMPORTED_MODULE_8__/* .EventListEditButton */ .U, {
         scheduleId: scheduleId,
         event: record
-      }), _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx(_EventListDeleteButton__WEBPACK_IMPORTED_MODULE_4__/* .EventListDeleteButton */ .g, {
+      }), _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx(_EventListDeleteButton__WEBPACK_IMPORTED_MODULE_7__/* .EventListDeleteButton */ .g, {
         scheduleId: scheduleId,
         eventId: record.id
       })]
@@ -907,8 +1003,8 @@ const EventList = ({
     if (convertedATime < convertedBTime) return -1;else if (convertedATime > convertedBTime) return 1;
     return 0;
   });
-  return _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Table, {
-    title: () => _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Space, {
+  return _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Table, {
+    title: () => _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Space, {
       children: titleExtra
     }),
     className: className,
@@ -2292,30 +2388,6 @@ const JobTypeOptions = [{
   label: 'Play Text To Audio',
   value: 'PlayTextToAudio'
 }];
-
-/***/ }),
-
-/***/ 8519:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "U": () => (/* binding */ normalizeString)
-/* harmony export */ });
-/* harmony import */ var lodash_lowerCase__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(496);
-/* harmony import */ var lodash_lowerCase__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash_lowerCase__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var lodash_capitalize__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(9969);
-/* harmony import */ var lodash_capitalize__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash_capitalize__WEBPACK_IMPORTED_MODULE_1__);
-
-
-const normalizeString = input => {
-  // Split the string into words
-  const words = input.split(' '); // Capitalize the first letter and convert the rest to lowercase for each word
-
-  const normalizedWords = words.map(word => lodash_capitalize__WEBPACK_IMPORTED_MODULE_1___default()(lodash_lowerCase__WEBPACK_IMPORTED_MODULE_0___default()(word))); // Join the normalized words with spaces
-
-  const normalizedString = normalizedWords.join(' ');
-  return normalizedString;
-};
 
 /***/ })
 

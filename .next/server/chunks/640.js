@@ -7,9 +7,7 @@ exports.modules = {
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "x": () => (/* binding */ ResetJobsButton)
-/* harmony export */ });
+/* unused harmony export ResetJobsButton */
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6689);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5725);
@@ -31,8 +29,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 const ResetJobsButton = props => {
-  const [resetJobs] = (0,_store_api_setting__WEBPACK_IMPORTED_MODULE_2__/* .useResetJobsMutation */ .zA)();
-  const [notify, contextHolder] = antd__WEBPACK_IMPORTED_MODULE_1__.notification.useNotification();
+  const [resetJobs] = useResetJobsMutation();
+  const [notify, contextHolder] = notification.useNotification();
 
   const resetJobConfirm = async () => {
     const result = await resetJobs();
@@ -45,14 +43,14 @@ const ResetJobsButton = props => {
     }
   };
 
-  return (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
-    children: [contextHolder, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Popconfirm, {
+  return _jsxs(_Fragment, {
+    children: [contextHolder, _jsx(Popconfirm, {
       title: "Stop running schedules",
       description: "Are you sure to stop running schedules?",
       onConfirm: resetJobConfirm,
       okText: "Yes",
       cancelText: "No",
-      children: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Button, _objectSpread(_objectSpread({
+      children: _jsx(Button, _objectSpread(_objectSpread({
         danger: true
       }, props), {}, {
         children: "Stop Schedules"
@@ -66,12 +64,9 @@ __webpack_async_result__();
 /***/ }),
 
 /***/ 8205:
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
+/***/ ((module, __unused_webpack___webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "x": () => (/* reexport safe */ _ResetJobsButton__WEBPACK_IMPORTED_MODULE_0__.x)
-/* harmony export */ });
 /* harmony import */ var _ResetJobsButton__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2781);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_ResetJobsButton__WEBPACK_IMPORTED_MODULE_0__]);
 _ResetJobsButton__WEBPACK_IMPORTED_MODULE_0__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
@@ -146,9 +141,11 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_ant_design_icons__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4399);
 /* harmony import */ var _store_api_setting__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(8366);
-/* harmony import */ var _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(7101);
-var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_components__WEBPACK_IMPORTED_MODULE_3__, _store_api_setting__WEBPACK_IMPORTED_MODULE_4__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__]);
-([_components__WEBPACK_IMPORTED_MODULE_3__, _store_api_setting__WEBPACK_IMPORTED_MODULE_4__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+/* harmony import */ var _hooks_useAuthorization__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(8801);
+/* harmony import */ var _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(7101);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_components__WEBPACK_IMPORTED_MODULE_3__, _store_api_setting__WEBPACK_IMPORTED_MODULE_4__, _hooks_useAuthorization__WEBPACK_IMPORTED_MODULE_5__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__]);
+([_components__WEBPACK_IMPORTED_MODULE_3__, _store_api_setting__WEBPACK_IMPORTED_MODULE_4__, _hooks_useAuthorization__WEBPACK_IMPORTED_MODULE_5__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+
 
 
 
@@ -171,6 +168,9 @@ const LicenseKeyFormInternal = ({
   } = (0,_store_api_setting__WEBPACK_IMPORTED_MODULE_4__/* .useGetSettingQuery */ .Rf)();
   const [update] = (0,_store_api_setting__WEBPACK_IMPORTED_MODULE_4__/* .useUpdateLicenseKeyMutation */ .Xt)();
   const [form] = antd__WEBPACK_IMPORTED_MODULE_1__.Form.useForm();
+  const {
+    isAuthorized
+  } = (0,_hooks_useAuthorization__WEBPACK_IMPORTED_MODULE_5__/* .useAuthorization */ .o)();
   const initialValues = {
     schoolId: setting?.schoolId,
     licenseKey: setting?.licenseKey,
@@ -191,46 +191,43 @@ const LicenseKeyFormInternal = ({
     }
   };
 
-  const renderForm = () => (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.Fragment, {
-    children: [_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(_components__WEBPACK_IMPORTED_MODULE_3__/* .CollapseCard.EditButton */ .Uf.EditButton, {
+  const renderForm = () => (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.Fragment, {
+    children: [_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx(_components__WEBPACK_IMPORTED_MODULE_3__/* .CollapseCard.EditButton */ .Uf.EditButton, {
       onClick: () => setEditing(!isEditing)
-    }), (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(_components__WEBPACK_IMPORTED_MODULE_3__/* .CardForm */ .Tr, {
+    }), (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(_components__WEBPACK_IMPORTED_MODULE_3__/* .CardForm */ .Tr, {
       form: form,
       initialValues: initialValues,
       onFinish: handleFinish,
-      children: [(0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(_components__WEBPACK_IMPORTED_MODULE_3__/* .CardForm.Row */ .Tr.Row, {
-        children: [_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(_components__WEBPACK_IMPORTED_MODULE_3__/* .CardForm.Item */ .Tr.Item, {
+      children: [(0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(_components__WEBPACK_IMPORTED_MODULE_3__/* .CardForm.Row */ .Tr.Row, {
+        children: [_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx(_components__WEBPACK_IMPORTED_MODULE_3__/* .CardForm.Item */ .Tr.Item, {
           name: ['schoolId'],
           label: "School Name",
           rules: [{
             required: true
           }],
-          children: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Input, {})
-        }), _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(_components__WEBPACK_IMPORTED_MODULE_3__/* .CardForm.Item */ .Tr.Item, {
+          children: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Input, {
+            disabled: !isAuthorized(['master'])
+          })
+        }), _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx(_components__WEBPACK_IMPORTED_MODULE_3__/* .CardForm.Item */ .Tr.Item, {
           name: ['licenseKey'],
           label: "License Key",
           rules: [{
             required: true
           }],
-          children: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Input, {})
-        }), _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(_components__WEBPACK_IMPORTED_MODULE_3__/* .CardForm.Item */ .Tr.Item, {
-          name: ['expiryDate'],
-          label: "Expiry Date",
-          isEditing: false,
-          children: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Input, {})
+          children: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Input, {})
         })]
-      }), isEditing && _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(_components__WEBPACK_IMPORTED_MODULE_3__/* .CollapseCard.FooterActions */ .Uf.FooterActions, {
-        children: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(_components__WEBPACK_IMPORTED_MODULE_3__/* .CardForm.Actions */ .Tr.Actions, {})
+      }), isEditing && _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx(_components__WEBPACK_IMPORTED_MODULE_3__/* .CollapseCard.FooterActions */ .Uf.FooterActions, {
+        children: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx(_components__WEBPACK_IMPORTED_MODULE_3__/* .CardForm.Actions */ .Tr.Actions, {})
       })]
     })]
   });
 
-  return (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(_components__WEBPACK_IMPORTED_MODULE_3__/* .CollapseCard */ .Uf, {
+  return (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(_components__WEBPACK_IMPORTED_MODULE_3__/* .CollapseCard */ .Uf, {
     className: className,
     header: header || 'License Key',
-    icon: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(_ant_design_icons__WEBPACK_IMPORTED_MODULE_2__.KeyOutlined, {}),
+    icon: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx(_ant_design_icons__WEBPACK_IMPORTED_MODULE_2__.KeyOutlined, {}),
     defaultActive: true,
-    children: [!setting && _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Spin, {}), !!setting && renderForm()]
+    children: [!setting && _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Spin, {}), !!setting && renderForm()]
   });
 };
 
@@ -265,8 +262,7 @@ __webpack_async_result__();
 __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "K2": () => (/* reexport safe */ _LicenseKey__WEBPACK_IMPORTED_MODULE_0__.K),
-/* harmony export */   "Mz": () => (/* reexport safe */ _LicenseKey__WEBPACK_IMPORTED_MODULE_0__.M),
-/* harmony export */   "xI": () => (/* reexport safe */ _Job__WEBPACK_IMPORTED_MODULE_1__.x)
+/* harmony export */   "Mz": () => (/* reexport safe */ _LicenseKey__WEBPACK_IMPORTED_MODULE_0__.M)
 /* harmony export */ });
 /* harmony import */ var _LicenseKey__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5012);
 /* harmony import */ var _Job__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8205);
@@ -274,6 +270,36 @@ var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_Lic
 ([_LicenseKey__WEBPACK_IMPORTED_MODULE_0__, _Job__WEBPACK_IMPORTED_MODULE_1__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
 
 
+__webpack_async_result__();
+} catch(e) { __webpack_async_result__(e); } });
+
+/***/ }),
+
+/***/ 8801:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "o": () => (/* binding */ useAuthorization)
+/* harmony export */ });
+/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3377);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_store__WEBPACK_IMPORTED_MODULE_0__]);
+_store__WEBPACK_IMPORTED_MODULE_0__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
+
+const useAuthorization = () => {
+  const {
+    data: currentUser
+  } = (0,_store__WEBPACK_IMPORTED_MODULE_0__/* .useGetCurrentUserQuery */ .XC)();
+
+  const isAuthorized = roles => {
+    if (!currentUser) return false;
+    return roles.some(role => currentUser.roles.includes(role));
+  };
+
+  return {
+    isAuthorized
+  };
+};
 __webpack_async_result__();
 } catch(e) { __webpack_async_result__(e); } });
 
@@ -322,8 +348,7 @@ __webpack_async_result__();
 __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Rf": () => (/* reexport safe */ _getSetting__WEBPACK_IMPORTED_MODULE_0__.Rf),
-/* harmony export */   "Xt": () => (/* reexport safe */ _updateLicenseKey__WEBPACK_IMPORTED_MODULE_1__.Xt),
-/* harmony export */   "zA": () => (/* reexport safe */ _resetJobs__WEBPACK_IMPORTED_MODULE_2__.zA)
+/* harmony export */   "Xt": () => (/* reexport safe */ _updateLicenseKey__WEBPACK_IMPORTED_MODULE_1__.Xt)
 /* harmony export */ });
 /* harmony import */ var _getSetting__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2863);
 /* harmony import */ var _updateLicenseKey__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3111);
@@ -342,10 +367,7 @@ __webpack_async_result__();
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "zA": () => (/* binding */ useResetJobsMutation)
-/* harmony export */ });
-/* unused harmony export resetJobs */
+/* unused harmony exports useResetJobsMutation, resetJobs */
 /* harmony import */ var _utils_apiHelpers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7640);
 /* harmony import */ var _rootApi__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6159);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_utils_apiHelpers__WEBPACK_IMPORTED_MODULE_0__, _rootApi__WEBPACK_IMPORTED_MODULE_1__]);

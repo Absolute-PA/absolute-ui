@@ -66,6 +66,46 @@ __webpack_async_result__();
 
 /***/ }),
 
+/***/ 8490:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "v": () => (/* binding */ RequiredRoles)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6689);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3377);
+/* harmony import */ var _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7101);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_store__WEBPACK_IMPORTED_MODULE_1__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__]);
+([_store__WEBPACK_IMPORTED_MODULE_1__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+
+
+
+
+const RequiredRoles = ({
+  children,
+  roles
+}) => {
+  const {
+    data: currentUser
+  } = (0,_store__WEBPACK_IMPORTED_MODULE_1__/* .useGetCurrentUserQuery */ .XC)();
+  if (!currentUser) return null;
+
+  if (!roles.some(role => currentUser.roles.includes(role))) {
+    return null;
+  }
+
+  return _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx(_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
+    children: children
+  });
+};
+__webpack_async_result__();
+} catch(e) { __webpack_async_result__(e); } });
+
+/***/ }),
+
 /***/ 4606:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
@@ -438,7 +478,8 @@ var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_sto
 
 
 const SoundName = ({
-  soundId
+  soundId,
+  className
 }) => {
   const {
     data: songs
@@ -449,6 +490,7 @@ const SoundName = ({
   const sound = songs?.find(song => song._id === soundId) || tunes?.find(tune => tune._id === soundId);
   if (!sound) return null;
   return _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx("span", {
+    className: className,
     children: sound.name
   });
 };
@@ -939,15 +981,20 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(5725);
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(antd__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _utils_apiHelpers_getBackendURL__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(7107);
-/* harmony import */ var _SoundUploader__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(750);
-/* harmony import */ var _hooks__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(4020);
-/* harmony import */ var _SoundListDeleteButton__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(7147);
-/* harmony import */ var _SoundListEditButton__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(9670);
-/* harmony import */ var _SoundListUpdateVolume__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(7649);
-/* harmony import */ var _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(7101);
-var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_SoundUploader__WEBPACK_IMPORTED_MODULE_3__, _hooks__WEBPACK_IMPORTED_MODULE_4__, _SoundListDeleteButton__WEBPACK_IMPORTED_MODULE_5__, _SoundListEditButton__WEBPACK_IMPORTED_MODULE_6__, _SoundListUpdateVolume__WEBPACK_IMPORTED_MODULE_7__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__]);
-([_SoundUploader__WEBPACK_IMPORTED_MODULE_3__, _hooks__WEBPACK_IMPORTED_MODULE_4__, _SoundListDeleteButton__WEBPACK_IMPORTED_MODULE_5__, _SoundListEditButton__WEBPACK_IMPORTED_MODULE_6__, _SoundListUpdateVolume__WEBPACK_IMPORTED_MODULE_7__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+/* harmony import */ var _utils_apiHelpers_getBackendURL__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(7107);
+/* harmony import */ var _features_auth_RequiredRoles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(8490);
+/* harmony import */ var _SoundUploader__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(750);
+/* harmony import */ var _hooks__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(4020);
+/* harmony import */ var _SoundListDeleteButton__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(7147);
+/* harmony import */ var _SoundListEditButton__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(9670);
+/* harmony import */ var _SoundListUpdateVolume__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(7649);
+/* harmony import */ var _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(7101);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_features_auth_RequiredRoles__WEBPACK_IMPORTED_MODULE_3__, _SoundUploader__WEBPACK_IMPORTED_MODULE_4__, _hooks__WEBPACK_IMPORTED_MODULE_5__, _SoundListDeleteButton__WEBPACK_IMPORTED_MODULE_6__, _SoundListEditButton__WEBPACK_IMPORTED_MODULE_7__, _SoundListUpdateVolume__WEBPACK_IMPORTED_MODULE_8__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__]);
+([_features_auth_RequiredRoles__WEBPACK_IMPORTED_MODULE_3__, _SoundUploader__WEBPACK_IMPORTED_MODULE_4__, _hooks__WEBPACK_IMPORTED_MODULE_5__, _SoundListDeleteButton__WEBPACK_IMPORTED_MODULE_6__, _SoundListEditButton__WEBPACK_IMPORTED_MODULE_7__, _SoundListUpdateVolume__WEBPACK_IMPORTED_MODULE_8__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+
+
+function _EMOTION_STRINGIFIED_CSS_ERROR__() { return "You have tried to stringify object returned from `css` function. It isn't supposed to be used directly (e.g. as value of the `className` prop), but rather handed to emotion so it can handle it (e.g. as value of `css` prop)."; }
+
 
 
 
@@ -963,15 +1010,24 @@ var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_Sou
 const {
   Title
 } = antd__WEBPACK_IMPORTED_MODULE_2__.Typography;
+const SOUND_ORDER = ['Evac', 'Alert', 'Lockdown', 'Bell', 'Chime'];
+const EMERGENCY_SOUNDS = ['Evac', 'Alert', 'Lockdown'];
+
+var _ref =  true ? {
+  name: "vgbo9k",
+  styles: "display:flex;flex-direction:column;align-items:center;gap:0.5rem;@media (min-width: 1280px){flex-direction:row;}"
+} : 0;
+
 const columns = [{
   title: 'Name',
   dataIndex: 'name',
   key: 'name',
-  render: (text, record) => (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-    children: [_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx(Title, {
+  width: '100px',
+  render: (text, record) => (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+    children: [_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx(Title, {
       level: 4,
       children: text
-    }), (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+    }), (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
       children: ["ID: ", record._id]
     })]
   })
@@ -979,30 +1035,38 @@ const columns = [{
   title: 'Tune',
   dataIndex: 'fileName',
   key: 'fileName',
-  render: (fileName, record) => (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(antd__WEBPACK_IMPORTED_MODULE_2__.Space, {
-    children: [fileName && _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx("audio", {
-      src: `${(0,_utils_apiHelpers_getBackendURL__WEBPACK_IMPORTED_MODULE_9__/* .getBackendURL */ .L)()}/assets/audio/${fileName}`,
+  width: '300px',
+  render: (fileName, record) => (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+    css: _ref,
+    children: [fileName && _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx("audio", {
+      src: `${(0,_utils_apiHelpers_getBackendURL__WEBPACK_IMPORTED_MODULE_10__/* .getBackendURL */ .L)()}/assets/audio/${fileName}`,
       controls: true
-    }), _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx(_SoundUploader__WEBPACK_IMPORTED_MODULE_3__/* .SoundUploaderSingle */ .p, {
+    }), EMERGENCY_SOUNDS.includes(record.name) ? _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx(_features_auth_RequiredRoles__WEBPACK_IMPORTED_MODULE_3__/* .RequiredRoles */ .v, {
+      roles: ['master'],
+      children: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx(_SoundUploader__WEBPACK_IMPORTED_MODULE_4__/* .SoundUploaderSingle */ .p, {
+        id: record._id
+      })
+    }) : _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx(_SoundUploader__WEBPACK_IMPORTED_MODULE_4__/* .SoundUploaderSingle */ .p, {
       id: record._id
     })]
   })
 }, {
   title: 'Volume',
   key: 'volume',
-  width: 200,
-  render: (_, record) => _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx(_SoundListUpdateVolume__WEBPACK_IMPORTED_MODULE_7__/* .SoundListUpdateVolume */ .D, {
+  width: '200px',
+  render: (_, record) => _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx(_SoundListUpdateVolume__WEBPACK_IMPORTED_MODULE_8__/* .SoundListUpdateVolume */ .D, {
     soundData: record
   })
 }, {
   title: 'Actions',
   key: 'actions',
-  render: (_, record) => _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx(antd__WEBPACK_IMPORTED_MODULE_2__.Space, {
-    size: "middle",
-    children: !record.isDefault && (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.Fragment, {
-      children: [_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx(_SoundListEditButton__WEBPACK_IMPORTED_MODULE_6__/* .SoundListEditButton */ .$, {
+  width: '10%',
+  render: (_, record) => _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx(antd__WEBPACK_IMPORTED_MODULE_2__.Space, {
+    size: "small",
+    children: !record.isDefault && (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.Fragment, {
+      children: [_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx(_SoundListEditButton__WEBPACK_IMPORTED_MODULE_7__/* .SoundListEditButton */ .$, {
         sound: record
-      }), ' ', _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx(_SoundListDeleteButton__WEBPACK_IMPORTED_MODULE_5__/* .SoundListDeleteButton */ .o, {
+      }), ' ', _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx(_SoundListDeleteButton__WEBPACK_IMPORTED_MODULE_6__/* .SoundListDeleteButton */ .o, {
         soundId: record._id
       })]
     })
@@ -1016,13 +1080,16 @@ const SoundList = ({
   const {
     data,
     isLoading
-  } = (0,_hooks__WEBPACK_IMPORTED_MODULE_4__/* .useGetSounds */ .d)(soundType)(undefined);
+  } = (0,_hooks__WEBPACK_IMPORTED_MODULE_5__/* .useGetSounds */ .d)(soundType)(undefined); // sort data by SOUND_ORDER
+
   const sortedData = (0,react__WEBPACK_IMPORTED_MODULE_1__.useMemo)(() => {
-    if (!data) return [];
-    return lodash_sortBy__WEBPACK_IMPORTED_MODULE_0___default()(data, item => -item.isDefault);
+    return lodash_sortBy__WEBPACK_IMPORTED_MODULE_0___default()(data, sound => {
+      const index = SOUND_ORDER.indexOf(sound.name);
+      return index === -1 ? SOUND_ORDER.length : index;
+    });
   }, [data]);
-  return _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx(antd__WEBPACK_IMPORTED_MODULE_2__.Table, {
-    caption: titleExtra ? _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx(antd__WEBPACK_IMPORTED_MODULE_2__.Space, {
+  return _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx(antd__WEBPACK_IMPORTED_MODULE_2__.Table, {
+    caption: titleExtra ? _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx(antd__WEBPACK_IMPORTED_MODULE_2__.Space, {
       children: titleExtra
     }) : undefined,
     className: className,
@@ -1226,8 +1293,8 @@ const marks = {
 };
 
 var _ref =  true ? {
-  name: "s5xdrg",
-  styles: "display:flex;align-items:center"
+  name: "1wnowod",
+  styles: "display:flex;align-items:center;justify-content:center"
 } : 0;
 
 var _ref2 =  true ? {
@@ -1236,8 +1303,8 @@ var _ref2 =  true ? {
 } : 0;
 
 var _ref3 =  true ? {
-  name: "1x3jg5i",
-  styles: "margin-left:0.75rem"
+  name: "1mys3sh",
+  styles: "margin-left:1rem"
 } : 0;
 
 const SoundListUpdateVolume = ({
@@ -1433,7 +1500,7 @@ const SoundPlayOnlyButton = _ref => {
     isLoading
   } = (0,_hooks__WEBPACK_IMPORTED_MODULE_5__/* .useGetSounds */ .d)(_types__WEBPACK_IMPORTED_MODULE_2__.SoundType.Tune)();
   const sound = (0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(() => data?.find(sound => sound.name === soundName), [data, soundName]);
-  const [playing, playLocal] = (0,_hooks__WEBPACK_IMPORTED_MODULE_3__/* .useAudio */ .Q)(`${(0,_utils_apiHelpers_getBackendURL__WEBPACK_IMPORTED_MODULE_7__/* .getBackendURL */ .L)()}/assets/audio/${sound?.fileName}`);
+  const [playing, playLocal] = (0,_hooks__WEBPACK_IMPORTED_MODULE_3__/* .useAudio */ .Q)(sound ? `${(0,_utils_apiHelpers_getBackendURL__WEBPACK_IMPORTED_MODULE_7__/* .getBackendURL */ .L)()}/assets/audio/${sound.fileName}` : undefined);
   const [playServer] = (0,_store_api_sound__WEBPACK_IMPORTED_MODULE_4__/* .useToggleSoundMutation */ .V4)();
 
   const handlePlay = async () => {
@@ -1761,24 +1828,23 @@ var external_react_ = __webpack_require__(6689);
 
 const useAudio = src => {
   const {
-    0: audio
-  } = (0,external_react_.useState)(new Audio(src));
-  const {
     0: playing,
     1: setPlaying
   } = (0,external_react_.useState)(false);
+  const audio = (0,external_react_.useMemo)(() => {
+    if (!src) return null;
+    const newAudio = new Audio(src);
+
+    newAudio.onended = () => setPlaying(false);
+
+    return newAudio;
+  }, [src]);
 
   const toggle = () => setPlaying(!playing);
 
   (0,external_react_.useEffect)(() => {
-    playing ? audio.play() : audio.pause();
-  }, [playing]);
-  (0,external_react_.useEffect)(() => {
-    audio.addEventListener('ended', () => setPlaying(false));
-    return () => {
-      audio.removeEventListener('ended', () => setPlaying(false));
-    };
-  }, []);
+    playing ? audio?.play() : audio?.pause();
+  }, [audio, playing]);
   return [playing, toggle];
 };
 ;// CONCATENATED MODULE: ./hooks/index.ts

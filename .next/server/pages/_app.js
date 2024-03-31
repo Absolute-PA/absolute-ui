@@ -71,12 +71,6 @@ const StyledLayout = /*#__PURE__*/(0,_emotion_styled_base__WEBPACK_IMPORTED_MODU
   styles: "background:linear-gradient(0.4turn, #fef3e8, #fff, #f4ecff)!important"
 } : 0);
 
-const items = _utils_pages__WEBPACK_IMPORTED_MODULE_4__/* .NAVIGATION_PAGES.map */ .F.map(page => (0,_utils_antHelpers__WEBPACK_IMPORTED_MODULE_10__/* .getMenuItem */ .L)({
-  label: page.pageName,
-  key: page.id,
-  icon: page.icon
-}));
-
 var _ref =  true ? {
   name: "1uiai01",
   styles: "min-height:100vh"
@@ -103,8 +97,8 @@ var _ref5 =  true ? {
 } : 0;
 
 var _ref6 =  true ? {
-  name: "1848y33",
-  styles: "margin-bottom:0.5rem;font-weight:700"
+  name: "gke1dx",
+  styles: "margin-top:0.5rem;font-weight:700"
 } : 0;
 
 var _ref7 =  true ? {
@@ -127,6 +121,11 @@ const MainLayout = ({
     data: setting
   } = (0,_store_api_setting__WEBPACK_IMPORTED_MODULE_8__/* .useGetSettingQuery */ .Rf)();
   const pageId = (0,react__WEBPACK_IMPORTED_MODULE_1__.useMemo)(() => router.pathname.split('/')[1] || 'home', [router.pathname]);
+  const items = _utils_pages__WEBPACK_IMPORTED_MODULE_4__/* .NAVIGATION_PAGES.filter */ .F.filter(item => item.roles ? item.roles.some(r => currentUser?.roles.includes(r)) : true).map(page => (0,_utils_antHelpers__WEBPACK_IMPORTED_MODULE_10__/* .getMenuItem */ .L)({
+    label: page.pageName,
+    key: page.id,
+    icon: page.icon
+  }));
 
   const onClick = e => {
     router.push(_utils_pages__WEBPACK_IMPORTED_MODULE_4__/* .NAVIGATION_PAGES.find */ .F.find(page => page.id === e.key)?.url ?? '/');
@@ -171,11 +170,11 @@ const MainLayout = ({
             style: {
               lineHeight: '14px'
             },
-            children: [_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx("div", {
+            children: [(0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+              children: ["Licensed to ", setting?.schoolId]
+            }), _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx("div", {
               css: _ref6,
               children: currentUser?.username
-            }), (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
-              children: ["Licence belongs to ", setting?.schoolId, " (v", setting?.appVersion, ")"]
             })]
           }), _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx(_features_auth__WEBPACK_IMPORTED_MODULE_6__/* .LogoutButton */ .sv, {
             type: "text"
@@ -484,7 +483,7 @@ const NAVIGATION_PAGES = [{
 }, {
   id: 'livetalk',
   url: '/liveTalk',
-  pageName: 'Live Talk',
+  pageName: 'Live Paging',
   icon: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__.FontAwesomeIcon, {
     icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__.faPhoneVolume
   })
@@ -506,7 +505,8 @@ const NAVIGATION_PAGES = [{
   pageName: 'User Management',
   icon: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__.FontAwesomeIcon, {
     icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__.faUsers
-  })
+  }),
+  roles: ['master']
 }, {
   id: 'settings',
   url: '/settings',
@@ -679,7 +679,7 @@ module.exports = import("js-cookie");;
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [159,377,399,746,640], () => (__webpack_exec__(3376)));
+var __webpack_exports__ = __webpack_require__.X(0, [377,399,746,640], () => (__webpack_exec__(3376)));
 module.exports = __webpack_exports__;
 
 })();

@@ -32,36 +32,21 @@ const StyledPageName = /*#__PURE__*/(0,_emotion_styled_base__WEBPACK_IMPORTED_MO
 } : 0);
 
 var _ref =  true ? {
-  name: "se5ttb",
-  styles: "display:flex;height:100vh"
+  name: "44hlzp",
+  styles: "display:flex;height:100vh;align-items:center;justify-content:center"
 } : 0;
 
 var _ref2 =  true ? {
-  name: "48dft9",
-  styles: "position:relative;display:none;width:0px;flex:1 1 0%;@media (min-width: 976px){display:block;}"
+  name: "9aw0au",
+  styles: "display:flex;flex-direction:column;justify-content:center;padding-left:1rem;padding-right:1rem;padding-top:3rem;padding-bottom:3rem;@media (min-width: 480px){padding-left:1.5rem;padding-right:1.5rem;}@media (min-width: 976px){flex:none;padding-left:5rem;padding-right:5rem;}@media (min-width: 1280px){padding-left:6rem;padding-right:6rem;}"
 } : 0;
 
 var _ref3 =  true ? {
-  name: "pbbvdc",
-  styles: "position:absolute;inset:0px;height:100%;width:100%;object-fit:cover"
-} : 0;
-
-var _ref4 =  true ? {
-  name: "eypkm5",
-  styles: "position:absolute;bottom:2.5rem;left:2.5rem;z-index:10;font-size:var(--fontSizeSM);line-height:var(--lineHeightBase);--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))"
-} : 0;
-
-var _ref5 =  true ? {
-  name: "9zle9m",
-  styles: "display:flex;flex:1 1 0%;flex-direction:column;justify-content:center;padding-left:1rem;padding-right:1rem;padding-top:3rem;padding-bottom:3rem;@media (min-width: 480px){padding-left:1.5rem;padding-right:1.5rem;}@media (min-width: 976px){flex:none;padding-left:5rem;padding-right:5rem;}@media (min-width: 1280px){padding-left:6rem;padding-right:6rem;}"
-} : 0;
-
-var _ref6 =  true ? {
   name: "12y8yhg",
   styles: "margin-left:auto;margin-right:auto;width:100%;max-width:24rem;@media (min-width: 976px){width:24rem;}"
 } : 0;
 
-var _ref7 =  true ? {
+var _ref4 =  true ? {
   name: "iopm2z",
   styles: "height:120px"
 } : 0;
@@ -70,31 +55,19 @@ const AuthLayout = ({
   children,
   pageName
 }) => {
-  return (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+  return _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx("div", {
     css: _ref,
-    children: [(0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+    children: (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
       css: _ref2,
-      children: [_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx("img", {
-        css: _ref3,
-        src: "https://images.unsplash.com/photo-1606176213201-8fc5bbf768b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80",
-        alt: "Ticket"
-      }), _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx(StyledPageName, {
-        children: pageName
-      }), _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx("p", {
-        css: _ref4,
-        children: `© ${new Date().getFullYear()} Absolute PA.`
-      })]
-    }), (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-      css: _ref5,
       children: [_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx("div", {
-        css: _ref6,
+        css: _ref3,
         children: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx("img", {
-          css: _ref7,
+          css: _ref4,
           src: "/img/absolute-pa-logo.png",
           alt: "AbsolutePA"
         })
       }), children]
-    })]
+    })
   });
 };
 __webpack_async_result__();
@@ -315,12 +288,10 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(antd__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7066);
 /* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_ant_design_icons__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(1853);
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _utils_auth__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(7811);
-/* harmony import */ var _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(7101);
-var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_utils_auth__WEBPACK_IMPORTED_MODULE_4__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__]);
-([_utils_auth__WEBPACK_IMPORTED_MODULE_4__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+/* harmony import */ var _utils_auth__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(7811);
+/* harmony import */ var _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(7101);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_utils_auth__WEBPACK_IMPORTED_MODULE_3__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__]);
+([_utils_auth__WEBPACK_IMPORTED_MODULE_3__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
@@ -336,7 +307,6 @@ function _EMOTION_STRINGIFIED_CSS_ERROR__() { return "You have tried to stringif
 
 
 
-
 var _ref2 =  true ? {
   name: "1j389vi",
   styles: "font-weight:700"
@@ -344,20 +314,19 @@ var _ref2 =  true ? {
 
 const LogoutButton = _ref => {
   let props = Object.assign({}, _ref);
-  const router = (0,next_router__WEBPACK_IMPORTED_MODULE_3__.useRouter)();
 
   const logout = () => {
-    (0,_utils_auth__WEBPACK_IMPORTED_MODULE_4__/* .removeAccessToken */ .yL)();
-    router.push('/login');
+    (0,_utils_auth__WEBPACK_IMPORTED_MODULE_3__/* .removeAccessToken */ .yL)();
+    window.location.href = '/login';
   };
 
-  return (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(antd__WEBPACK_IMPORTED_MODULE_1__.Button, _objectSpread(_objectSpread({
+  return (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(antd__WEBPACK_IMPORTED_MODULE_1__.Button, _objectSpread(_objectSpread({
     onClick: logout
   }, props), {}, {
-    children: [_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx("span", {
+    children: [_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx("span", {
       css: _ref2,
       children: "Logout"
-    }), _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(_ant_design_icons__WEBPACK_IMPORTED_MODULE_2__.LogoutOutlined, {})]
+    }), _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(_ant_design_icons__WEBPACK_IMPORTED_MODULE_2__.LogoutOutlined, {})]
   }));
 };
 __webpack_async_result__();
