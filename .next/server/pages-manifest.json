@@ -4,6 +4,7 @@
   "/": "pages/index.html",
   "/liveTalk": "pages/liveTalk.html",
   "/login": "pages/login.html",
+  "/_error": "pages/_error.js",
   "/music": "pages/music.html",
   "/register": "pages/register.html",
   "/schedule": "pages/schedule.html",
@@ -13,6 +14,5 @@
   "/text-to-audio": "pages/text-to-audio.html",
   "/user": "pages/user.html",
   "/voice-record": "pages/voice-record.html",
-  "/_error": "pages/_error.js",
   "/404": "pages/404.html"
 }
