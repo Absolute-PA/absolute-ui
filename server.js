@@ -2,7 +2,7 @@ const { createServer } = require('https');
 const { parse } = require('url');
 const next = require('next');
 const fs = require('fs');
-require('dotenv');
+require('dotenv').config();
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
 const handle = app.getRequestHandler();
