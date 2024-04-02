@@ -1,16 +1,17 @@
 {
   "name": "nodeweb-master-ui",
-  "version": "0.1.10",
+  "version": "0.1.12",
   "private": true,
   "scripts": {
     "dev": "next dev ",
-    "dev-https": "NODE_OPTIONS='-r @newrelic/next' HTTPS=true node server.js",
-    "start-https": "NODE_ENV=production NODE_OPTIONS='-r @newrelic/next' HTTPS=true node server.js",
-    "build": "next build",
+    "dev-https": "NEXT_PUBLIC_HTTPS=true NODE_OPTIONS='-r @newrelic/next' HTTPS=true node server.js",
+    "start-https": "NEXT_PUBLIC_HTTPS=true NODE_ENV=production NODE_OPTIONS='-r @newrelic/next' HTTPS=true node server.js",
+    "build": "NEXT_PUBLIC_HTTPS=true next build",
     "start": "NODE_OPTIONS='-r @newrelic/next' next start",
     "lint": "next lint",
     "compile": "tsc -b tsconfig.json --incremental",
     "docker:build": "docker build -t nodeweb-master-ui .",
+    "deploy": "./scripts/prepareBuild.sh",
     "docker:save": "docker save -o ./out/nodeweb-master-ui.tar nodeweb-master-ui"
   },
   "dependencies": {

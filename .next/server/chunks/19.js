@@ -1027,8 +1027,11 @@ const columns = [{
     children: [_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx(Title, {
       level: 4,
       children: text
-    }), (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
-      children: ["ID: ", record._id]
+    }), _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx(_features_auth_RequiredRoles__WEBPACK_IMPORTED_MODULE_3__/* .RequiredRoles */ .v, {
+      roles: ['master'],
+      children: (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+        children: ["ID: ", record._id]
+      })
     })]
   })
 }, {
@@ -1992,7 +1995,7 @@ __webpack_async_result__();
 
 /***/ }),
 
-/***/ 4245:
+/***/ 7643:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2087,7 +2090,7 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony import */ var _createSound__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4070);
 /* harmony import */ var _deleteSound__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1102);
 /* harmony import */ var _getTunes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(2066);
-/* harmony import */ var _getSongs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4245);
+/* harmony import */ var _getSongs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(7643);
 /* harmony import */ var _toggleSound__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(8179);
 /* harmony import */ var _updateSound__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(9395);
 /* harmony import */ var _uploadSound__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(293);
