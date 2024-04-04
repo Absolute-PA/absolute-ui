@@ -1045,7 +1045,7 @@ const columns = [{
       src: `${(0,_utils_apiHelpers_getBackendURL__WEBPACK_IMPORTED_MODULE_10__/* .getBackendURL */ .L)()}/assets/audio/${fileName}`,
       controls: true
     }), EMERGENCY_SOUNDS.includes(record.name) ? _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx(_features_auth_RequiredRoles__WEBPACK_IMPORTED_MODULE_3__/* .RequiredRoles */ .v, {
-      roles: ['master'],
+      roles: ['master', 'admin'],
       children: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx(_SoundUploader__WEBPACK_IMPORTED_MODULE_4__/* .SoundUploaderSingle */ .p, {
         id: record._id
       })
