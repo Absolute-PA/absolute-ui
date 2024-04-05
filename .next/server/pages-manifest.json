@@ -11,8 +11,8 @@
   "/sound": "pages/sound.html",
   "/stream": "pages/stream.html",
   "/user": "pages/user.html",
-  "/text-to-audio": "pages/text-to-audio.html",
   "/voice-record": "pages/voice-record.html",
+  "/text-to-audio": "pages/text-to-audio.html",
   "/_error": "pages/_error.js",
   "/404": "pages/404.html"
 }
