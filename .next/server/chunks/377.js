@@ -275,6 +275,7 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony export */   "d$": () => (/* reexport safe */ _audit__WEBPACK_IMPORTED_MODULE_7__.d),
 /* harmony export */   "dZ": () => (/* reexport safe */ _playlist__WEBPACK_IMPORTED_MODULE_5__.dZ),
 /* harmony export */   "fX": () => (/* reexport safe */ _textToAudio__WEBPACK_IMPORTED_MODULE_2__.fX),
+/* harmony export */   "fg": () => (/* reexport safe */ _textToAudio__WEBPACK_IMPORTED_MODULE_2__.fg),
 /* harmony export */   "lR": () => (/* reexport safe */ _auth__WEBPACK_IMPORTED_MODULE_0__.lR),
 /* harmony export */   "o3": () => (/* reexport safe */ _schedule__WEBPACK_IMPORTED_MODULE_1__.o3),
 /* harmony export */   "oA": () => (/* reexport safe */ _schedule__WEBPACK_IMPORTED_MODULE_1__.oA),
@@ -1141,13 +1142,16 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "HH": () => (/* reexport safe */ _getAllMessage__WEBPACK_IMPORTED_MODULE_1__.HH),
 /* harmony export */   "fX": () => (/* reexport safe */ _postMessageToAudio__WEBPACK_IMPORTED_MODULE_0__.fX),
+/* harmony export */   "fg": () => (/* reexport safe */ _updateTextToAudio__WEBPACK_IMPORTED_MODULE_3__.fg),
 /* harmony export */   "qT": () => (/* reexport safe */ _saveMessage__WEBPACK_IMPORTED_MODULE_2__.qT)
 /* harmony export */ });
 /* harmony import */ var _postMessageToAudio__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4887);
 /* harmony import */ var _getAllMessage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6808);
 /* harmony import */ var _saveMessage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(896);
-var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_postMessageToAudio__WEBPACK_IMPORTED_MODULE_0__, _getAllMessage__WEBPACK_IMPORTED_MODULE_1__, _saveMessage__WEBPACK_IMPORTED_MODULE_2__]);
-([_postMessageToAudio__WEBPACK_IMPORTED_MODULE_0__, _getAllMessage__WEBPACK_IMPORTED_MODULE_1__, _saveMessage__WEBPACK_IMPORTED_MODULE_2__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+/* harmony import */ var _updateTextToAudio__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(7319);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_postMessageToAudio__WEBPACK_IMPORTED_MODULE_0__, _getAllMessage__WEBPACK_IMPORTED_MODULE_1__, _saveMessage__WEBPACK_IMPORTED_MODULE_2__, _updateTextToAudio__WEBPACK_IMPORTED_MODULE_3__]);
+([_postMessageToAudio__WEBPACK_IMPORTED_MODULE_0__, _getAllMessage__WEBPACK_IMPORTED_MODULE_1__, _saveMessage__WEBPACK_IMPORTED_MODULE_2__, _updateTextToAudio__WEBPACK_IMPORTED_MODULE_3__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+
 
 
 
@@ -1224,6 +1228,44 @@ const {
   useSaveMeesageMutation,
   endpoints: {
     saveMeesage
+  }
+} = api;
+/* unused harmony default export */ var __WEBPACK_DEFAULT_EXPORT__ = ((/* unused pure expression or super */ null && (api)));
+__webpack_async_result__();
+} catch(e) { __webpack_async_result__(e); } });
+
+/***/ }),
+
+/***/ 7319:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "fg": () => (/* binding */ useUpdateTextToAudioMutation)
+/* harmony export */ });
+/* unused harmony export updateTextToAudio */
+/* harmony import */ var _utils_apiHelpers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7640);
+/* harmony import */ var _rootApi__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6159);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_utils_apiHelpers__WEBPACK_IMPORTED_MODULE_0__, _rootApi__WEBPACK_IMPORTED_MODULE_1__]);
+([_utils_apiHelpers__WEBPACK_IMPORTED_MODULE_0__, _rootApi__WEBPACK_IMPORTED_MODULE_1__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+
+
+const api = _rootApi__WEBPACK_IMPORTED_MODULE_1__/* .rootApi.injectEndpoints */ .e.injectEndpoints({
+  endpoints: builder => ({
+    updateTextToAudio: builder.mutation({
+      query: message => _utils_apiHelpers__WEBPACK_IMPORTED_MODULE_0__/* .http.put */ .dJ.put(`/textToAudio/${message.id}`, {
+        data: message
+      }),
+      invalidatesTags: [{
+        type: _rootApi__WEBPACK_IMPORTED_MODULE_1__/* .Tags.TextToAudio */ .$.TextToAudio
+      }]
+    })
+  })
+});
+const {
+  useUpdateTextToAudioMutation,
+  endpoints: {
+    updateTextToAudio
   }
 } = api;
 /* unused harmony default export */ var __WEBPACK_DEFAULT_EXPORT__ = ((/* unused pure expression or super */ null && (api)));
@@ -1532,6 +1574,7 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony export */   "a_": () => (/* reexport safe */ _api__WEBPACK_IMPORTED_MODULE_4__.a_),
 /* harmony export */   "d$": () => (/* reexport safe */ _api__WEBPACK_IMPORTED_MODULE_4__.d$),
 /* harmony export */   "fX": () => (/* reexport safe */ _api__WEBPACK_IMPORTED_MODULE_4__.fX),
+/* harmony export */   "fg": () => (/* reexport safe */ _api__WEBPACK_IMPORTED_MODULE_4__.fg),
 /* harmony export */   "lR": () => (/* reexport safe */ _api__WEBPACK_IMPORTED_MODULE_4__.lR),
 /* harmony export */   "o3": () => (/* reexport safe */ _api__WEBPACK_IMPORTED_MODULE_4__.o3),
 /* harmony export */   "oA": () => (/* reexport safe */ _api__WEBPACK_IMPORTED_MODULE_4__.oA),
