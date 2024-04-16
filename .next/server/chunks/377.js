@@ -1484,7 +1484,10 @@ var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_uti
 const api = _rootApi__WEBPACK_IMPORTED_MODULE_1__/* .rootApi.injectEndpoints */ .e.injectEndpoints({
   endpoints: builder => ({
     postPlayVoice: builder.query({
-      query: filePath => _utils_apiHelpers__WEBPACK_IMPORTED_MODULE_0__/* .http.post */ .dJ.post(`/voice/play/?filePath=${filePath}`),
+      query: ({
+        filePath,
+        volume
+      }) => _utils_apiHelpers__WEBPACK_IMPORTED_MODULE_0__/* .http.post */ .dJ.post(`/voice/play/?filePath=${filePath}&volume=${volume}`),
       providesTags: result => [{
         type: _rootApi__WEBPACK_IMPORTED_MODULE_1__/* .Tags.TextToAudio */ .$.TextToAudio
       }]

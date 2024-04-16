@@ -1003,7 +1003,11 @@ const EventList = ({
     if (convertedATime < convertedBTime) return -1;else if (convertedATime > convertedBTime) return 1;
     return 0;
   });
+  const scroll = {
+    x: 'max-content'
+  };
   return _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Table, {
+    scroll: scroll,
     title: () => _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Space, {
       children: titleExtra
     }),
@@ -2093,7 +2097,11 @@ const ScheduleList = ({
     scheduleId: record._id
   });
 
+  const scroll = {
+    x: 'max-content'
+  };
   return _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Table, {
+    scroll: scroll,
     title: () => _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Space, {
       children: titleExtra
     }),

@@ -1091,7 +1091,11 @@ const SoundList = ({
       return index === -1 ? SOUND_ORDER.length : index;
     });
   }, [data]);
+  const scroll = {
+    x: 'max-content'
+  };
   return _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx(antd__WEBPACK_IMPORTED_MODULE_2__.Table, {
+    scroll: scroll,
     caption: titleExtra ? _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx(antd__WEBPACK_IMPORTED_MODULE_2__.Space, {
       children: titleExtra
     }) : undefined,

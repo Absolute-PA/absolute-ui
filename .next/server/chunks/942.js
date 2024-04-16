@@ -466,7 +466,11 @@ const PlaylistList = ({
     data,
     isLoading
   } = (0,_store__WEBPACK_IMPORTED_MODULE_2__/* .useGetPlaylistListQuery */ .a9)();
+  const scroll = {
+    x: 'max-content'
+  };
   return _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Table, {
+    scroll: scroll,
     caption: title,
     className: className,
     loading: isLoading,

@@ -496,11 +496,15 @@ const ViewUser = ({
       })
     });
   });
+  const scroll = {
+    x: 'max-content'
+  };
   return _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx(_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.Fragment, {
     children: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Form, {
       form: form,
       component: false,
       children: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Table, {
+        scroll: scroll,
         components: {
           body: {
             cell: _EditableCell__WEBPACK_IMPORTED_MODULE_5__/* .EditableCell */ .n

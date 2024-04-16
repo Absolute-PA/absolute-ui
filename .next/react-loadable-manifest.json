@@ -28,10 +28,11 @@
     ]
   },
   "voice-record.tsx -> @/features/message/VoiceMessage": {
-    "id": 89889,
+    "id": 33515,
     "files": [
       "static/chunks/907-705713eae9a4adf4.js",
-      "static/chunks/889.e921989dc79c3e4c.js"
+      "static/chunks/80-5abe8fecaa107bcc.js",
+      "static/chunks/515.87a734cfc747dbec.js"
     ]
   }
 }
