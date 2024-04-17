@@ -1,7 +1,7 @@
 {
   "/_app": "pages/_app.js",
-  "/_document": "pages/_document.js",
   "/": "pages/index.html",
+  "/_document": "pages/_document.js",
   "/liveTalk": "pages/liveTalk.html",
   "/login": "pages/login.html",
   "/music": "pages/music.html",
