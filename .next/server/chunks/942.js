@@ -431,6 +431,7 @@ const columns = [{
   title: 'Songs',
   dataIndex: 'sounds',
   key: 'sounds',
+  width: 500,
   render: (sounds, record) => _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx(_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.Fragment, {
     children: sounds.map(item => _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Tag, {
       children: item.name

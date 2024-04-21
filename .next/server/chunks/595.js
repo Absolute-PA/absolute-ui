@@ -149,12 +149,12 @@ __webpack_async_result__();
 
 /***/ }),
 
-/***/ 3911:
+/***/ 2435:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "O": () => (/* binding */ UserSettingForm)
+/* harmony export */   "x": () => (/* binding */ UserCredentialForm)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6689);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
@@ -188,7 +188,7 @@ var _ref2 =  true ? {
   styles: "font-weight:700"
 } : 0;
 
-const UserSettingFormInternal = ({
+const UserCredentialFormInternal = ({
   className,
   header
 }) => {
@@ -288,7 +288,7 @@ const UserSettingFormInternal = ({
   });
 };
 
-const UserSettingForm = (0,_components__WEBPACK_IMPORTED_MODULE_3__/* .withCardFormContext */ .h4)(UserSettingFormInternal);
+const UserCredentialForm = (0,_components__WEBPACK_IMPORTED_MODULE_3__/* .withCardFormContext */ .h4)(UserCredentialFormInternal);
 __webpack_async_result__();
 } catch(e) { __webpack_async_result__(e); } });
 
@@ -531,16 +531,16 @@ __webpack_async_result__();
 
 __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "O5": () => (/* reexport safe */ _UserSettingForm__WEBPACK_IMPORTED_MODULE_2__.O),
 /* harmony export */   "ol": () => (/* reexport safe */ _ViewUser__WEBPACK_IMPORTED_MODULE_1__.o),
-/* harmony export */   "vU": () => (/* reexport safe */ _CreateUserButton__WEBPACK_IMPORTED_MODULE_3__.v)
+/* harmony export */   "vU": () => (/* reexport safe */ _CreateUserButton__WEBPACK_IMPORTED_MODULE_3__.v),
+/* harmony export */   "xF": () => (/* reexport safe */ _UserCredentialForm__WEBPACK_IMPORTED_MODULE_2__.x)
 /* harmony export */ });
 /* harmony import */ var _EditableCell__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6033);
 /* harmony import */ var _ViewUser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5938);
-/* harmony import */ var _UserSettingForm__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3911);
+/* harmony import */ var _UserCredentialForm__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(2435);
 /* harmony import */ var _CreateUserButton__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(8354);
-var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_EditableCell__WEBPACK_IMPORTED_MODULE_0__, _ViewUser__WEBPACK_IMPORTED_MODULE_1__, _UserSettingForm__WEBPACK_IMPORTED_MODULE_2__, _CreateUserButton__WEBPACK_IMPORTED_MODULE_3__]);
-([_EditableCell__WEBPACK_IMPORTED_MODULE_0__, _ViewUser__WEBPACK_IMPORTED_MODULE_1__, _UserSettingForm__WEBPACK_IMPORTED_MODULE_2__, _CreateUserButton__WEBPACK_IMPORTED_MODULE_3__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_EditableCell__WEBPACK_IMPORTED_MODULE_0__, _ViewUser__WEBPACK_IMPORTED_MODULE_1__, _UserCredentialForm__WEBPACK_IMPORTED_MODULE_2__, _CreateUserButton__WEBPACK_IMPORTED_MODULE_3__]);
+([_EditableCell__WEBPACK_IMPORTED_MODULE_0__, _ViewUser__WEBPACK_IMPORTED_MODULE_1__, _UserCredentialForm__WEBPACK_IMPORTED_MODULE_2__, _CreateUserButton__WEBPACK_IMPORTED_MODULE_3__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
 
 
 

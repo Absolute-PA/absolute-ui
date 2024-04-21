@@ -256,18 +256,140 @@ __webpack_async_result__();
 
 /***/ }),
 
+/***/ 6098:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "O": () => (/* binding */ UserSettingForm)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6689);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5725);
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(antd__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7066);
+/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_ant_design_icons__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4399);
+/* harmony import */ var _store_api_setting__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(8366);
+/* harmony import */ var _hooks_useAuthorization__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(8801);
+/* harmony import */ var _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(7101);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_components__WEBPACK_IMPORTED_MODULE_3__, _store_api_setting__WEBPACK_IMPORTED_MODULE_4__, _hooks_useAuthorization__WEBPACK_IMPORTED_MODULE_5__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__]);
+([_components__WEBPACK_IMPORTED_MODULE_3__, _store_api_setting__WEBPACK_IMPORTED_MODULE_4__, _hooks_useAuthorization__WEBPACK_IMPORTED_MODULE_5__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+
+
+
+
+
+
+
+
+
+
+const UserSettingFormInternal = ({
+  className,
+  header
+}) => {
+  const {
+    isEditing,
+    setEditing
+  } = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(_components__WEBPACK_IMPORTED_MODULE_3__/* .CardFormContext */ .j8);
+  const {
+    data: setting
+  } = (0,_store_api_setting__WEBPACK_IMPORTED_MODULE_4__/* .useGetSettingQuery */ .Rf)();
+  const [update] = (0,_store_api_setting__WEBPACK_IMPORTED_MODULE_4__/* .useUpdateUserSettingMutation */ .Bw)();
+  const [form] = antd__WEBPACK_IMPORTED_MODULE_1__.Form.useForm();
+  const {
+    isAuthorized
+  } = (0,_hooks_useAuthorization__WEBPACK_IMPORTED_MODULE_5__/* .useAuthorization */ .o)();
+  const initialValues = {
+    maxUser: setting?.userSetting?.maxUser
+  };
+
+  const handleFinish = async formValues => {
+    const res = await update({
+      id: setting?._id,
+      data: formValues
+    });
+
+    if ('error' in res) {
+      form.resetFields();
+    } else {
+      setEditing(false);
+    }
+  };
+
+  const renderForm = () => (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.Fragment, {
+    children: [_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx(_components__WEBPACK_IMPORTED_MODULE_3__/* .CollapseCard.EditButton */ .Uf.EditButton, {
+      onClick: () => setEditing(!isEditing)
+    }), (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(_components__WEBPACK_IMPORTED_MODULE_3__/* .CardForm */ .Tr, {
+      form: form,
+      initialValues: initialValues,
+      onFinish: handleFinish,
+      children: [_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx(_components__WEBPACK_IMPORTED_MODULE_3__/* .CardForm.Row */ .Tr.Row, {
+        children: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx(_components__WEBPACK_IMPORTED_MODULE_3__/* .CardForm.Item */ .Tr.Item, {
+          name: ['maxUser'],
+          label: "Max number of users",
+          rules: [{
+            required: true
+          }],
+          children: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.InputNumber, {})
+        })
+      }), isEditing && _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx(_components__WEBPACK_IMPORTED_MODULE_3__/* .CollapseCard.FooterActions */ .Uf.FooterActions, {
+        children: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx(_components__WEBPACK_IMPORTED_MODULE_3__/* .CardForm.Actions */ .Tr.Actions, {})
+      })]
+    })]
+  });
+
+  if (!isAuthorized(['master'])) {
+    return null;
+  }
+
+  return (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(_components__WEBPACK_IMPORTED_MODULE_3__/* .CollapseCard */ .Uf, {
+    className: className,
+    header: header || 'User Setting',
+    icon: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx(_ant_design_icons__WEBPACK_IMPORTED_MODULE_2__.UserOutlined, {}),
+    defaultActive: true,
+    children: [!setting && _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Spin, {}), !!setting && renderForm()]
+  });
+};
+
+const UserSettingForm = (0,_components__WEBPACK_IMPORTED_MODULE_3__/* .withCardFormContext */ .h4)(UserSettingFormInternal);
+__webpack_async_result__();
+} catch(e) { __webpack_async_result__(e); } });
+
+/***/ }),
+
+/***/ 4323:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "O": () => (/* reexport safe */ _UserSettingForm__WEBPACK_IMPORTED_MODULE_0__.O)
+/* harmony export */ });
+/* harmony import */ var _UserSettingForm__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6098);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_UserSettingForm__WEBPACK_IMPORTED_MODULE_0__]);
+_UserSettingForm__WEBPACK_IMPORTED_MODULE_0__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
+
+__webpack_async_result__();
+} catch(e) { __webpack_async_result__(e); } });
+
+/***/ }),
+
 /***/ 3640:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "K2": () => (/* reexport safe */ _LicenseKey__WEBPACK_IMPORTED_MODULE_0__.K),
-/* harmony export */   "Mz": () => (/* reexport safe */ _LicenseKey__WEBPACK_IMPORTED_MODULE_0__.M)
+/* harmony export */   "Mz": () => (/* reexport safe */ _LicenseKey__WEBPACK_IMPORTED_MODULE_0__.M),
+/* harmony export */   "O5": () => (/* reexport safe */ _UserSetting__WEBPACK_IMPORTED_MODULE_2__.O)
 /* harmony export */ });
 /* harmony import */ var _LicenseKey__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5012);
 /* harmony import */ var _Job__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8205);
-var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_LicenseKey__WEBPACK_IMPORTED_MODULE_0__, _Job__WEBPACK_IMPORTED_MODULE_1__]);
-([_LicenseKey__WEBPACK_IMPORTED_MODULE_0__, _Job__WEBPACK_IMPORTED_MODULE_1__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+/* harmony import */ var _UserSetting__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(4323);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_LicenseKey__WEBPACK_IMPORTED_MODULE_0__, _Job__WEBPACK_IMPORTED_MODULE_1__, _UserSetting__WEBPACK_IMPORTED_MODULE_2__]);
+([_LicenseKey__WEBPACK_IMPORTED_MODULE_0__, _Job__WEBPACK_IMPORTED_MODULE_1__, _UserSetting__WEBPACK_IMPORTED_MODULE_2__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+
 
 
 __webpack_async_result__();
@@ -347,14 +469,17 @@ __webpack_async_result__();
 
 __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Bw": () => (/* reexport safe */ _updateUserSetting__WEBPACK_IMPORTED_MODULE_3__.Bw),
 /* harmony export */   "Rf": () => (/* reexport safe */ _getSetting__WEBPACK_IMPORTED_MODULE_0__.Rf),
 /* harmony export */   "Xt": () => (/* reexport safe */ _updateLicenseKey__WEBPACK_IMPORTED_MODULE_1__.Xt)
 /* harmony export */ });
 /* harmony import */ var _getSetting__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2863);
 /* harmony import */ var _updateLicenseKey__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3111);
 /* harmony import */ var _resetJobs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3523);
-var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_getSetting__WEBPACK_IMPORTED_MODULE_0__, _updateLicenseKey__WEBPACK_IMPORTED_MODULE_1__, _resetJobs__WEBPACK_IMPORTED_MODULE_2__]);
-([_getSetting__WEBPACK_IMPORTED_MODULE_0__, _updateLicenseKey__WEBPACK_IMPORTED_MODULE_1__, _resetJobs__WEBPACK_IMPORTED_MODULE_2__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+/* harmony import */ var _updateUserSetting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(1028);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_getSetting__WEBPACK_IMPORTED_MODULE_0__, _updateLicenseKey__WEBPACK_IMPORTED_MODULE_1__, _resetJobs__WEBPACK_IMPORTED_MODULE_2__, _updateUserSetting__WEBPACK_IMPORTED_MODULE_3__]);
+([_getSetting__WEBPACK_IMPORTED_MODULE_0__, _updateLicenseKey__WEBPACK_IMPORTED_MODULE_1__, _resetJobs__WEBPACK_IMPORTED_MODULE_2__, _updateUserSetting__WEBPACK_IMPORTED_MODULE_3__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+
 
 
 
@@ -427,6 +552,48 @@ const {
   useUpdateLicenseKeyMutation,
   endpoints: {
     updateLicenseKey
+  }
+} = api;
+/* unused harmony default export */ var __WEBPACK_DEFAULT_EXPORT__ = ((/* unused pure expression or super */ null && (api)));
+__webpack_async_result__();
+} catch(e) { __webpack_async_result__(e); } });
+
+/***/ }),
+
+/***/ 1028:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Bw": () => (/* binding */ useUpdateUserSettingMutation)
+/* harmony export */ });
+/* unused harmony export updateUserSetting */
+/* harmony import */ var _utils_apiHelpers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7640);
+/* harmony import */ var _rootApi__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6159);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_utils_apiHelpers__WEBPACK_IMPORTED_MODULE_0__, _rootApi__WEBPACK_IMPORTED_MODULE_1__]);
+([_utils_apiHelpers__WEBPACK_IMPORTED_MODULE_0__, _rootApi__WEBPACK_IMPORTED_MODULE_1__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+
+
+const api = _rootApi__WEBPACK_IMPORTED_MODULE_1__/* .rootApi.injectEndpoints */ .e.injectEndpoints({
+  endpoints: builder => ({
+    updateUserSetting: builder.mutation({
+      query: ({
+        id,
+        data
+      }) => _utils_apiHelpers__WEBPACK_IMPORTED_MODULE_0__/* .http.patch */ .dJ.patch(`/setting/${id}/user-setting`, {
+        data
+      }),
+      invalidatesTags: () => [{
+        type: _rootApi__WEBPACK_IMPORTED_MODULE_1__/* .Tags.Setting */ .$.Setting,
+        id: 'LIST'
+      }]
+    })
+  })
+});
+const {
+  useUpdateUserSettingMutation,
+  endpoints: {
+    updateUserSetting
   }
 } = api;
 /* unused harmony default export */ var __WEBPACK_DEFAULT_EXPORT__ = ((/* unused pure expression or super */ null && (api)));
