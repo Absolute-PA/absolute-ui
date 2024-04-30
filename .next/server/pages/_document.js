@@ -64,7 +64,10 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_2__["default"] {
     return (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(next_document__WEBPACK_IMPORTED_MODULE_2__.Html, {
       lang: "en",
       children: [(0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(next_document__WEBPACK_IMPORTED_MODULE_2__.Head, {
-        children: [_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx("style", {
+        children: [_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx("script", {
+          async: true,
+          src: "/__ENV.js"
+        }), _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx("style", {
           "data-emotion-css": this.props.ids?.join(' '),
           dangerouslySetInnerHTML: {
             __html: this.props.css || ''

@@ -1685,7 +1685,8 @@ __webpack_async_result__();
 /* harmony export */   "L": () => (/* binding */ getBackendURL)
 /* harmony export */ });
 function getBackendURL() {
-  return `${window.location.protocol}//${window.location.hostname}:${"8080"}`;
+  const PORT =  true ? "8080" : 0;
+  return `${window.location.protocol}//${window.location.hostname}:${PORT}`;
 }
 
 /***/ }),
