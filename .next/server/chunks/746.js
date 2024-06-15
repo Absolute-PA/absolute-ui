@@ -625,6 +625,10 @@ const usePageAuthorization = ({
 }) => {
   const router = (0,next_router__WEBPACK_IMPORTED_MODULE_0__.useRouter)();
   (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
+    if (!router.pathname || !currentUserRoles) {
+      return;
+    }
+
     const page = _utils_pages__WEBPACK_IMPORTED_MODULE_2__/* .NAVIGATION_PAGES.find */ .F.find(page => router.pathname === page.url); // If the page is not found, redirect to 404
 
     if (!page) {
