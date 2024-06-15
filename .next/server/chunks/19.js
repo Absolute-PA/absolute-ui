@@ -1567,11 +1567,11 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _store_rootApi__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(6159);
 /* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(8473);
-/* harmony import */ var _utils_apiHelpers_getBackendURL__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(7107);
-/* harmony import */ var _utils_constants__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(8269);
-/* harmony import */ var _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(7101);
-var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([js_cookie__WEBPACK_IMPORTED_MODULE_0__, _store_rootApi__WEBPACK_IMPORTED_MODULE_4__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__]);
-([js_cookie__WEBPACK_IMPORTED_MODULE_0__, _store_rootApi__WEBPACK_IMPORTED_MODULE_4__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+/* harmony import */ var _utils_apiHelpers_getBackendURL__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(7107);
+/* harmony import */ var _utils_constants__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(6343);
+/* harmony import */ var _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(7101);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([js_cookie__WEBPACK_IMPORTED_MODULE_0__, _store_rootApi__WEBPACK_IMPORTED_MODULE_4__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__]);
+([js_cookie__WEBPACK_IMPORTED_MODULE_0__, _store_rootApi__WEBPACK_IMPORTED_MODULE_4__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
 function _EMOTION_STRINGIFIED_CSS_ERROR__() { return "You have tried to stringify object returned from `css` function. It isn't supposed to be used directly (e.g. as value of the `className` prop), but rather handed to emotion so it can handle it (e.g. as value of `css` prop)."; }
 
 
@@ -1597,7 +1597,7 @@ const SoundUploaderMultiple = ({
   soundType
 }) => {
   const dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_3__.useDispatch)();
-  const action = `${(0,_utils_apiHelpers_getBackendURL__WEBPACK_IMPORTED_MODULE_7__/* .getBackendURL */ .L)()}/sound/upload/${soundType}`;
+  const action = `${(0,_utils_apiHelpers_getBackendURL__WEBPACK_IMPORTED_MODULE_8__/* .getBackendURL */ .L)()}/sound/upload/${soundType}`;
 
   const handleChange = ({
     file
@@ -1626,19 +1626,19 @@ const SoundUploaderMultiple = ({
     }
   };
 
-  return (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(Dragger, {
+  return (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(Dragger, {
     action: action,
     onChange: handleChange,
     accept: "audio/*",
     css: _ref,
     headers: {
-      Authorization: `Bearer ${js_cookie__WEBPACK_IMPORTED_MODULE_0__["default"].get(_utils_constants__WEBPACK_IMPORTED_MODULE_8__/* .AUTH_ACCESS_TOKEN_KEY */ ._)}`
+      Authorization: `Bearer ${js_cookie__WEBPACK_IMPORTED_MODULE_0__["default"].get(_utils_constants__WEBPACK_IMPORTED_MODULE_6__/* .AUTH_ACCESS_TOKEN_KEY */ ._)}`
     },
     multiple: true,
-    children: [_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx("p", {
+    children: [_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx("p", {
       className: "ant-upload-drag-icon",
-      children: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx(_ant_design_icons__WEBPACK_IMPORTED_MODULE_1__.InboxOutlined, {})
-    }), _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx("p", {
+      children: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx(_ant_design_icons__WEBPACK_IMPORTED_MODULE_1__.InboxOutlined, {})
+    }), _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx("p", {
       className: "ant-upload-text",
       children: "Click or drag files to this area to upload"
     })]
@@ -1665,11 +1665,11 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(9915);
 /* harmony import */ var _store_rootApi__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(6159);
-/* harmony import */ var _utils_constants__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(8269);
+/* harmony import */ var _utils_constants__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(6343);
 /* harmony import */ var _utils_apiHelpers_getBackendURL__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(7107);
-/* harmony import */ var _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(7101);
-var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([js_cookie__WEBPACK_IMPORTED_MODULE_3__, _store_rootApi__WEBPACK_IMPORTED_MODULE_4__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__]);
-([js_cookie__WEBPACK_IMPORTED_MODULE_3__, _store_rootApi__WEBPACK_IMPORTED_MODULE_4__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+/* harmony import */ var _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(7101);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([js_cookie__WEBPACK_IMPORTED_MODULE_3__, _store_rootApi__WEBPACK_IMPORTED_MODULE_4__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__]);
+([js_cookie__WEBPACK_IMPORTED_MODULE_3__, _store_rootApi__WEBPACK_IMPORTED_MODULE_4__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
 
 
 
@@ -1682,7 +1682,7 @@ const SoundUploaderSingle = ({
   id
 }) => {
   const dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_2__.useDispatch)();
-  const token = js_cookie__WEBPACK_IMPORTED_MODULE_3__["default"].get(_utils_constants__WEBPACK_IMPORTED_MODULE_6__/* .AUTH_ACCESS_TOKEN_KEY */ ._);
+  const token = js_cookie__WEBPACK_IMPORTED_MODULE_3__["default"].get(_utils_constants__WEBPACK_IMPORTED_MODULE_5__/* .AUTH_ACCESS_TOKEN_KEY */ ._);
   const action = `${(0,_utils_apiHelpers_getBackendURL__WEBPACK_IMPORTED_MODULE_7__/* .getBackendURL */ .L)()}/sound/${id}/upload`;
 
   const handleChange = ({
@@ -1697,7 +1697,7 @@ const SoundUploaderSingle = ({
     }
   };
 
-  return _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Upload, {
+  return _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Upload, {
     action: action,
     showUploadList: false,
     maxCount: 1,
@@ -1705,8 +1705,8 @@ const SoundUploaderSingle = ({
     headers: {
       Authorization: `Bearer ${token}`
     },
-    children: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Button, {
-      icon: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(_ant_design_icons__WEBPACK_IMPORTED_MODULE_0__.UploadOutlined, {}),
+    children: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Button, {
+      icon: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx(_ant_design_icons__WEBPACK_IMPORTED_MODULE_0__.UploadOutlined, {}),
       children: "Replace File"
     })
   });

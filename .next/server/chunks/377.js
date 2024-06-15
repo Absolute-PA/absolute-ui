@@ -186,12 +186,14 @@ const api = _rootApi__WEBPACK_IMPORTED_MODULE_1__/* .rootApi.injectEndpoints */ 
       query: ({
         username,
         password,
-        email
+        email,
+        roles
       }) => _utils_apiHelpers__WEBPACK_IMPORTED_MODULE_0__/* .http.post */ .dJ.post(`/auth/register`, {
         data: {
           username,
           email,
-          password
+          password,
+          roles
         }
       }),
       invalidatesTags: [{
@@ -1702,8 +1704,8 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* unused harmony export getAxiosInstance */
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9648);
 /* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(9915);
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(8269);
-/* harmony import */ var _getBackendURL__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7107);
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(6343);
+/* harmony import */ var _getBackendURL__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(7107);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([axios__WEBPACK_IMPORTED_MODULE_0__, js_cookie__WEBPACK_IMPORTED_MODULE_1__]);
 ([axios__WEBPACK_IMPORTED_MODULE_0__, js_cookie__WEBPACK_IMPORTED_MODULE_1__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
@@ -1723,13 +1725,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
  * @param {string} [baseURL] - base url for the request
  * @returns {AxiosInstance} a custom axios instance
  */
-const getAxiosInstance = (baseURL = (0,_getBackendURL__WEBPACK_IMPORTED_MODULE_2__/* .getBackendURL */ .L)(), accessTokenKey = _constants__WEBPACK_IMPORTED_MODULE_3__/* .AUTH_ACCESS_TOKEN_KEY */ ._) => {
+const getAxiosInstance = (baseURL = (0,_getBackendURL__WEBPACK_IMPORTED_MODULE_3__/* .getBackendURL */ .L)(), accessTokenKey = _constants__WEBPACK_IMPORTED_MODULE_2__/* .AUTH_ACCESS_TOKEN_KEY */ ._) => {
   const instance = axios__WEBPACK_IMPORTED_MODULE_0__["default"].create({
     baseURL
   });
 
   if (accessTokenKey) {
-    const token = js_cookie__WEBPACK_IMPORTED_MODULE_1__["default"].get(_constants__WEBPACK_IMPORTED_MODULE_3__/* .AUTH_ACCESS_TOKEN_KEY */ ._);
+    const token = js_cookie__WEBPACK_IMPORTED_MODULE_1__["default"].get(_constants__WEBPACK_IMPORTED_MODULE_2__/* .AUTH_ACCESS_TOKEN_KEY */ ._);
 
     if (token) {
       instance.interceptors.request.use(config => {
@@ -1751,7 +1753,7 @@ const axiosBaseQuery = options => async ({
   responseType
 }) => {
   try {
-    const baseUrl = (0,_getBackendURL__WEBPACK_IMPORTED_MODULE_2__/* .getBackendURL */ .L)();
+    const baseUrl = (0,_getBackendURL__WEBPACK_IMPORTED_MODULE_3__/* .getBackendURL */ .L)();
     const axios = getAxiosInstance(baseUrl, options?.accessTokenKey); // normal axios request
 
     const result = await axios({
@@ -1828,7 +1830,7 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony export */   "yL": () => (/* binding */ removeAccessToken)
 /* harmony export */ });
 /* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9915);
-/* harmony import */ var _utils_constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8269);
+/* harmony import */ var _utils_constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6343);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([js_cookie__WEBPACK_IMPORTED_MODULE_0__]);
 js_cookie__WEBPACK_IMPORTED_MODULE_0__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
 
@@ -1866,13 +1868,37 @@ __webpack_async_result__();
 
 /***/ }),
 
-/***/ 8269:
+/***/ 6343:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "_": () => (/* binding */ AUTH_ACCESS_TOKEN_KEY)
-/* harmony export */ });
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "_": () => (/* binding */ AUTH_ACCESS_TOKEN_KEY),
+  "l": () => (/* binding */ ROLE_OPTIONS)
+});
+
+;// CONCATENATED MODULE: ./store/api/user/types.ts
+let Role;
+
+(function (Role) {
+  Role["User"] = "user";
+  Role["Admin"] = "admin";
+  Role["Viewer"] = "viewer";
+})(Role || (Role = {}));
+;// CONCATENATED MODULE: ./utils/constants.ts
+
 const AUTH_ACCESS_TOKEN_KEY = 'accessToken';
+const ROLE_OPTIONS = [{
+  value: Role.Admin,
+  label: 'Admin'
+}, {
+  value: Role.User,
+  label: 'User'
+}, {
+  value: Role.Viewer,
+  label: 'Viewer'
+}];
 
 /***/ })
 

@@ -106,6 +106,11 @@ var _ref7 =  true ? {
   styles: "height:100%;overflow-y:auto;padding:1.25rem"
 } : 0;
 
+var _ref8 =  true ? {
+  name: "cgqc82",
+  styles: "background-color:transparent !important;text-align:center"
+} : 0;
+
 const MainLayout = ({
   children
 }) => {
@@ -120,6 +125,7 @@ const MainLayout = ({
   const {
     data: setting
   } = (0,_store_api_setting__WEBPACK_IMPORTED_MODULE_8__/* .useGetSettingQuery */ .Rf)();
+  const currentYear = new Date().getFullYear();
   const pageId = (0,react__WEBPACK_IMPORTED_MODULE_1__.useMemo)(() => router.pathname.split('/')[1] || 'home', [router.pathname]);
   const items = _utils_pages__WEBPACK_IMPORTED_MODULE_4__/* .NAVIGATION_PAGES.filter */ .F.filter(item => item.roles ? item.roles.some(r => currentUser?.roles.includes(r)) : true).map(page => (0,_utils_antHelpers__WEBPACK_IMPORTED_MODULE_10__/* .getMenuItem */ .L)({
     label: page.pageName,
@@ -185,6 +191,15 @@ const MainLayout = ({
       }), _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx(Content, {
         css: _ref7,
         children: children
+      }), (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(Footer, {
+        css: _ref8,
+        children: ["\xA9", currentYear, " Absolute PA. Contact us:", ' ', _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx("a", {
+          href: "mailto:service@absolutepa.com.au",
+          children: "service@absolutepa.com.au"
+        }), ' ', "or ", _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx("a", {
+          href: "tel:0390563988",
+          children: "03 9056 3988"
+        }), ' ']
       })]
     })]
   });
@@ -433,91 +448,6 @@ const getMenuItem = ({
   };
   return item;
 };
-
-/***/ }),
-
-/***/ 8340:
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "F": () => (/* binding */ NAVIGATION_PAGES),
-/* harmony export */   "e": () => (/* binding */ NON_PROTECTED_PAGES)
-/* harmony export */ });
-/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7066);
-/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_ant_design_icons__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6689);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(4563);
-/* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(7197);
-/* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(7101);
-var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__]);
-([_fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
-
-
-
-
-
-const NAVIGATION_PAGES = [{
-  id: 'home',
-  url: '/',
-  pageName: 'Dashboard',
-  icon: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(_ant_design_icons__WEBPACK_IMPORTED_MODULE_0__.HomeFilled, {})
-}, {
-  id: 'schedule',
-  url: '/schedule',
-  pageName: 'Schedule',
-  icon: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(_ant_design_icons__WEBPACK_IMPORTED_MODULE_0__.CalendarOutlined, {})
-}, {
-  id: 'sound',
-  url: '/sound',
-  pageName: 'Sound Management',
-  icon: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(_ant_design_icons__WEBPACK_IMPORTED_MODULE_0__.BellFilled, {})
-}, {
-  id: 'music',
-  url: '/music',
-  pageName: 'Music Management',
-  icon: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(_ant_design_icons__WEBPACK_IMPORTED_MODULE_0__.PlayCircleOutlined, {})
-}, {
-  id: 'livetalk',
-  url: '/liveTalk',
-  pageName: 'Live Paging',
-  icon: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__.FontAwesomeIcon, {
-    icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__.faPhoneVolume
-  })
-}, {
-  id: 'text-to-audio',
-  url: '/text-to-audio',
-  pageName: 'Text to audio',
-  icon: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(_ant_design_icons__WEBPACK_IMPORTED_MODULE_0__.MessageOutlined, {})
-}, {
-  id: 'voice-record',
-  url: '/voice-record',
-  pageName: 'Voice Record',
-  icon: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__.FontAwesomeIcon, {
-    icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__.faMicrophone
-  })
-}, {
-  id: 'user',
-  url: '/user',
-  pageName: 'User Management',
-  icon: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__.FontAwesomeIcon, {
-    icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__.faUsers
-  }),
-  roles: ['master', 'admin']
-}, {
-  id: 'settings',
-  url: '/settings',
-  pageName: 'Settings',
-  icon: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__.FontAwesomeIcon, {
-    icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__.faGear
-  })
-}];
-const NON_PROTECTED_PAGES = ['/login', '/register'];
-__webpack_async_result__();
-} catch(e) { __webpack_async_result__(e); } });
 
 /***/ }),
 

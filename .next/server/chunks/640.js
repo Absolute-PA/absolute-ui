@@ -118,7 +118,7 @@ const LicenseKeyBanner = _ref => {
   } = (0,_store_api_setting__WEBPACK_IMPORTED_MODULE_2__/* .useGetSettingQuery */ .Rf)();
   if (!setting?.isExpired) return null;
   return _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx(antd__WEBPACK_IMPORTED_MODULE_0__.Alert, _objectSpread({
-    message: "Your License Key has expired. Please update it with the new one to continue using the service."
+    message: "Something went wrong, please reset the server."
   }, props));
 };
 __webpack_async_result__();

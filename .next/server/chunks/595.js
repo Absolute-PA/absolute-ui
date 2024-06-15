@@ -76,7 +76,7 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony export */ });
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5725);
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(antd__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _store_api_user_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7379);
+/* harmony import */ var _utils_constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6343);
 /* harmony import */ var _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7101);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__]);
 _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
@@ -98,13 +98,6 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 const {
   Option
 } = antd__WEBPACK_IMPORTED_MODULE_0__.Select;
-const options = [{
-  value: _store_api_user_types__WEBPACK_IMPORTED_MODULE_1__/* .Role.Admin */ .u.Admin,
-  label: 'Admin'
-}, {
-  value: _store_api_user_types__WEBPACK_IMPORTED_MODULE_1__/* .Role.User */ .u.User,
-  label: 'User'
-}];
 const EditableCell = _ref => {
   let {
     editing,
@@ -128,7 +121,7 @@ const EditableCell = _ref => {
     mode: "multiple",
     placeholder: "Please select",
     onChange: handleChange,
-    options: options
+    options: _utils_constants__WEBPACK_IMPORTED_MODULE_1__/* .ROLE_OPTIONS */ .l
   }) : _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx(antd__WEBPACK_IMPORTED_MODULE_0__.Input, {});
   return _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx("td", _objectSpread(_objectSpread({}, restProps), {}, {
     children: editing ? _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx(antd__WEBPACK_IMPORTED_MODULE_0__.Form.Item, {
@@ -547,21 +540,6 @@ var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_Edi
 
 __webpack_async_result__();
 } catch(e) { __webpack_async_result__(e); } });
-
-/***/ }),
-
-/***/ 7379:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "u": () => (/* binding */ Role)
-/* harmony export */ });
-let Role;
-
-(function (Role) {
-  Role["User"] = "user";
-  Role["Admin"] = "admin";
-})(Role || (Role = {}));
 
 /***/ })
 

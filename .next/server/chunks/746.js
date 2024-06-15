@@ -10,26 +10,16 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "g": () => (/* binding */ AuthLayout)
 /* harmony export */ });
-/* harmony import */ var _emotion_styled_base__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4243);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6689);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7101);
-var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_emotion_styled_base__WEBPACK_IMPORTED_MODULE_0__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__]);
-([_emotion_styled_base__WEBPACK_IMPORTED_MODULE_0__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
-
-
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6689);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7101);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__]);
+_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
 function _EMOTION_STRINGIFIED_CSS_ERROR__() { return "You have tried to stringify object returned from `css` function. It isn't supposed to be used directly (e.g. as value of the `className` prop), but rather handed to emotion so it can handle it (e.g. as value of `css` prop)."; }
 
 
 
 
-
-const StyledPageName = /*#__PURE__*/(0,_emotion_styled_base__WEBPACK_IMPORTED_MODULE_0__["default"])("div",  true ? {
-  target: "e1vwdecx0"
-} : 0)( true ? {
-  name: "it7igo",
-  styles: "position:absolute;bottom:8rem;left:2.5rem;z-index:10;font-size:3rem;line-height:1;font-weight:700;--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity));;text-shadow:var(--colorTextBase) 2px 2px 0;&:before{position:absolute;bottom:-1.25rem;left:0px;height:0.25rem;width:100%;--tw-bg-opacity:1;background-color:rgb(64 130 255 / var(--tw-bg-opacity));--tw-shadow:0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);;content:'';}"
-} : 0);
 
 var _ref =  true ? {
   name: "44hlzp",
@@ -55,13 +45,13 @@ const AuthLayout = ({
   children,
   pageName
 }) => {
-  return _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx("div", {
+  return _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx("div", {
     css: _ref,
-    children: (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+    children: (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
       css: _ref2,
-      children: [_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx("div", {
+      children: [_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx("div", {
         css: _ref3,
-        children: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx("img", {
+        children: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx("img", {
           css: _ref4,
           src: "/img/absolute-pa-logo.png",
           alt: "AbsolutePA"
@@ -349,10 +339,12 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _utils_auth__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(7811);
 /* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(3377);
-/* harmony import */ var _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(7101);
-var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_utils_auth__WEBPACK_IMPORTED_MODULE_3__, _store__WEBPACK_IMPORTED_MODULE_4__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__]);
-([_utils_auth__WEBPACK_IMPORTED_MODULE_3__, _store__WEBPACK_IMPORTED_MODULE_4__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+/* harmony import */ var _hooks_usePageAuthorization__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(7641);
+/* harmony import */ var _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(7101);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_utils_auth__WEBPACK_IMPORTED_MODULE_3__, _store__WEBPACK_IMPORTED_MODULE_4__, _hooks_usePageAuthorization__WEBPACK_IMPORTED_MODULE_5__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__]);
+([_utils_auth__WEBPACK_IMPORTED_MODULE_3__, _store__WEBPACK_IMPORTED_MODULE_4__, _hooks_usePageAuthorization__WEBPACK_IMPORTED_MODULE_5__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
 function _EMOTION_STRINGIFIED_CSS_ERROR__() { return "You have tried to stringify object returned from `css` function. It isn't supposed to be used directly (e.g. as value of the `className` prop), but rather handed to emotion so it can handle it (e.g. as value of `css` prop)."; }
+
 
 
 
@@ -374,6 +366,9 @@ const ProtectedPage = ({
   const {
     data: currentUser
   } = (0,_store__WEBPACK_IMPORTED_MODULE_4__/* .useGetCurrentUserQuery */ .XC)();
+  (0,_hooks_usePageAuthorization__WEBPACK_IMPORTED_MODULE_5__/* .usePageAuthorization */ .J)({
+    currentUserRoles: currentUser?.roles
+  });
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
     // If no session exists, display access denied message
     const token = (0,_utils_auth__WEBPACK_IMPORTED_MODULE_3__/* .getAccessToken */ .hP)();
@@ -384,11 +379,11 @@ const ProtectedPage = ({
     } // eslint-disable-next-line react-hooks/exhaustive-deps
 
   }, []);
-  return currentUser ? _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.Fragment, {
+  return currentUser ? _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx(_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.Fragment, {
     children: children
-  }) : _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx("div", {
+  }) : _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx("div", {
     css: _ref,
-    children: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Spin, {
+    children: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Spin, {
       size: "large"
     })
   });
@@ -407,16 +402,15 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6689);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1853);
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(5725);
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(antd__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(7066);
-/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_ant_design_icons__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(3377);
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5725);
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(antd__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7066);
+/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_ant_design_icons__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(3377);
+/* harmony import */ var _utils_constants__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(6343);
 /* harmony import */ var _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(7101);
-var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_store__WEBPACK_IMPORTED_MODULE_4__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__]);
-([_store__WEBPACK_IMPORTED_MODULE_4__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_store__WEBPACK_IMPORTED_MODULE_3__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__]);
+([_store__WEBPACK_IMPORTED_MODULE_3__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
 function _EMOTION_STRINGIFIED_CSS_ERROR__() { return "You have tried to stringify object returned from `css` function. It isn't supposed to be used directly (e.g. as value of the `className` prop), but rather handed to emotion so it can handle it (e.g. as value of `css` prop)."; }
 
 
@@ -444,8 +438,7 @@ const RegisterForm = ({
   hasBlockBtn = true,
   confirmBtnPosition
 }) => {
-  const [form] = antd__WEBPACK_IMPORTED_MODULE_2__.Form.useForm();
-  const router = (0,next_router__WEBPACK_IMPORTED_MODULE_1__.useRouter)();
+  const [form] = antd__WEBPACK_IMPORTED_MODULE_1__.Form.useForm();
   const {
     0: isLoading,
     1: setIsLoading
@@ -454,7 +447,7 @@ const RegisterForm = ({
     0: error,
     1: setError
   } = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null);
-  const [register] = (0,_store__WEBPACK_IMPORTED_MODULE_4__/* .usePostRegisterMutation */ .Ml)();
+  const [register] = (0,_store__WEBPACK_IMPORTED_MODULE_3__/* .usePostRegisterMutation */ .Ml)();
 
   const handleSubmitForm = async values => {
     setIsLoading(true);
@@ -462,17 +455,18 @@ const RegisterForm = ({
     register({
       username: values.username,
       password: values.password,
-      email: values.email
+      email: values.email,
+      roles: values.roles
     }).then(data => {
       setIsLoading(false);
 
       if ('error' in data) {
         const msg = data.error?.data?.error;
-        antd__WEBPACK_IMPORTED_MODULE_2__.message.error(msg);
+        antd__WEBPACK_IMPORTED_MODULE_1__.message.error(msg);
         return;
       }
 
-      antd__WEBPACK_IMPORTED_MODULE_2__.message.success('Sucess create new user');
+      antd__WEBPACK_IMPORTED_MODULE_1__.message.success('Sucess create new user');
     });
   };
 
@@ -484,35 +478,35 @@ const RegisterForm = ({
       css: [hasSpacing && {
         "marginTop": "1.5rem"
       },  true ? "" : 0,  true ? "" : 0],
-      children: (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(antd__WEBPACK_IMPORTED_MODULE_2__.Form, {
+      children: (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(antd__WEBPACK_IMPORTED_MODULE_1__.Form, {
         css: _ref2,
         name: "login-form",
         layout: "vertical",
         onFinish: handleSubmitForm,
         form: form,
-        children: [_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(antd__WEBPACK_IMPORTED_MODULE_2__.Form.Item, {
+        children: [_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Form.Item, {
           name: "username",
           label: "Username",
           rules: [{
             required: true,
             message: 'Please input your username'
           }],
-          children: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(antd__WEBPACK_IMPORTED_MODULE_2__.Input, {
-            prefix: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(_ant_design_icons__WEBPACK_IMPORTED_MODULE_3__.UserOutlined, {}),
+          children: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Input, {
+            prefix: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(_ant_design_icons__WEBPACK_IMPORTED_MODULE_2__.UserOutlined, {}),
             placeholder: "Username"
           })
-        }), _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(antd__WEBPACK_IMPORTED_MODULE_2__.Form.Item, {
+        }), _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Form.Item, {
           name: "email",
           label: "Email",
           rules: [{
             required: true,
             message: 'Please input your email'
           }],
-          children: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(antd__WEBPACK_IMPORTED_MODULE_2__.Input, {
-            prefix: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(_ant_design_icons__WEBPACK_IMPORTED_MODULE_3__.UserOutlined, {}),
+          children: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Input, {
+            prefix: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(_ant_design_icons__WEBPACK_IMPORTED_MODULE_2__.UserOutlined, {}),
             placeholder: "Email"
           })
-        }), _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(antd__WEBPACK_IMPORTED_MODULE_2__.Form.Item, {
+        }), _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Form.Item, {
           className: "password-input",
           name: "password",
           label: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx("div", {
@@ -525,10 +519,28 @@ const RegisterForm = ({
             required: true,
             message: 'Please input your password'
           }],
-          children: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(antd__WEBPACK_IMPORTED_MODULE_2__.Input.Password, {
-            prefix: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(_ant_design_icons__WEBPACK_IMPORTED_MODULE_3__.LockOutlined, {}),
+          children: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Input.Password, {
+            prefix: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(_ant_design_icons__WEBPACK_IMPORTED_MODULE_2__.LockOutlined, {}),
             type: "password",
             placeholder: "Password"
+          })
+        }), _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Form.Item, {
+          className: "roles",
+          name: "roles",
+          label: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx("div", {
+            className: "roles",
+            children: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx("span", {
+              children: 'Roles'
+            })
+          }),
+          rules: [{
+            required: true,
+            message: 'Please input roles'
+          }],
+          children: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Select, {
+            mode: "multiple",
+            placeholder: "Please select",
+            options: _utils_constants__WEBPACK_IMPORTED_MODULE_4__/* .ROLE_OPTIONS */ .l
           })
         }), _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx("div", {
           css: ["text-align:center;", confirmBtnPosition === 'left' && {
@@ -536,14 +548,14 @@ const RegisterForm = ({
           }, confirmBtnPosition === 'right' && {
             "textAlign": "right"
           },  true ? "" : 0,  true ? "" : 0],
-          children: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(antd__WEBPACK_IMPORTED_MODULE_2__.Button, {
+          children: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Button, {
             type: "primary",
             htmlType: "submit",
             loading: isLoading,
             block: hasBlockBtn,
             children: "Register"
           })
-        }), !!error && _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(antd__WEBPACK_IMPORTED_MODULE_2__.Alert, {
+        }), !!error && _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Alert, {
           style: {
             marginBottom: '16px'
           },
@@ -586,6 +598,136 @@ var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_Log
 
 
 
+__webpack_async_result__();
+} catch(e) { __webpack_async_result__(e); } });
+
+/***/ }),
+
+/***/ 7641:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "J": () => (/* binding */ usePageAuthorization)
+/* harmony export */ });
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1853);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6689);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _utils_pages__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(8340);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_utils_pages__WEBPACK_IMPORTED_MODULE_2__]);
+_utils_pages__WEBPACK_IMPORTED_MODULE_2__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
+
+
+
+const usePageAuthorization = ({
+  currentUserRoles
+}) => {
+  const router = (0,next_router__WEBPACK_IMPORTED_MODULE_0__.useRouter)();
+  (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
+    const page = _utils_pages__WEBPACK_IMPORTED_MODULE_2__/* .NAVIGATION_PAGES.find */ .F.find(page => router.pathname === page.url); // If the page is not found, redirect to 404
+
+    if (!page) {
+      router.push('/unauthorized');
+    } // If the page has roles and the current user role is not included in the page roles, redirect to 404
+
+
+    if (page?.roles && !page.roles.some(role => currentUserRoles?.includes(role))) {
+      router.push('/unauthorized');
+    }
+  }, [currentUserRoles, router]);
+};
+__webpack_async_result__();
+} catch(e) { __webpack_async_result__(e); } });
+
+/***/ }),
+
+/***/ 8340:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "F": () => (/* binding */ NAVIGATION_PAGES),
+/* harmony export */   "e": () => (/* binding */ NON_PROTECTED_PAGES)
+/* harmony export */ });
+/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7066);
+/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_ant_design_icons__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6689);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(4563);
+/* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(7197);
+/* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(7101);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__]);
+([_fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+
+
+
+
+
+const NAVIGATION_PAGES = [{
+  id: 'home',
+  url: '/',
+  pageName: 'Dashboard',
+  icon: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(_ant_design_icons__WEBPACK_IMPORTED_MODULE_0__.HomeFilled, {})
+}, {
+  id: 'schedule',
+  url: '/schedule',
+  pageName: 'Schedule',
+  icon: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(_ant_design_icons__WEBPACK_IMPORTED_MODULE_0__.CalendarOutlined, {}),
+  roles: ['master', 'admin', 'user']
+}, {
+  id: 'sound',
+  url: '/sound',
+  pageName: 'Sound Management',
+  icon: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(_ant_design_icons__WEBPACK_IMPORTED_MODULE_0__.BellFilled, {}),
+  roles: ['master', 'admin', 'user']
+}, {
+  id: 'music',
+  url: '/music',
+  pageName: 'Music Management',
+  icon: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(_ant_design_icons__WEBPACK_IMPORTED_MODULE_0__.PlayCircleOutlined, {}),
+  roles: ['master', 'admin', 'user']
+}, {
+  id: 'livetalk',
+  url: '/liveTalk',
+  pageName: 'Live Paging',
+  icon: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__.FontAwesomeIcon, {
+    icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__.faPhoneVolume
+  }),
+  roles: ['master', 'admin', 'user']
+}, {
+  id: 'text-to-audio',
+  url: '/text-to-audio',
+  pageName: 'Text to audio',
+  icon: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(_ant_design_icons__WEBPACK_IMPORTED_MODULE_0__.MessageOutlined, {}),
+  roles: ['master', 'admin', 'user']
+}, {
+  id: 'voice-record',
+  url: '/voice-record',
+  pageName: 'Voice Record',
+  icon: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__.FontAwesomeIcon, {
+    icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__.faMicrophone
+  }),
+  roles: ['master', 'admin', 'user']
+}, {
+  id: 'user',
+  url: '/user',
+  pageName: 'User Management',
+  icon: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__.FontAwesomeIcon, {
+    icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__.faUsers
+  }),
+  roles: ['master', 'admin']
+}, {
+  id: 'settings',
+  url: '/settings',
+  pageName: 'Settings',
+  icon: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__.FontAwesomeIcon, {
+    icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__.faGear
+  }),
+  roles: ['master', 'admin', 'user']
+}];
+const NON_PROTECTED_PAGES = ['/login', '/register', '/unauthorized'];
 __webpack_async_result__();
 } catch(e) { __webpack_async_result__(e); } });
 
