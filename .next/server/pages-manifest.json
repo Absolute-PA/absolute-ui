@@ -9,11 +9,11 @@
   "/schedule": "pages/schedule.html",
   "/settings": "pages/settings.html",
   "/sound": "pages/sound.html",
-  "/text-to-audio": "pages/text-to-audio.html",
   "/stream": "pages/stream.html",
+  "/text-to-audio": "pages/text-to-audio.html",
   "/unauthorized": "pages/unauthorized.html",
-  "/voice-record": "pages/voice-record.html",
   "/user": "pages/user.html",
+  "/voice-record": "pages/voice-record.html",
   "/_error": "pages/_error.js",
   "/404": "pages/404.html"
 }

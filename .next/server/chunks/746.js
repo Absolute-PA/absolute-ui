@@ -731,7 +731,7 @@ const NAVIGATION_PAGES = [{
   }),
   roles: ['master', 'admin', 'user']
 }];
-const NON_PROTECTED_PAGES = ['/login', '/register', '/unauthorized'];
+const NON_PROTECTED_PAGES = ['/login', '/register', '/unauthorized', '/stream'];
 __webpack_async_result__();
 } catch(e) { __webpack_async_result__(e); } });
 
