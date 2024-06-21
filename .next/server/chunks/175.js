@@ -1998,9 +1998,11 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony import */ var _EventList__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(876);
 /* harmony import */ var _ScheduleListEditButton__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(4155);
 /* harmony import */ var _ScheduleListDeleteButton__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(3954);
-/* harmony import */ var _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(7101);
-var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_store__WEBPACK_IMPORTED_MODULE_4__, _CreateEventButton__WEBPACK_IMPORTED_MODULE_5__, _EventList__WEBPACK_IMPORTED_MODULE_6__, _ScheduleListEditButton__WEBPACK_IMPORTED_MODULE_7__, _ScheduleListDeleteButton__WEBPACK_IMPORTED_MODULE_8__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__]);
-([_store__WEBPACK_IMPORTED_MODULE_4__, _CreateEventButton__WEBPACK_IMPORTED_MODULE_5__, _EventList__WEBPACK_IMPORTED_MODULE_6__, _ScheduleListEditButton__WEBPACK_IMPORTED_MODULE_7__, _ScheduleListDeleteButton__WEBPACK_IMPORTED_MODULE_8__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+/* harmony import */ var _ScheduleListCloneButton__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(5672);
+/* harmony import */ var _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(7101);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_store__WEBPACK_IMPORTED_MODULE_4__, _CreateEventButton__WEBPACK_IMPORTED_MODULE_5__, _EventList__WEBPACK_IMPORTED_MODULE_6__, _ScheduleListEditButton__WEBPACK_IMPORTED_MODULE_7__, _ScheduleListDeleteButton__WEBPACK_IMPORTED_MODULE_8__, _ScheduleListCloneButton__WEBPACK_IMPORTED_MODULE_9__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__]);
+([_store__WEBPACK_IMPORTED_MODULE_4__, _CreateEventButton__WEBPACK_IMPORTED_MODULE_5__, _EventList__WEBPACK_IMPORTED_MODULE_6__, _ScheduleListEditButton__WEBPACK_IMPORTED_MODULE_7__, _ScheduleListDeleteButton__WEBPACK_IMPORTED_MODULE_8__, _ScheduleListCloneButton__WEBPACK_IMPORTED_MODULE_9__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+
 
 
 
@@ -2018,7 +2020,7 @@ const columns = [{
   key: 'name',
   render: (text, {
     color
-  }) => _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Tag, {
+  }) => _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Tag, {
     color: color,
     children: text
   })
@@ -2026,21 +2028,21 @@ const columns = [{
   title: 'Effective Date',
   dataIndex: 'startDate',
   key: 'startDate',
-  render: date => _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx("span", {
+  render: date => _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx("span", {
     children: dayjs__WEBPACK_IMPORTED_MODULE_2___default()(date).format('DD/MM/YYYY')
   })
 }, {
   title: 'Expiration Date',
   dataIndex: 'endDate',
   key: 'endDate',
-  render: date => _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx("span", {
+  render: date => _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx("span", {
     children: dayjs__WEBPACK_IMPORTED_MODULE_2___default()(date).format('DD/MM/YYYY')
   })
 }, {
   title: 'Enable on Week Days',
   dataIndex: 'weekDays',
   key: 'weekDays',
-  render: weekDays => weekDays.map(day => _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Tag, {
+  render: weekDays => weekDays.map(day => _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Tag, {
     color: "blue",
     children: _utils_options__WEBPACK_IMPORTED_MODULE_3__/* .WeekDayOptions.find */ .O.find(option => option.value === day)?.label
   }, day))
@@ -2050,7 +2052,7 @@ const columns = [{
   key: 'includeDates',
   render: dates => {
     const sortedDate = [...dates].sort((a, b) => dayjs__WEBPACK_IMPORTED_MODULE_2___default()(a).unix() - dayjs__WEBPACK_IMPORTED_MODULE_2___default()(b).unix());
-    return sortedDate.map(date => _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Tag, {
+    return sortedDate.map(date => _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Tag, {
       color: "green",
       children: dayjs__WEBPACK_IMPORTED_MODULE_2___default()(date).format('DD/MM/YYYY')
     }, date));
@@ -2061,7 +2063,7 @@ const columns = [{
   key: 'excludeDates',
   render: dates => {
     const sortedDate = [...dates].sort((a, b) => dayjs__WEBPACK_IMPORTED_MODULE_2___default()(a).unix() - dayjs__WEBPACK_IMPORTED_MODULE_2___default()(b).unix());
-    return sortedDate.map(date => _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Tag, {
+    return sortedDate.map(date => _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Tag, {
       color: "red",
       children: dayjs__WEBPACK_IMPORTED_MODULE_2___default()(date).format('DD/MM/YYYY')
     }, date));
@@ -2069,11 +2071,13 @@ const columns = [{
 }, {
   title: 'Actions',
   key: 'actions',
-  render: (_, record) => (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(antd__WEBPACK_IMPORTED_MODULE_1__.Space, {
+  render: (_, record) => (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)(antd__WEBPACK_IMPORTED_MODULE_1__.Space, {
     size: "middle",
-    children: [_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx(_ScheduleListEditButton__WEBPACK_IMPORTED_MODULE_7__/* .ScheduleListEditButton */ .C, {
+    children: [_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx(_ScheduleListEditButton__WEBPACK_IMPORTED_MODULE_7__/* .ScheduleListEditButton */ .C, {
       schedule: record
-    }), _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx(_ScheduleListDeleteButton__WEBPACK_IMPORTED_MODULE_8__/* .ScheduleListDeleteButton */ .j, {
+    }), _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx(_ScheduleListCloneButton__WEBPACK_IMPORTED_MODULE_9__/* .ScheduleListCloneButton */ .N, {
+      scheduleId: record._id
+    }), _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx(_ScheduleListDeleteButton__WEBPACK_IMPORTED_MODULE_8__/* .ScheduleListDeleteButton */ .j, {
       scheduleId: record._id
     })]
   })
@@ -2089,9 +2093,9 @@ const ScheduleList = ({
   } = (0,_store__WEBPACK_IMPORTED_MODULE_4__/* .useGetSchedulesQuery */ .xV)(undefined);
   const filteredColumns = columns.filter(item => visibleColumns.includes(item.key));
 
-  const expandedRowRender = record => _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx(_EventList__WEBPACK_IMPORTED_MODULE_6__/* .EventList */ .q, {
+  const expandedRowRender = record => _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx(_EventList__WEBPACK_IMPORTED_MODULE_6__/* .EventList */ .q, {
     events: record.events,
-    titleExtra: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx(_CreateEventButton__WEBPACK_IMPORTED_MODULE_5__/* .CreateEventButton */ .u, {
+    titleExtra: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx(_CreateEventButton__WEBPACK_IMPORTED_MODULE_5__/* .CreateEventButton */ .u, {
       scheduleId: record._id
     }),
     scheduleId: record._id
@@ -2100,9 +2104,9 @@ const ScheduleList = ({
   const scroll = {
     x: 'max-content'
   };
-  return _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Table, {
+  return _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Table, {
     scroll: scroll,
-    title: () => _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Space, {
+    title: () => _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Space, {
       children: titleExtra
     }),
     className: className,
@@ -2121,6 +2125,55 @@ __webpack_async_result__();
 
 /***/ }),
 
+/***/ 5672:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "N": () => (/* binding */ ScheduleListCloneButton)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6689);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5725);
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(antd__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7066);
+/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_ant_design_icons__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(3377);
+/* harmony import */ var _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(7101);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_store__WEBPACK_IMPORTED_MODULE_3__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__]);
+([_store__WEBPACK_IMPORTED_MODULE_3__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+
+
+
+
+
+const ScheduleListCloneButton = ({
+  className,
+  scheduleId
+}) => {
+  const [cloneSchedule] = (0,_store__WEBPACK_IMPORTED_MODULE_3__/* .useCloneScheduleMutation */ .Lk)();
+
+  const handleClone = () => {
+    cloneSchedule({
+      id: scheduleId,
+      data: undefined
+    });
+  };
+
+  return _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Tooltip, {
+    title: "Clone",
+    children: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Button, {
+      shape: "circle",
+      icon: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(_ant_design_icons__WEBPACK_IMPORTED_MODULE_2__.CopyOutlined, {}),
+      onClick: handleClone
+    })
+  });
+};
+__webpack_async_result__();
+} catch(e) { __webpack_async_result__(e); } });
+
+/***/ }),
+
 /***/ 3954:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
@@ -2132,10 +2185,13 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5725);
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(antd__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3377);
-/* harmony import */ var _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(7101);
-var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_store__WEBPACK_IMPORTED_MODULE_2__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__]);
-([_store__WEBPACK_IMPORTED_MODULE_2__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7066);
+/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_ant_design_icons__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(3377);
+/* harmony import */ var _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(7101);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_store__WEBPACK_IMPORTED_MODULE_3__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__]);
+([_store__WEBPACK_IMPORTED_MODULE_3__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+
 
 
 
@@ -2144,7 +2200,7 @@ const ScheduleListDeleteButton = ({
   className,
   scheduleId
 }) => {
-  const [deleteSchedule] = (0,_store__WEBPACK_IMPORTED_MODULE_2__/* .useDeleteScheduleMutation */ .Wj)();
+  const [deleteSchedule] = (0,_store__WEBPACK_IMPORTED_MODULE_3__/* .useDeleteScheduleMutation */ .Wj)();
 
   const handleConfirm = () => {
     deleteSchedule({
@@ -2153,15 +2209,20 @@ const ScheduleListDeleteButton = ({
     });
   };
 
-  return _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Popconfirm, {
+  return _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Popconfirm, {
     className: className,
     title: "Delete the schedule",
     description: "Are you sure to delete this schedule?",
     onConfirm: handleConfirm,
     okText: "Yes",
     cancelText: "No",
-    children: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx("a", {
-      children: "Delete"
+    children: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Tooltip, {
+      title: "Delete",
+      children: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Button, {
+        danger: true,
+        shape: "circle",
+        icon: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(_ant_design_icons__WEBPACK_IMPORTED_MODULE_2__.DeleteOutlined, {})
+      })
     })
   });
 };
@@ -2183,17 +2244,20 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(antd__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1635);
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4399);
-/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(3377);
-/* harmony import */ var _ScheduleForm__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(4245);
-/* harmony import */ var _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(7101);
-var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_components__WEBPACK_IMPORTED_MODULE_3__, _store__WEBPACK_IMPORTED_MODULE_4__, _ScheduleForm__WEBPACK_IMPORTED_MODULE_5__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__]);
-([_components__WEBPACK_IMPORTED_MODULE_3__, _store__WEBPACK_IMPORTED_MODULE_4__, _ScheduleForm__WEBPACK_IMPORTED_MODULE_5__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(7066);
+/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_ant_design_icons__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(4399);
+/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(3377);
+/* harmony import */ var _ScheduleForm__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(4245);
+/* harmony import */ var _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(7101);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_components__WEBPACK_IMPORTED_MODULE_4__, _store__WEBPACK_IMPORTED_MODULE_5__, _ScheduleForm__WEBPACK_IMPORTED_MODULE_6__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__]);
+([_components__WEBPACK_IMPORTED_MODULE_4__, _store__WEBPACK_IMPORTED_MODULE_5__, _ScheduleForm__WEBPACK_IMPORTED_MODULE_6__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
@@ -2214,7 +2278,7 @@ const ScheduleListEditButton = ({
   } = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
   const [updateSchedule, {
     isLoading
-  }] = (0,_store__WEBPACK_IMPORTED_MODULE_4__/* .useUpdateScheduleMutation */ .X9)();
+  }] = (0,_store__WEBPACK_IMPORTED_MODULE_5__/* .useUpdateScheduleMutation */ .X9)();
 
   const handleOpenDrawer = () => setOpen(true);
 
@@ -2244,23 +2308,27 @@ const ScheduleListEditButton = ({
     includeDates: schedule.includeDates.map(date => dayjs__WEBPACK_IMPORTED_MODULE_2___default()(date).toDate()),
     weekDays: schedule.weekDays
   }), [schedule]);
-  return (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.Fragment, {
-    children: [_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx("a", {
-      onClick: handleOpenDrawer,
-      children: "Edit"
-    }), _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx(_components__WEBPACK_IMPORTED_MODULE_3__/* .Drawer */ .dy, {
+  return (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.Fragment, {
+    children: [_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Tooltip, {
+      title: "Edit",
+      children: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Button, {
+        shape: "circle",
+        icon: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx(_ant_design_icons__WEBPACK_IMPORTED_MODULE_3__.EditOutlined, {}),
+        onClick: handleOpenDrawer
+      })
+    }), _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx(_components__WEBPACK_IMPORTED_MODULE_4__/* .Drawer */ .dy, {
       title: "Edit schedule",
       open: open,
       onClose: () => setOpen(false),
-      children: (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(_ScheduleForm__WEBPACK_IMPORTED_MODULE_5__/* .ScheduleForm */ .c, {
+      children: (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(_ScheduleForm__WEBPACK_IMPORTED_MODULE_6__/* .ScheduleForm */ .c, {
         initialValues: initialValues,
         onFinish: handleSubmit,
-        children: [_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx(_ScheduleForm__WEBPACK_IMPORTED_MODULE_5__/* .ScheduleFormItems */ .E, {}), (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(_components__WEBPACK_IMPORTED_MODULE_3__/* .Drawer.FooterActions */ .dy.FooterActions, {
-          children: [_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Button, {
+        children: [_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx(_ScheduleForm__WEBPACK_IMPORTED_MODULE_6__/* .ScheduleFormItems */ .E, {}), (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(_components__WEBPACK_IMPORTED_MODULE_4__/* .Drawer.FooterActions */ .dy.FooterActions, {
+          children: [_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Button, {
             onClick: handleCloseDrawer,
             disabled: isLoading,
             children: "Cancel"
-          }), _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Button, {
+          }), _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Button, {
             type: "primary",
             htmlType: "submit",
             loading: isLoading,

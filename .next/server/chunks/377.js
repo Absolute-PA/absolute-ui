@@ -265,6 +265,7 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "A": () => (/* reexport safe */ _schedule__WEBPACK_IMPORTED_MODULE_1__.A),
 /* harmony export */   "HH": () => (/* reexport safe */ _textToAudio__WEBPACK_IMPORTED_MODULE_2__.HH),
+/* harmony export */   "Lk": () => (/* reexport safe */ _schedule__WEBPACK_IMPORTED_MODULE_1__.Lk),
 /* harmony export */   "Ml": () => (/* reexport safe */ _auth__WEBPACK_IMPORTED_MODULE_0__.Ml),
 /* harmony export */   "R8": () => (/* reexport safe */ _playlist__WEBPACK_IMPORTED_MODULE_5__.R8),
 /* harmony export */   "We": () => (/* reexport safe */ _auth__WEBPACK_IMPORTED_MODULE_0__.We),
@@ -629,6 +630,48 @@ __webpack_async_result__();
 
 /***/ }),
 
+/***/ 4086:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Lk": () => (/* binding */ useCloneScheduleMutation)
+/* harmony export */ });
+/* unused harmony export cloneSchedule */
+/* harmony import */ var _utils_apiHelpers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7640);
+/* harmony import */ var _rootApi__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6159);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_utils_apiHelpers__WEBPACK_IMPORTED_MODULE_0__, _rootApi__WEBPACK_IMPORTED_MODULE_1__]);
+([_utils_apiHelpers__WEBPACK_IMPORTED_MODULE_0__, _rootApi__WEBPACK_IMPORTED_MODULE_1__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+
+
+const api = _rootApi__WEBPACK_IMPORTED_MODULE_1__/* .rootApi.injectEndpoints */ .e.injectEndpoints({
+  endpoints: builder => ({
+    cloneSchedule: builder.mutation({
+      query: ({
+        id
+      }) => _utils_apiHelpers__WEBPACK_IMPORTED_MODULE_0__/* .http.post */ .dJ.post(`/schedule/${id}/clone`),
+      invalidatesTags: schedule => [{
+        type: _rootApi__WEBPACK_IMPORTED_MODULE_1__/* .Tags.ScheduleList */ .$.ScheduleList,
+        id: 'LIST'
+      }, {
+        type: _rootApi__WEBPACK_IMPORTED_MODULE_1__/* .Tags.ScheduleByDate */ .$.ScheduleByDate,
+        id: schedule?._id
+      }]
+    })
+  })
+});
+const {
+  useCloneScheduleMutation,
+  endpoints: {
+    cloneSchedule
+  }
+} = api;
+/* unused harmony default export */ var __WEBPACK_DEFAULT_EXPORT__ = ((/* unused pure expression or super */ null && (api)));
+__webpack_async_result__();
+} catch(e) { __webpack_async_result__(e); } });
+
+/***/ }),
+
 /***/ 6886:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
@@ -926,6 +969,7 @@ __webpack_async_result__();
 __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "A": () => (/* reexport safe */ _createSchedule__WEBPACK_IMPORTED_MODULE_0__.A),
+/* harmony export */   "Lk": () => (/* reexport safe */ _cloneSchedule__WEBPACK_IMPORTED_MODULE_10__.Lk),
 /* harmony export */   "Wj": () => (/* reexport safe */ _deleteSchedule__WEBPACK_IMPORTED_MODULE_3__.Wj),
 /* harmony export */   "X9": () => (/* reexport safe */ _updateSchedule__WEBPACK_IMPORTED_MODULE_2__.X9),
 /* harmony export */   "a_": () => (/* reexport safe */ _getEligibleScheduleByDate__WEBPACK_IMPORTED_MODULE_5__.a_),
@@ -946,8 +990,10 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony import */ var _updateEvent__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(8398);
 /* harmony import */ var _addIncludeDateToSchedule__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(102);
 /* harmony import */ var _getAllEligibleSchedulesByDate__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(7292);
-var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_createSchedule__WEBPACK_IMPORTED_MODULE_0__, _getSchedules__WEBPACK_IMPORTED_MODULE_1__, _updateSchedule__WEBPACK_IMPORTED_MODULE_2__, _deleteSchedule__WEBPACK_IMPORTED_MODULE_3__, _createEvent__WEBPACK_IMPORTED_MODULE_4__, _getEligibleScheduleByDate__WEBPACK_IMPORTED_MODULE_5__, _deleteEvent__WEBPACK_IMPORTED_MODULE_6__, _updateEvent__WEBPACK_IMPORTED_MODULE_7__, _addIncludeDateToSchedule__WEBPACK_IMPORTED_MODULE_8__, _getAllEligibleSchedulesByDate__WEBPACK_IMPORTED_MODULE_9__]);
-([_createSchedule__WEBPACK_IMPORTED_MODULE_0__, _getSchedules__WEBPACK_IMPORTED_MODULE_1__, _updateSchedule__WEBPACK_IMPORTED_MODULE_2__, _deleteSchedule__WEBPACK_IMPORTED_MODULE_3__, _createEvent__WEBPACK_IMPORTED_MODULE_4__, _getEligibleScheduleByDate__WEBPACK_IMPORTED_MODULE_5__, _deleteEvent__WEBPACK_IMPORTED_MODULE_6__, _updateEvent__WEBPACK_IMPORTED_MODULE_7__, _addIncludeDateToSchedule__WEBPACK_IMPORTED_MODULE_8__, _getAllEligibleSchedulesByDate__WEBPACK_IMPORTED_MODULE_9__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+/* harmony import */ var _cloneSchedule__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(4086);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_createSchedule__WEBPACK_IMPORTED_MODULE_0__, _getSchedules__WEBPACK_IMPORTED_MODULE_1__, _updateSchedule__WEBPACK_IMPORTED_MODULE_2__, _deleteSchedule__WEBPACK_IMPORTED_MODULE_3__, _createEvent__WEBPACK_IMPORTED_MODULE_4__, _getEligibleScheduleByDate__WEBPACK_IMPORTED_MODULE_5__, _deleteEvent__WEBPACK_IMPORTED_MODULE_6__, _updateEvent__WEBPACK_IMPORTED_MODULE_7__, _addIncludeDateToSchedule__WEBPACK_IMPORTED_MODULE_8__, _getAllEligibleSchedulesByDate__WEBPACK_IMPORTED_MODULE_9__, _cloneSchedule__WEBPACK_IMPORTED_MODULE_10__]);
+([_createSchedule__WEBPACK_IMPORTED_MODULE_0__, _getSchedules__WEBPACK_IMPORTED_MODULE_1__, _updateSchedule__WEBPACK_IMPORTED_MODULE_2__, _deleteSchedule__WEBPACK_IMPORTED_MODULE_3__, _createEvent__WEBPACK_IMPORTED_MODULE_4__, _getEligibleScheduleByDate__WEBPACK_IMPORTED_MODULE_5__, _deleteEvent__WEBPACK_IMPORTED_MODULE_6__, _updateEvent__WEBPACK_IMPORTED_MODULE_7__, _addIncludeDateToSchedule__WEBPACK_IMPORTED_MODULE_8__, _getAllEligibleSchedulesByDate__WEBPACK_IMPORTED_MODULE_9__, _cloneSchedule__WEBPACK_IMPORTED_MODULE_10__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+
 
 
 
@@ -1569,6 +1615,7 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony export */   "A": () => (/* reexport safe */ _api__WEBPACK_IMPORTED_MODULE_4__.A),
 /* harmony export */   "CO": () => (/* binding */ storeWrapper),
 /* harmony export */   "HH": () => (/* reexport safe */ _api__WEBPACK_IMPORTED_MODULE_4__.HH),
+/* harmony export */   "Lk": () => (/* reexport safe */ _api__WEBPACK_IMPORTED_MODULE_4__.Lk),
 /* harmony export */   "Ml": () => (/* reexport safe */ _api__WEBPACK_IMPORTED_MODULE_4__.Ml),
 /* harmony export */   "We": () => (/* reexport safe */ _api__WEBPACK_IMPORTED_MODULE_4__.We),
 /* harmony export */   "Wj": () => (/* reexport safe */ _api__WEBPACK_IMPORTED_MODULE_4__.Wj),
