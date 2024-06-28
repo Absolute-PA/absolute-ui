@@ -3,6 +3,7 @@ git fetch origin
 git reset --hard origin/main
 yarn 
 if ! test -f .env ; then 
+    rm -rf .env
     cp .env.production .env
 fi
 
