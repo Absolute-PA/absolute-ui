@@ -1,6 +1,6 @@
-git checkout main
 git fetch origin
-git reset --hard origin/main
+git checkout uat
+git reset --hard origin/uat
 yarn 
 
 # Define the source and destination file paths
