@@ -1,6 +1,6 @@
 {
   "name": "nodeweb-master-ui",
-  "version": "0.1.37",
+  "version": "0.1.39",
   "private": true,
   "scripts": {
     "dev": "next dev ",
@@ -12,6 +12,7 @@
     "compile": "tsc -b tsconfig.json --incremental",
     "docker:build": "docker build -t nodeweb-master-ui .",
     "deploy": "./scripts/prepareBuild.sh",
+    "deployUat": "./scripts/prepareBuildUat.sh",
     "docker:save": "docker save -o ./out/nodeweb-master-ui.tar nodeweb-master-ui"
   },
   "dependencies": {

@@ -197,12 +197,14 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony import */ var _emotion_styled_base__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4243);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6689);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(8473);
-/* harmony import */ var _store_api_sound__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(7510);
-/* harmony import */ var _hooks_usePlayingClientEvent__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(3957);
-/* harmony import */ var _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(7101);
-var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_emotion_styled_base__WEBPACK_IMPORTED_MODULE_0__, _store_api_sound__WEBPACK_IMPORTED_MODULE_3__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__]);
-([_emotion_styled_base__WEBPACK_IMPORTED_MODULE_0__, _store_api_sound__WEBPACK_IMPORTED_MODULE_3__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(5725);
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(antd__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(8473);
+/* harmony import */ var _store_api_sound__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(7510);
+/* harmony import */ var _hooks_usePlayingClientEvent__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(3957);
+/* harmony import */ var _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(7101);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_emotion_styled_base__WEBPACK_IMPORTED_MODULE_0__, _store_api_sound__WEBPACK_IMPORTED_MODULE_4__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__]);
+([_emotion_styled_base__WEBPACK_IMPORTED_MODULE_0__, _store_api_sound__WEBPACK_IMPORTED_MODULE_4__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
 
 
 
@@ -243,48 +245,66 @@ const RippleButton = ({
   config,
   isRepeat
 }) => {
-  const [toggleSound] = (0,_store_api_sound__WEBPACK_IMPORTED_MODULE_3__/* .useToggleSoundMutation */ .V4)();
-  const eventData = (0,_hooks_usePlayingClientEvent__WEBPACK_IMPORTED_MODULE_4__/* .usePlayingClientEvent */ .M)(sound._id);
+  const [toggleSound] = (0,_store_api_sound__WEBPACK_IMPORTED_MODULE_4__/* .useToggleSoundMutation */ .V4)();
+  const eventData = (0,_hooks_usePlayingClientEvent__WEBPACK_IMPORTED_MODULE_5__/* .usePlayingClientEvent */ .M)(sound._id);
   console.log(`Sound ${sound.name} | id: ${sound._id} - playing: ${eventData?.isPlaying} - jobId: ${sound.jobId}`);
   const isPlaying = eventData?.isPlaying !== undefined ? eventData.isPlaying : !!sound.jobId;
 
   const handleClick = () => {
     if (!sound?.fileName) return;
-    const action = isPlaying ? _types__WEBPACK_IMPORTED_MODULE_2__.SoundAction.Stop : _types__WEBPACK_IMPORTED_MODULE_2__.SoundAction.Play;
+    const action = isPlaying ? _types__WEBPACK_IMPORTED_MODULE_3__.SoundAction.Stop : _types__WEBPACK_IMPORTED_MODULE_3__.SoundAction.Play;
     toggleSound({
       id: sound._id,
       data: {
         action,
-        isRepeat: !!isRepeat && action === _types__WEBPACK_IMPORTED_MODULE_2__.SoundAction.Play
+        isRepeat: !!isRepeat && action === _types__WEBPACK_IMPORTED_MODULE_3__.SoundAction.Play
       }
     });
   };
 
   const renderIcon = icon => {
     const Icon = icon;
-    return _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(Icon, {
+    return _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx(Icon, {
       className: "btn-icon"
     });
   };
 
-  return _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(StyledWrapper, {
-    config: config,
-    children: (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(StyledButton, {
+  if (isPlaying) {
+    return _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx(StyledWrapper, {
       config: config,
-      className: isPlaying ? 'btn-active' : '',
-      onClick: handleClick,
-      children: [isPlaying && (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.Fragment, {
-        children: [_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx("div", {
+      children: (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(StyledButton, {
+        config: config,
+        className: "btn-active",
+        onClick: handleClick,
+        children: [_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx("div", {
           className: "circle1"
-        }), _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx("div", {
+        }), _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx("div", {
           className: "circle2"
-        }), _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx("div", {
+        }), _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx("div", {
           className: "circle3"
+        }), renderIcon(config.icon), _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx("div", {
+          className: "tune-name",
+          children: sound.name
         })]
-      }), renderIcon(config.icon), _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx("div", {
-        className: "tune-name",
-        children: sound.name
-      })]
+      })
+    });
+  }
+
+  return _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx(antd__WEBPACK_IMPORTED_MODULE_2__.Popconfirm, {
+    title: `Activate ${sound.name}?`,
+    description: `Are you sure to activate ${sound.name}?`,
+    onConfirm: handleClick,
+    okText: "Yes",
+    cancelText: "No",
+    children: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx(StyledWrapper, {
+      config: config,
+      children: (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(StyledButton, {
+        config: config,
+        children: [renderIcon(config.icon), _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx("div", {
+          className: "tune-name",
+          children: sound.name
+        })]
+      })
     })
   });
 };

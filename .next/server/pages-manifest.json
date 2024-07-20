@@ -6,14 +6,14 @@
   "/login": "pages/login.html",
   "/music": "pages/music.html",
   "/register": "pages/register.html",
-  "/schedule": "pages/schedule.html",
   "/settings": "pages/settings.html",
+  "/schedule": "pages/schedule.html",
   "/sound": "pages/sound.html",
   "/stream": "pages/stream.html",
   "/text-to-audio": "pages/text-to-audio.html",
   "/unauthorized": "pages/unauthorized.html",
   "/user": "pages/user.html",
-  "/_error": "pages/_error.js",
   "/voice-record": "pages/voice-record.html",
+  "/_error": "pages/_error.js",
   "/404": "pages/404.html"
 }
