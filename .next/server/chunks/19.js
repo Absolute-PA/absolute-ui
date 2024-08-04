@@ -243,7 +243,8 @@ const StyledButton = /*#__PURE__*/(0,_emotion_styled_base__WEBPACK_IMPORTED_MODU
 const RippleButton = ({
   sound,
   config,
-  isRepeat
+  isRepeat,
+  showConfirm = false
 }) => {
   const [toggleSound] = (0,_store_api_sound__WEBPACK_IMPORTED_MODULE_4__/* .useToggleSoundMutation */ .V4)();
   const eventData = (0,_hooks_usePlayingClientEvent__WEBPACK_IMPORTED_MODULE_5__/* .usePlayingClientEvent */ .M)(sound._id);
@@ -283,6 +284,20 @@ const RippleButton = ({
         }), _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx("div", {
           className: "circle3"
         }), renderIcon(config.icon), _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx("div", {
+          className: "tune-name",
+          children: sound.name
+        })]
+      })
+    });
+  }
+
+  if (!showConfirm) {
+    return _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx(StyledWrapper, {
+      config: config,
+      children: (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(StyledButton, {
+        config: config,
+        onClick: handleClick,
+        children: [renderIcon(config.icon), _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx("div", {
           className: "tune-name",
           children: sound.name
         })]
@@ -442,7 +457,8 @@ const SoundControlPanel = ({
       children: emergencyTunes.map(tune => _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx(_RippleButton__WEBPACK_IMPORTED_MODULE_6__/* .RippleButton */ .a, {
         sound: tune,
         config: SOUND_CONFIG[tune.name] || SOUND_CONFIG.Default,
-        isRepeat: true
+        isRepeat: true,
+        showConfirm: true
       }, tune._id))
     }), _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx("span", {
       css: _ref4,

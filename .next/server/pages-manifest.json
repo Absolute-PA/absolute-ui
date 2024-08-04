@@ -1,10 +1,10 @@
 {
   "/_app": "pages/_app.js",
-  "/": "pages/index.html",
   "/_document": "pages/_document.js",
+  "/": "pages/index.html",
   "/liveTalk": "pages/liveTalk.html",
-  "/login": "pages/login.html",
   "/music": "pages/music.html",
+  "/login": "pages/login.html",
   "/register": "pages/register.html",
   "/schedule": "pages/schedule.html",
   "/settings": "pages/settings.html",
