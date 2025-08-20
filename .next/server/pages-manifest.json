@@ -1,11 +1,11 @@
 {
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.html",
   "/liveTalk": "pages/liveTalk.html",
-  "/music": "pages/music.html",
   "/login": "pages/login.html",
+  "/": "pages/index.html",
   "/register": "pages/register.html",
+  "/music": "pages/music.html",
   "/schedule": "pages/schedule.html",
   "/settings": "pages/settings.html",
   "/sound": "pages/sound.html",

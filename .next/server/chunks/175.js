@@ -189,7 +189,7 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_ant_design_icons__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4399);
 /* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(3377);
-/* harmony import */ var _ScheduleForm__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(4245);
+/* harmony import */ var _ScheduleForm__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(8709);
 /* harmony import */ var _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(7101);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_components__WEBPACK_IMPORTED_MODULE_3__, _store__WEBPACK_IMPORTED_MODULE_4__, _ScheduleForm__WEBPACK_IMPORTED_MODULE_5__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__]);
 ([_components__WEBPACK_IMPORTED_MODULE_3__, _store__WEBPACK_IMPORTED_MODULE_4__, _ScheduleForm__WEBPACK_IMPORTED_MODULE_5__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
@@ -287,14 +287,17 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var dayjs_plugin_localizedFormat__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(7424);
 /* harmony import */ var dayjs_plugin_localizedFormat__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(dayjs_plugin_localizedFormat__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(3377);
-/* harmony import */ var _EventDescription__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(3400);
-/* harmony import */ var _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(7101);
-var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_emotion_styled_base__WEBPACK_IMPORTED_MODULE_0__, _store__WEBPACK_IMPORTED_MODULE_4__, _EventDescription__WEBPACK_IMPORTED_MODULE_5__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__]);
-([_emotion_styled_base__WEBPACK_IMPORTED_MODULE_0__, _store__WEBPACK_IMPORTED_MODULE_4__, _EventDescription__WEBPACK_IMPORTED_MODULE_5__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(5725);
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(antd__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(3377);
+/* harmony import */ var _EventDescription__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(3400);
+/* harmony import */ var _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(7101);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_emotion_styled_base__WEBPACK_IMPORTED_MODULE_0__, _store__WEBPACK_IMPORTED_MODULE_5__, _EventDescription__WEBPACK_IMPORTED_MODULE_6__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__]);
+([_emotion_styled_base__WEBPACK_IMPORTED_MODULE_0__, _store__WEBPACK_IMPORTED_MODULE_5__, _EventDescription__WEBPACK_IMPORTED_MODULE_6__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
 
 
 function _EMOTION_STRINGIFIED_CSS_ERROR__() { return "You have tried to stringify object returned from `css` function. It isn't supposed to be used directly (e.g. as value of the `className` prop), but rather handed to emotion so it can handle it (e.g. as value of `css` prop)."; }
+
 
 
 
@@ -323,6 +326,11 @@ var _ref2 =  true ? {
 } : 0;
 
 var _ref3 =  true ? {
+  name: "1jq4fo6",
+  styles: "margin-top:16px;display:flex;align-items:center;gap:0.5rem;font-size:16px;font-weight:700;@media (min-width: 768px){font-size:20px;}"
+} : 0;
+
+var _ref4 =  true ? {
   name: "13yok3r",
   styles: "margin-top:16px;font-size:12px;font-weight:700;@media (min-width: 768px){font-size:16px;}"
 } : 0;
@@ -337,7 +345,7 @@ const DigitalClock = ({
   const dateStr = date.format('YYYY-MM-DD');
   const {
     data: schedule
-  } = (0,_store__WEBPACK_IMPORTED_MODULE_4__/* .useGetScheduleByDateQuery */ .a_)({
+  } = (0,_store__WEBPACK_IMPORTED_MODULE_5__/* .useGetScheduleByDateQuery */ .a_)({
     date: 'today'
   }, {
     refetchOnMountOrArgChange: true
@@ -360,18 +368,30 @@ const DigitalClock = ({
     }, 1000);
     return () => clearInterval(intervalId);
   }, []);
-  return (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(StyledWrapper, {
+  return (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(StyledWrapper, {
     className: className,
-    children: [_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx("div", {
+    children: [_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx("div", {
       css: _ref,
       children: date.format('dddd, MMMM D, YYYY')
-    }), _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx("div", {
+    }), _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx("div", {
       css: _ref2,
       children: date.format('HH:mm:ss')
-    }), nextEvent && _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx("div", {
+    }), schedule && (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
       css: _ref3,
-      children: (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("span", {
-        children: ["Next Event: ", _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx(_EventDescription__WEBPACK_IMPORTED_MODULE_5__/* .EventDescription */ .d, {
+      children: [_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx("span", {
+        children: "Schedule: "
+      }), _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx(antd__WEBPACK_IMPORTED_MODULE_4__.Tag, {
+        style: {
+          fontSize: '14px',
+          padding: '4px 12px'
+        },
+        color: schedule.color,
+        children: schedule.name
+      })]
+    }), nextEvent && _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx("div", {
+      css: _ref4,
+      children: (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("span", {
+        children: ["Next Event: ", _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx(_EventDescription__WEBPACK_IMPORTED_MODULE_6__/* .EventDescription */ .d, {
           event: nextEvent
         })]
       })
@@ -1960,7 +1980,7 @@ __webpack_async_result__();
 
 /***/ }),
 
-/***/ 4245:
+/***/ 8709:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
@@ -2248,7 +2268,7 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_ant_design_icons__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(4399);
 /* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(3377);
-/* harmony import */ var _ScheduleForm__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(4245);
+/* harmony import */ var _ScheduleForm__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(8709);
 /* harmony import */ var _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(7101);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_components__WEBPACK_IMPORTED_MODULE_4__, _store__WEBPACK_IMPORTED_MODULE_5__, _ScheduleForm__WEBPACK_IMPORTED_MODULE_6__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__]);
 ([_components__WEBPACK_IMPORTED_MODULE_4__, _store__WEBPACK_IMPORTED_MODULE_5__, _ScheduleForm__WEBPACK_IMPORTED_MODULE_6__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
