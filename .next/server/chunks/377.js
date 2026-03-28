@@ -398,7 +398,10 @@ __webpack_async_result__();
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
-/* unused harmony exports useGetPlaylistQuery, useLazyGetPlaylistQuery, getPlaylist */
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "$B": () => (/* binding */ useGetPlaylistQuery)
+/* harmony export */ });
+/* unused harmony exports useLazyGetPlaylistQuery, getPlaylist */
 /* harmony import */ var _utils_apiHelpers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7640);
 /* harmony import */ var _rootApi__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6159);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_utils_apiHelpers__WEBPACK_IMPORTED_MODULE_0__, _rootApi__WEBPACK_IMPORTED_MODULE_1__]);
@@ -474,6 +477,7 @@ __webpack_async_result__();
 
 __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "$B": () => (/* reexport safe */ _getPlaylist__WEBPACK_IMPORTED_MODULE_0__.$B),
 /* harmony export */   "R8": () => (/* reexport safe */ _deletePlaylist__WEBPACK_IMPORTED_MODULE_4__.R8),
 /* harmony export */   "Xc": () => (/* reexport safe */ _updatePlaylist__WEBPACK_IMPORTED_MODULE_2__.Xc),
 /* harmony export */   "a9": () => (/* reexport safe */ _getPlaylistList__WEBPACK_IMPORTED_MODULE_3__.a9),
@@ -1734,7 +1738,14 @@ __webpack_async_result__();
 /* harmony export */   "L": () => (/* binding */ getBackendURL)
 /* harmony export */ });
 function getBackendURL() {
-  const PORT =  true ? "8080" : 0;
+  if (true) {
+    // Server-side rendering: use localhost with the backend port
+    const PORT = "8080" || 0;
+    return `https://localhost:${PORT}`;
+  } // Client-side: use the current origin's protocol and hostname with the backend port
+
+
+  const PORT = window.__ENV.NEXT_PUBLIC_SERVER_PORT || '8082';
   return `${window.location.protocol}//${window.location.hostname}:${PORT}`;
 }
 

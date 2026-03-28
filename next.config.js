@@ -8,8 +8,20 @@ const nextConfig = {
   // reactStrictMode: false,
   webpack(config) {
     const webpackConfig = { ...config };
-    // read .env
-    webpackConfig.plugins.push(new webpack.EnvironmentPlugin(process.env));
+    // Filter out environment variables that conflict with Next.js plugins
+    const allowedEnvVars = {};
+    const excludedKeys = ['NEXT_RUNTIME', '__NEXT_OPTIMIZE_FONTS'];
+
+    Object.keys(process.env).forEach((key) => {
+      if (!excludedKeys.includes(key)) {
+        allowedEnvVars[key] = process.env[key];
+      }
+    });
+
+    // Only add EnvironmentPlugin if there are variables to add
+    if (Object.keys(allowedEnvVars).length > 0) {
+      webpackConfig.plugins.push(new webpack.EnvironmentPlugin(allowedEnvVars));
+    }
 
     return webpackConfig;
   },

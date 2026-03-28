@@ -39,22 +39,37 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_2__["default"] {
   static async getInitialProps(ctx) {
     const initialProps = await next_document__WEBPACK_IMPORTED_MODULE_2__["default"].getInitialProps(ctx);
     const page = await ctx.renderPage();
-    const styles = (0,_emotion_server__WEBPACK_IMPORTED_MODULE_3__.extractCritical)(page.html); // Property 'agent' does not exist on type 'typeof import("/Users/tuan/Code/AbsolutePA/nodeweb-master-ui/node_modules/@types/newrelic/index")'.
-    // @ts-ignore
+    const styles = (0,_emotion_server__WEBPACK_IMPORTED_MODULE_3__.extractCritical)(page.html);
+    let browserTimingHeader = '';
 
-    if (!newrelic__WEBPACK_IMPORTED_MODULE_0___default().agent.collector.isConnected()) {
-      await new Promise(resolve => {
-        // @ts-ignore
-        newrelic__WEBPACK_IMPORTED_MODULE_0___default().agent.on('connected', resolve);
-      });
+    try {
+      // Property 'agent' does not exist on type 'typeof import("/Users/tuan/Code/AbsolutePA/nodeweb-master-ui/node_modules/@types/newrelic/index")'.
+      // @ts-ignore
+      if ((newrelic__WEBPACK_IMPORTED_MODULE_0___default().agent) && !newrelic__WEBPACK_IMPORTED_MODULE_0___default().agent.collector.isConnected()) {
+        // Wait for connection with a timeout to prevent blocking indefinitely
+        await Promise.race([new Promise(resolve => {
+          // @ts-ignore
+          newrelic__WEBPACK_IMPORTED_MODULE_0___default().agent.on('connected', resolve);
+        }), new Promise(resolve => {
+          // Timeout after 5 seconds
+          setTimeout(resolve, 5000);
+        })]);
+      } // @ts-ignore
+
+
+      if ((newrelic__WEBPACK_IMPORTED_MODULE_0___default().agent) && newrelic__WEBPACK_IMPORTED_MODULE_0___default().agent.collector.isConnected()) {
+        browserTimingHeader = newrelic__WEBPACK_IMPORTED_MODULE_0___default().getBrowserTimingHeader({
+          hasToRemoveScriptWrapper: true,
+          // Argument of type '{ hasToRemoveScriptWrapper: true; allowTransactionlessInjection: boolean; }' is not assignable to parameter of type '{ nonce?: string | undefined; hasToRemoveScriptWrapper?: boolean | undefined; }'.
+          // @ts-ignore
+          allowTransactionlessInjection: true
+        });
+      }
+    } catch (error) {
+      // If NewRelic fails, continue without it
+      console.warn('NewRelic failed to initialize:', error);
     }
 
-    const browserTimingHeader = newrelic__WEBPACK_IMPORTED_MODULE_0___default().getBrowserTimingHeader({
-      hasToRemoveScriptWrapper: true,
-      // Argument of type '{ hasToRemoveScriptWrapper: true; allowTransactionlessInjection: boolean; }' is not assignable to parameter of type '{ nonce?: string | undefined; hasToRemoveScriptWrapper?: boolean | undefined; }'.
-      // @ts-ignore
-      allowTransactionlessInjection: true
-    });
     return _objectSpread(_objectSpread(_objectSpread(_objectSpread({}, initialProps), page), styles), {}, {
       browserTimingHeader
     });

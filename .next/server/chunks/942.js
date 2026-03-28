@@ -17,10 +17,10 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7066);
 /* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_ant_design_icons__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4399);
-/* harmony import */ var _UpsertPlaylist__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(8950);
+/* harmony import */ var _PlaylistForm__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(5574);
 /* harmony import */ var _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(7101);
-var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_components__WEBPACK_IMPORTED_MODULE_3__, _UpsertPlaylist__WEBPACK_IMPORTED_MODULE_4__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__]);
-([_components__WEBPACK_IMPORTED_MODULE_3__, _UpsertPlaylist__WEBPACK_IMPORTED_MODULE_4__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_components__WEBPACK_IMPORTED_MODULE_3__, _PlaylistForm__WEBPACK_IMPORTED_MODULE_4__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__]);
+([_components__WEBPACK_IMPORTED_MODULE_3__, _PlaylistForm__WEBPACK_IMPORTED_MODULE_4__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
 
 
 
@@ -53,8 +53,14 @@ const CreatePlaylistButton = ({
       open: open,
       onClose: handleCloseDrawer,
       destroyOnClose: true,
-      children: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(_UpsertPlaylist__WEBPACK_IMPORTED_MODULE_4__/* .UpsertSteps */ .l, {
-        onFinish: handleCloseDrawer
+      children: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(_PlaylistForm__WEBPACK_IMPORTED_MODULE_4__/* .PlaylistUpsertForm */ .yl, {
+        onSuccess: handleCloseDrawer,
+        children: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Button, {
+          type: "primary",
+          htmlType: "submit",
+          block: true,
+          children: "Create Playlist"
+        })
       })
     })]
   });
@@ -133,9 +139,7 @@ __webpack_async_result__();
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "H": () => (/* binding */ PlaylistForm)
-/* harmony export */ });
+/* unused harmony export PlaylistForm */
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6689);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5725);
@@ -143,7 +147,7 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony import */ var _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7101);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__]);
 _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
-const _excluded = ["onFinish", "children"];
+const _excluded = (/* unused pure expression or super */ null && (["onFinish", "children"]));
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 
@@ -165,22 +169,173 @@ const PlaylistForm = _ref => {
   } = _ref,
       props = _objectWithoutProperties(_ref, _excluded);
 
-  const handleOnFinish = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(values => {
+  const handleOnFinish = useCallback(values => {
     onFinish?.(values);
   }, [onFinish]);
-  return _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Form, _objectSpread(_objectSpread({
+  return _jsx(Form, _objectSpread(_objectSpread({
     name: "playlist-form",
     layout: "vertical",
     onFinish: handleOnFinish
   }, props), {}, {
-    children: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Form.Item, {
+    children: _jsx(Form.Item, {
       name: "name",
       label: "Name",
       rules: [{
         required: true
       }],
-      children: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Input, {})
+      children: _jsx(Input, {})
     })
+  }));
+};
+__webpack_async_result__();
+} catch(e) { __webpack_async_result__(e); } });
+
+/***/ }),
+
+/***/ 6278:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "y": () => (/* binding */ PlaylistUpsertForm)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6689);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5725);
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(antd__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _store_api_playlist__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9570);
+/* harmony import */ var _store_api_sound__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(7510);
+/* harmony import */ var _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(7101);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_store_api_playlist__WEBPACK_IMPORTED_MODULE_2__, _store_api_sound__WEBPACK_IMPORTED_MODULE_3__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__]);
+([_store_api_playlist__WEBPACK_IMPORTED_MODULE_2__, _store_api_sound__WEBPACK_IMPORTED_MODULE_3__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+const _excluded = ["id", "onFinish", "onSuccess", "children"];
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+
+
+
+
+
+
+const PlaylistUpsertForm = _ref => {
+  let {
+    id,
+    onFinish,
+    onSuccess,
+    children
+  } = _ref,
+      props = _objectWithoutProperties(_ref, _excluded);
+
+  const [form] = antd__WEBPACK_IMPORTED_MODULE_1__.Form.useForm();
+  const isEdit = (0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(() => !!id, [id]); // Queries
+
+  const {
+    data: existingPlaylist,
+    isLoading: isLoadingPlaylist
+  } = (0,_store_api_playlist__WEBPACK_IMPORTED_MODULE_2__/* .useGetPlaylistQuery */ .$B)({
+    id: id
+  }, {
+    skip: !id
+  });
+  const {
+    data: songs,
+    isLoading: isLoadingSongs
+  } = (0,_store_api_sound__WEBPACK_IMPORTED_MODULE_3__/* .useGetSongsQuery */ .wi)(); // Mutations
+
+  const [createPlaylist, {
+    isLoading: isCreating
+  }] = (0,_store_api_playlist__WEBPACK_IMPORTED_MODULE_2__/* .useCreatePlaylistMutation */ .tS)();
+  const [updatePlaylist, {
+    isLoading: isUpdating
+  }] = (0,_store_api_playlist__WEBPACK_IMPORTED_MODULE_2__/* .useUpdatePlaylistMutation */ .Xc)();
+  const isLoading = isLoadingPlaylist || isLoadingSongs || isCreating || isUpdating;
+  const songOptions = (0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(() => {
+    return songs?.map(song => ({
+      label: song.name,
+      value: song._id
+    }));
+  }, [songs]); // Prefill form when editing
+
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+    if (isEdit && existingPlaylist) {
+      form.setFieldsValue({
+        name: existingPlaylist.name,
+        songIds: existingPlaylist.sounds?.map(sound => sound._id) || []
+      });
+    }
+  }, [isEdit, existingPlaylist, form]);
+  const handleOnFinish = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(async values => {
+    try {
+      if (isEdit && id) {
+        await updatePlaylist({
+          id,
+          data: {
+            name: values.name,
+            soundIds: values.songIds
+          }
+        });
+      } else {
+        await createPlaylist({
+          data: {
+            name: values.name,
+            soundIds: values.songIds
+          }
+        });
+      }
+
+      onFinish?.(values);
+      onSuccess?.();
+    } catch (error) {
+      console.error('Error saving playlist:', error);
+    }
+  }, [isEdit, id, createPlaylist, updatePlaylist, onFinish, onSuccess]);
+
+  if (isLoadingPlaylist || isLoadingSongs) {
+    return _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Spin, {});
+  }
+
+  return (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(antd__WEBPACK_IMPORTED_MODULE_1__.Form, _objectSpread(_objectSpread({
+    form: form,
+    name: "playlist-upsert-form",
+    layout: "vertical",
+    onFinish: handleOnFinish
+  }, props), {}, {
+    children: [_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Form.Item, {
+      name: "name",
+      label: "Playlist Name",
+      rules: [{
+        required: true,
+        message: 'This field is required'
+      }],
+      children: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Input, {
+        placeholder: "Enter playlist name"
+      })
+    }), _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Form.Item, {
+      name: "songIds",
+      label: "Select Songs",
+      rules: [{
+        required: true,
+        message: 'Please select at least one song'
+      }],
+      children: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Select, {
+        mode: "multiple",
+        allowClear: true,
+        style: {
+          width: '100%'
+        },
+        placeholder: "Please select songs",
+        options: songOptions
+      })
+    }), children]
   }));
 };
 __webpack_async_result__();
@@ -192,9 +347,7 @@ __webpack_async_result__();
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "t": () => (/* binding */ SelectSongsForm)
-/* harmony export */ });
+/* unused harmony export SelectSongsForm */
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6689);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5725);
@@ -203,7 +356,7 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony import */ var _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(7101);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_store_api_sound__WEBPACK_IMPORTED_MODULE_2__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__]);
 ([_store_api_sound__WEBPACK_IMPORTED_MODULE_2__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
-const _excluded = ["playlistId", "onFinish", "children"];
+const _excluded = (/* unused pure expression or super */ null && (["playlistId", "onFinish", "children"]));
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 
@@ -230,29 +383,29 @@ const SelectSongsForm = _ref => {
   const {
     data: songs,
     isLoading
-  } = (0,_store_api_sound__WEBPACK_IMPORTED_MODULE_2__/* .useGetSongsQuery */ .wi)();
-  const songOptions = (0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(() => {
+  } = useGetSongsQuery();
+  const songOptions = useMemo(() => {
     return songs?.map(song => ({
       label: song.name,
       value: song._id
     }));
   }, [songs]);
-  const handleOnFinish = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(values => {
+  const handleOnFinish = useCallback(values => {
     onFinish?.(values);
   }, [onFinish]);
-  if (isLoading) return _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Spin, {});
-  return _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Form, _objectSpread(_objectSpread({
+  if (isLoading) return _jsx(Spin, {});
+  return _jsx(Form, _objectSpread(_objectSpread({
     name: "SelectSongs-form",
     layout: "vertical",
     onFinish: handleOnFinish
   }, props), {}, {
-    children: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Form.Item, {
+    children: _jsx(Form.Item, {
       name: "songIds",
       label: "Select Songs",
       rules: [{
         required: true
       }],
-      children: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Select, {
+      children: _jsx(Select, {
         mode: "multiple",
         allowClear: true,
         style: {
@@ -274,13 +427,14 @@ __webpack_async_result__();
 
 __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "H": () => (/* reexport safe */ _PlaylistForm__WEBPACK_IMPORTED_MODULE_0__.H),
-/* harmony export */   "t": () => (/* reexport safe */ _SelectSongsForm__WEBPACK_IMPORTED_MODULE_1__.t)
+/* harmony export */   "yl": () => (/* reexport safe */ _PlaylistUpsertForm__WEBPACK_IMPORTED_MODULE_2__.y)
 /* harmony export */ });
 /* harmony import */ var _PlaylistForm__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3369);
 /* harmony import */ var _SelectSongsForm__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4593);
-var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_PlaylistForm__WEBPACK_IMPORTED_MODULE_0__, _SelectSongsForm__WEBPACK_IMPORTED_MODULE_1__]);
-([_PlaylistForm__WEBPACK_IMPORTED_MODULE_0__, _SelectSongsForm__WEBPACK_IMPORTED_MODULE_1__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+/* harmony import */ var _PlaylistUpsertForm__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(6278);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_PlaylistForm__WEBPACK_IMPORTED_MODULE_0__, _SelectSongsForm__WEBPACK_IMPORTED_MODULE_1__, _PlaylistUpsertForm__WEBPACK_IMPORTED_MODULE_2__]);
+([_PlaylistForm__WEBPACK_IMPORTED_MODULE_0__, _SelectSongsForm__WEBPACK_IMPORTED_MODULE_1__, _PlaylistUpsertForm__WEBPACK_IMPORTED_MODULE_2__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+
 
 
 __webpack_async_result__();
@@ -346,11 +500,14 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6689);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4399);
-/* harmony import */ var _UpsertPlaylist__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(8950);
-/* harmony import */ var _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(7101);
-var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_components__WEBPACK_IMPORTED_MODULE_1__, _UpsertPlaylist__WEBPACK_IMPORTED_MODULE_2__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__]);
-([_components__WEBPACK_IMPORTED_MODULE_1__, _UpsertPlaylist__WEBPACK_IMPORTED_MODULE_2__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5725);
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(antd__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(4399);
+/* harmony import */ var _PlaylistForm__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(5574);
+/* harmony import */ var _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(7101);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_components__WEBPACK_IMPORTED_MODULE_2__, _PlaylistForm__WEBPACK_IMPORTED_MODULE_3__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__]);
+([_components__WEBPACK_IMPORTED_MODULE_2__, _PlaylistForm__WEBPACK_IMPORTED_MODULE_3__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+
 
 
 
@@ -370,18 +527,24 @@ const PlaylistEditButton = ({
 
   const handleCloseDrawer = () => setOpen(false);
 
-  return (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
-    children: [_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx("a", {
+  return (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.Fragment, {
+    children: [_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx("a", {
       onClick: handleOpenDrawer,
       children: "Edit"
-    }), _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx(_components__WEBPACK_IMPORTED_MODULE_1__/* .Drawer */ .dy, {
+    }), _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(_components__WEBPACK_IMPORTED_MODULE_2__/* .Drawer */ .dy, {
       title: "Edit Playlist",
       open: open,
       onClose: handleCloseDrawer,
       destroyOnClose: true,
-      children: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx(_UpsertPlaylist__WEBPACK_IMPORTED_MODULE_2__/* .UpsertSteps */ .l, {
+      children: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(_PlaylistForm__WEBPACK_IMPORTED_MODULE_3__/* .PlaylistUpsertForm */ .yl, {
         id: playlistId,
-        onFinish: handleCloseDrawer
+        onSuccess: handleCloseDrawer,
+        children: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Button, {
+          type: "primary",
+          htmlType: "submit",
+          block: true,
+          children: "Save Changes"
+        })
       })
     })]
   });
@@ -612,167 +775,6 @@ var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_Pla
 ([_PlaylistList__WEBPACK_IMPORTED_MODULE_0__, _PlaylistEditButton__WEBPACK_IMPORTED_MODULE_1__, _PlaylistDeleteButton__WEBPACK_IMPORTED_MODULE_2__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
 
 
-
-__webpack_async_result__();
-} catch(e) { __webpack_async_result__(e); } });
-
-/***/ }),
-
-/***/ 4677:
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "l": () => (/* binding */ UpsertSteps)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6689);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5725);
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(antd__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _store_api_playlist__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9570);
-/* harmony import */ var _PlaylistForm__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(5574);
-/* harmony import */ var _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(7101);
-var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_store_api_playlist__WEBPACK_IMPORTED_MODULE_2__, _PlaylistForm__WEBPACK_IMPORTED_MODULE_3__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__]);
-([_store_api_playlist__WEBPACK_IMPORTED_MODULE_2__, _PlaylistForm__WEBPACK_IMPORTED_MODULE_3__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
-function _EMOTION_STRINGIFIED_CSS_ERROR__() { return "You have tried to stringify object returned from `css` function. It isn't supposed to be used directly (e.g. as value of the `className` prop), but rather handed to emotion so it can handle it (e.g. as value of `css` prop)."; }
-
-
-
-
-
-
-
-var Mode;
-
-(function (Mode) {
-  Mode["Update"] = "Update";
-  Mode["Create"] = "Create";
-})(Mode || (Mode = {}));
-
-var _ref =  true ? {
-  name: "yz1nei",
-  styles: "margin-top:16px"
-} : 0;
-
-const UpsertSteps = ({
-  id,
-  className,
-  onFinish
-}) => {
-  const mode = (0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(() => id ? Mode.Update : Mode.Create, [id]);
-  const {
-    0: current,
-    1: setCurrent
-  } = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0);
-  const [createPlaylist, {
-    data: createdPlaylist,
-    isLoading: isCreating
-  }] = (0,_store_api_playlist__WEBPACK_IMPORTED_MODULE_2__/* .useCreatePlaylistMutation */ .tS)();
-  const [updatePlaylist, {
-    data: updatedPlaylist,
-    isLoading: isUpdating
-  }] = (0,_store_api_playlist__WEBPACK_IMPORTED_MODULE_2__/* .useUpdatePlaylistMutation */ .Xc)();
-  const [createPlaylistForm] = antd__WEBPACK_IMPORTED_MODULE_1__.Form.useForm();
-  const [selectSongsForm] = antd__WEBPACK_IMPORTED_MODULE_1__.Form.useForm();
-  const isLoading = isCreating || isUpdating;
-  const data = createdPlaylist || updatedPlaylist;
-  const handleCreatePlaylist = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(async playlist => {
-    const act = mode === Mode.Update ? updatePlaylist : createPlaylist;
-    await act({
-      id,
-      data: playlist
-    });
-  }, [createPlaylist, id, mode, updatePlaylist]);
-  const handleUpdateSongs = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(async ({
-    songIds
-  }) => {
-    if (!data?._id) return;
-    await updatePlaylist({
-      id: data._id,
-      data: {
-        soundIds: songIds
-      }
-    });
-    onFinish?.();
-  }, [data?._id, onFinish, updatePlaylist]);
-  const steps = (0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(() => {
-    return [{
-      title: 'Info',
-      content: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(_PlaylistForm__WEBPACK_IMPORTED_MODULE_3__/* .PlaylistForm */ .H, {
-        form: createPlaylistForm,
-        onFinish: handleCreatePlaylist
-      })
-    }, {
-      title: 'Select Songs',
-      content: data?._id ? _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(_PlaylistForm__WEBPACK_IMPORTED_MODULE_3__/* .SelectSongsForm */ .t, {
-        form: selectSongsForm,
-        playlistId: data._id,
-        onFinish: handleUpdateSongs
-      }) : null
-    }];
-  }, [createPlaylistForm, data?._id, handleCreatePlaylist, handleUpdateSongs, selectSongsForm]);
-  const items = steps.map(item => ({
-    key: item.title,
-    title: item.title
-  }));
-  const next = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(() => {
-    switch (current) {
-      case 0:
-        createPlaylistForm.submit();
-        setCurrent(current + 1);
-        break;
-
-      case 1:
-        selectSongsForm.submit();
-        break;
-
-      default:
-        break;
-    }
-  }, [createPlaylistForm, current, selectSongsForm]);
-  const prev = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(() => {
-    setCurrent(current - 1);
-  }, [current]);
-  return (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-    className: className,
-    children: [_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Steps, {
-      current: current,
-      items: items
-    }), _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx("div", {
-      css: _ref,
-      children: steps[current].content
-    }), (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-      style: {
-        marginTop: 24
-      },
-      children: [current < steps.length - 1 && _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Button, {
-        loading: isLoading,
-        type: "primary",
-        onClick: next,
-        children: "Next"
-      }), current === steps.length - 1 && _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Button, {
-        type: "primary",
-        onClick: next,
-        children: "Finish"
-      })]
-    })]
-  });
-};
-__webpack_async_result__();
-} catch(e) { __webpack_async_result__(e); } });
-
-/***/ }),
-
-/***/ 8950:
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "l": () => (/* reexport safe */ _UpsertSteps__WEBPACK_IMPORTED_MODULE_0__.l)
-/* harmony export */ });
-/* harmony import */ var _UpsertSteps__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4677);
-var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_UpsertSteps__WEBPACK_IMPORTED_MODULE_0__]);
-_UpsertSteps__WEBPACK_IMPORTED_MODULE_0__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
 
 __webpack_async_result__();
 } catch(e) { __webpack_async_result__(e); } });
