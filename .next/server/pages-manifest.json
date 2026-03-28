@@ -1,19 +1,19 @@
 {
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
-  "/liveTalk": "pages/liveTalk.html",
   "/": "pages/index.html",
   "/login": "pages/login.html",
+  "/register": "pages/register.html",
+  "/liveTalk": "pages/liveTalk.html",
   "/music": "pages/music.html",
   "/schedule": "pages/schedule.html",
   "/settings": "pages/settings.html",
-  "/sound": "pages/sound.html",
   "/stream": "pages/stream.html",
-  "/register": "pages/register.html",
+  "/sound": "pages/sound.html",
   "/text-to-audio": "pages/text-to-audio.html",
   "/unauthorized": "pages/unauthorized.html",
-  "/voice-record": "pages/voice-record.html",
   "/user": "pages/user.html",
+  "/voice-record": "pages/voice-record.html",
   "/_error": "pages/_error.js",
   "/404": "pages/404.html"
 }
