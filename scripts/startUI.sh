@@ -31,4 +31,4 @@ done < "$SOURCE_FILE"
 
 echo "Copy completed."
 
-NEXT_PUBLIC_HTTPS=true NODE_OPTIONS='-r @newrelic/next' node server.js
+NEXT_PUBLIC_HTTPS=true node server.js
