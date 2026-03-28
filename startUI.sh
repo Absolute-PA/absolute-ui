@@ -7,4 +7,4 @@ if ! test -f .env ; then
     cp .env.production .env
 fi
 
-NEXT_PUBLIC_HTTPS=true NODE_OPTIONS='-r @newrelic/next' node server.js
+NEXT_PUBLIC_HTTPS=true node server.js
