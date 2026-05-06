@@ -3,6 +3,76 @@ exports.id = 640;
 exports.ids = [640];
 exports.modules = {
 
+/***/ 3215:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "O": () => (/* binding */ CleanProcessesButton)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6689);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5725);
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(antd__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _store_api_setting__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(8366);
+/* harmony import */ var _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(7101);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_store_api_setting__WEBPACK_IMPORTED_MODULE_2__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__]);
+([_store_api_setting__WEBPACK_IMPORTED_MODULE_2__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+
+
+const CleanProcessesButton = props => {
+  const [cleanProcesses, {
+    isLoading
+  }] = (0,_store_api_setting__WEBPACK_IMPORTED_MODULE_2__/* .useCleanProcessesMutation */ .g6)();
+  const [notify, contextHolder] = antd__WEBPACK_IMPORTED_MODULE_1__.notification.useNotification();
+
+  const handleConfirm = async () => {
+    const result = await cleanProcesses();
+
+    if ('data' in result) {
+      notify.success({
+        message: 'Clean Processes',
+        description: 'Orphaned processes cleanup initiated successfully'
+      });
+    } else {
+      notify.error({
+        message: 'Clean Processes Failed',
+        description: 'An error occurred while cleaning orphaned processes'
+      });
+    }
+  };
+
+  return (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
+    children: [contextHolder, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Popconfirm, {
+      title: "Clean orphaned processes",
+      description: "This will kill any orphaned mplayer, mpg123, and browser processes. Use this if audio is stuck or not playing.",
+      onConfirm: handleConfirm,
+      okText: "Yes",
+      cancelText: "No",
+      children: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx(antd__WEBPACK_IMPORTED_MODULE_1__.Button, _objectSpread(_objectSpread({
+        danger: true,
+        loading: isLoading
+      }, props), {}, {
+        children: "Clean Orphaned Processes"
+      }))
+    })]
+  });
+};
+__webpack_async_result__();
+} catch(e) { __webpack_async_result__(e); } });
+
+/***/ }),
+
 /***/ 2781:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
@@ -77,35 +147,16 @@ __webpack_async_result__();
 /***/ }),
 
 /***/ 7737:
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "M": () => (/* binding */ LicenseKeyBanner)
 /* harmony export */ });
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5725);
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(antd__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6689);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _store_api_setting__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(8366);
-/* harmony import */ var _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(7101);
-var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_store_api_setting__WEBPACK_IMPORTED_MODULE_2__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__]);
-([_store_api_setting__WEBPACK_IMPORTED_MODULE_2__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
 const _excluded = ["className"];
-
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
-
-
-
 
 const LicenseKeyBanner = _ref => {
   let {
@@ -113,16 +164,16 @@ const LicenseKeyBanner = _ref => {
   } = _ref,
       props = _objectWithoutProperties(_ref, _excluded);
 
-  const {
-    data: setting
-  } = (0,_store_api_setting__WEBPACK_IMPORTED_MODULE_2__/* .useGetSettingQuery */ .Rf)();
-  if (!setting?.isExpired) return null;
-  return _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx(antd__WEBPACK_IMPORTED_MODULE_0__.Alert, _objectSpread({
-    message: "Something went wrong, please reset the server."
-  }, props));
+  // Temporarily disable license expiry check as Thi's request.
+  return null; // const { data: setting } = useGetSettingQuery();
+  // if (!setting?.isExpired) return null;
+  // return (
+  //   <Alert
+  //     message="Something went wrong, please reset the server."
+  //     {...props}
+  //   />
+  // );
 };
-__webpack_async_result__();
-} catch(e) { __webpack_async_result__(e); } });
 
 /***/ }),
 
@@ -247,8 +298,8 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony export */ });
 /* harmony import */ var _LicenseKeyForm__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3659);
 /* harmony import */ var _LicenseKeyBanner__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7737);
-var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_LicenseKeyForm__WEBPACK_IMPORTED_MODULE_0__, _LicenseKeyBanner__WEBPACK_IMPORTED_MODULE_1__]);
-([_LicenseKeyForm__WEBPACK_IMPORTED_MODULE_0__, _LicenseKeyBanner__WEBPACK_IMPORTED_MODULE_1__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_LicenseKeyForm__WEBPACK_IMPORTED_MODULE_0__]);
+_LicenseKeyForm__WEBPACK_IMPORTED_MODULE_0__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
 
 
 __webpack_async_result__();
@@ -382,13 +433,16 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "K2": () => (/* reexport safe */ _LicenseKey__WEBPACK_IMPORTED_MODULE_0__.K),
 /* harmony export */   "Mz": () => (/* reexport safe */ _LicenseKey__WEBPACK_IMPORTED_MODULE_0__.M),
-/* harmony export */   "O5": () => (/* reexport safe */ _UserSetting__WEBPACK_IMPORTED_MODULE_2__.O)
+/* harmony export */   "O5": () => (/* reexport safe */ _UserSetting__WEBPACK_IMPORTED_MODULE_2__.O),
+/* harmony export */   "OM": () => (/* reexport safe */ _CleanProcesses_CleanProcessesButton__WEBPACK_IMPORTED_MODULE_3__.O)
 /* harmony export */ });
 /* harmony import */ var _LicenseKey__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5012);
 /* harmony import */ var _Job__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8205);
 /* harmony import */ var _UserSetting__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(4323);
-var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_LicenseKey__WEBPACK_IMPORTED_MODULE_0__, _Job__WEBPACK_IMPORTED_MODULE_1__, _UserSetting__WEBPACK_IMPORTED_MODULE_2__]);
-([_LicenseKey__WEBPACK_IMPORTED_MODULE_0__, _Job__WEBPACK_IMPORTED_MODULE_1__, _UserSetting__WEBPACK_IMPORTED_MODULE_2__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+/* harmony import */ var _CleanProcesses_CleanProcessesButton__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(3215);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_LicenseKey__WEBPACK_IMPORTED_MODULE_0__, _Job__WEBPACK_IMPORTED_MODULE_1__, _UserSetting__WEBPACK_IMPORTED_MODULE_2__, _CleanProcesses_CleanProcessesButton__WEBPACK_IMPORTED_MODULE_3__]);
+([_LicenseKey__WEBPACK_IMPORTED_MODULE_0__, _Job__WEBPACK_IMPORTED_MODULE_1__, _UserSetting__WEBPACK_IMPORTED_MODULE_2__, _CleanProcesses_CleanProcessesButton__WEBPACK_IMPORTED_MODULE_3__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+
 
 
 
@@ -422,6 +476,39 @@ const useAuthorization = () => {
     isAuthorized
   };
 };
+__webpack_async_result__();
+} catch(e) { __webpack_async_result__(e); } });
+
+/***/ }),
+
+/***/ 8242:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "g6": () => (/* binding */ useCleanProcessesMutation)
+/* harmony export */ });
+/* unused harmony export cleanProcesses */
+/* harmony import */ var _utils_apiHelpers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7640);
+/* harmony import */ var _rootApi__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6159);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_utils_apiHelpers__WEBPACK_IMPORTED_MODULE_0__, _rootApi__WEBPACK_IMPORTED_MODULE_1__]);
+([_utils_apiHelpers__WEBPACK_IMPORTED_MODULE_0__, _rootApi__WEBPACK_IMPORTED_MODULE_1__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+
+
+const api = _rootApi__WEBPACK_IMPORTED_MODULE_1__/* .rootApi.injectEndpoints */ .e.injectEndpoints({
+  endpoints: builder => ({
+    cleanProcesses: builder.mutation({
+      query: () => _utils_apiHelpers__WEBPACK_IMPORTED_MODULE_0__/* .http.post */ .dJ.post(`/setting/clean-processes`)
+    })
+  })
+});
+const {
+  useCleanProcessesMutation,
+  endpoints: {
+    cleanProcesses
+  }
+} = api;
+/* unused harmony default export */ var __WEBPACK_DEFAULT_EXPORT__ = ((/* unused pure expression or super */ null && (api)));
 __webpack_async_result__();
 } catch(e) { __webpack_async_result__(e); } });
 
@@ -469,16 +556,19 @@ __webpack_async_result__();
 
 __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Bw": () => (/* reexport safe */ _updateUserSetting__WEBPACK_IMPORTED_MODULE_3__.Bw),
+/* harmony export */   "Bw": () => (/* reexport safe */ _updateUserSetting__WEBPACK_IMPORTED_MODULE_4__.Bw),
 /* harmony export */   "Rf": () => (/* reexport safe */ _getSetting__WEBPACK_IMPORTED_MODULE_0__.Rf),
-/* harmony export */   "Xt": () => (/* reexport safe */ _updateLicenseKey__WEBPACK_IMPORTED_MODULE_1__.Xt)
+/* harmony export */   "Xt": () => (/* reexport safe */ _updateLicenseKey__WEBPACK_IMPORTED_MODULE_1__.Xt),
+/* harmony export */   "g6": () => (/* reexport safe */ _cleanProcesses__WEBPACK_IMPORTED_MODULE_3__.g6)
 /* harmony export */ });
 /* harmony import */ var _getSetting__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2863);
 /* harmony import */ var _updateLicenseKey__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3111);
 /* harmony import */ var _resetJobs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3523);
-/* harmony import */ var _updateUserSetting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(1028);
-var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_getSetting__WEBPACK_IMPORTED_MODULE_0__, _updateLicenseKey__WEBPACK_IMPORTED_MODULE_1__, _resetJobs__WEBPACK_IMPORTED_MODULE_2__, _updateUserSetting__WEBPACK_IMPORTED_MODULE_3__]);
-([_getSetting__WEBPACK_IMPORTED_MODULE_0__, _updateLicenseKey__WEBPACK_IMPORTED_MODULE_1__, _resetJobs__WEBPACK_IMPORTED_MODULE_2__, _updateUserSetting__WEBPACK_IMPORTED_MODULE_3__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+/* harmony import */ var _cleanProcesses__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(8242);
+/* harmony import */ var _updateUserSetting__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(1028);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_getSetting__WEBPACK_IMPORTED_MODULE_0__, _updateLicenseKey__WEBPACK_IMPORTED_MODULE_1__, _resetJobs__WEBPACK_IMPORTED_MODULE_2__, _cleanProcesses__WEBPACK_IMPORTED_MODULE_3__, _updateUserSetting__WEBPACK_IMPORTED_MODULE_4__]);
+([_getSetting__WEBPACK_IMPORTED_MODULE_0__, _updateLicenseKey__WEBPACK_IMPORTED_MODULE_1__, _resetJobs__WEBPACK_IMPORTED_MODULE_2__, _cleanProcesses__WEBPACK_IMPORTED_MODULE_3__, _updateUserSetting__WEBPACK_IMPORTED_MODULE_4__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+
 
 
 

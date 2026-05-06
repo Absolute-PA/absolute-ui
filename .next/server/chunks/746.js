@@ -629,7 +629,7 @@ const usePageAuthorization = ({
       return;
     }
 
-    const page = _utils_pages__WEBPACK_IMPORTED_MODULE_2__/* .NAVIGATION_PAGES.find */ .F.find(page => router.pathname === page.url); // If the page is not found, redirect to 404
+    const page = _utils_pages__WEBPACK_IMPORTED_MODULE_2__/* .NAVIGATION_PAGES.find */ .FS.find(page => router.pathname === page.url); // If the page is not found, redirect to 404
 
     if (!page) {
       router.push('/unauthorized');
@@ -646,13 +646,30 @@ __webpack_async_result__();
 
 /***/ }),
 
+/***/ 635:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "x": () => (/* binding */ isSatelliteFeaturesEnabled)
+/* harmony export */ });
+const getPublicFlag = key => {
+  if (false) {}
+
+  return process.env[key];
+};
+
+const isSatelliteFeaturesEnabled = () => getPublicFlag('NEXT_PUBLIC_ENABLE_SATELLITE_FEATURES') === 'true';
+
+/***/ }),
+
 /***/ 8340:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "F": () => (/* binding */ NAVIGATION_PAGES),
-/* harmony export */   "e": () => (/* binding */ NON_PROTECTED_PAGES)
+/* harmony export */   "FS": () => (/* binding */ NAVIGATION_PAGES),
+/* harmony export */   "ek": () => (/* binding */ NON_PROTECTED_PAGES),
+/* harmony export */   "wF": () => (/* binding */ getVisibleNavigationPages)
 /* harmony export */ });
 /* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7066);
 /* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_ant_design_icons__WEBPACK_IMPORTED_MODULE_0__);
@@ -661,9 +678,11 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(4563);
 /* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(7197);
 /* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _featureFlags__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(635);
 /* harmony import */ var _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(7101);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__]);
 ([_fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__, _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+
 
 
 
@@ -673,24 +692,35 @@ const NAVIGATION_PAGES = [{
   id: 'home',
   url: '/',
   pageName: 'Dashboard',
-  icon: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(_ant_design_icons__WEBPACK_IMPORTED_MODULE_0__.HomeFilled, {})
+  icon: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(_ant_design_icons__WEBPACK_IMPORTED_MODULE_0__.HomeFilled, {}),
+  visible: true
 }, {
   id: 'schedule',
   url: '/schedule',
   pageName: 'Schedule',
   icon: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(_ant_design_icons__WEBPACK_IMPORTED_MODULE_0__.CalendarOutlined, {}),
+  visible: true,
   roles: ['master', 'admin', 'user']
 }, {
   id: 'sound',
   url: '/sound',
   pageName: 'Sound Management',
   icon: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(_ant_design_icons__WEBPACK_IMPORTED_MODULE_0__.BellFilled, {}),
+  visible: true,
   roles: ['master', 'admin', 'user']
 }, {
   id: 'music',
   url: '/music',
   pageName: 'Music Management',
   icon: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(_ant_design_icons__WEBPACK_IMPORTED_MODULE_0__.PlayCircleOutlined, {}),
+  visible: true,
+  roles: ['master', 'admin', 'user']
+}, {
+  id: 'devices',
+  url: '/devices',
+  pageName: 'Device Management',
+  icon: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(_ant_design_icons__WEBPACK_IMPORTED_MODULE_0__.ApiOutlined, {}),
+  visible: (0,_featureFlags__WEBPACK_IMPORTED_MODULE_5__/* .isSatelliteFeaturesEnabled */ .x)(),
   roles: ['master', 'admin', 'user']
 }, {
   id: 'livetalk',
@@ -699,12 +729,14 @@ const NAVIGATION_PAGES = [{
   icon: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__.FontAwesomeIcon, {
     icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__.faPhoneVolume
   }),
+  visible: true,
   roles: ['master', 'admin', 'user']
 }, {
   id: 'text-to-audio',
   url: '/text-to-audio',
   pageName: 'Text to audio',
   icon: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(_ant_design_icons__WEBPACK_IMPORTED_MODULE_0__.MessageOutlined, {}),
+  visible: true,
   roles: ['master', 'admin', 'user']
 }, {
   id: 'voice-record',
@@ -713,6 +745,7 @@ const NAVIGATION_PAGES = [{
   icon: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__.FontAwesomeIcon, {
     icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__.faMicrophone
   }),
+  visible: true,
   roles: ['master', 'admin', 'user']
 }, {
   id: 'user',
@@ -721,6 +754,7 @@ const NAVIGATION_PAGES = [{
   icon: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__.FontAwesomeIcon, {
     icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__.faUsers
   }),
+  visible: true,
   roles: ['master', 'admin']
 }, {
   id: 'settings',
@@ -729,8 +763,10 @@ const NAVIGATION_PAGES = [{
   icon: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__.FontAwesomeIcon, {
     icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__.faGear
   }),
+  visible: true,
   roles: ['master', 'admin', 'user']
 }];
+const getVisibleNavigationPages = () => NAVIGATION_PAGES.filter(page => page.visible);
 const NON_PROTECTED_PAGES = ['/login', '/register', '/unauthorized', '/stream'];
 __webpack_async_result__();
 } catch(e) { __webpack_async_result__(e); } });

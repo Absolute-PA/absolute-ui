@@ -266,6 +266,7 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony export */   "A": () => (/* reexport safe */ _schedule__WEBPACK_IMPORTED_MODULE_1__.A),
 /* harmony export */   "HH": () => (/* reexport safe */ _textToAudio__WEBPACK_IMPORTED_MODULE_2__.HH),
 /* harmony export */   "Lk": () => (/* reexport safe */ _schedule__WEBPACK_IMPORTED_MODULE_1__.Lk),
+/* harmony export */   "Lr": () => (/* reexport safe */ _satellite__WEBPACK_IMPORTED_MODULE_8__.Lr),
 /* harmony export */   "Ml": () => (/* reexport safe */ _auth__WEBPACK_IMPORTED_MODULE_0__.Ml),
 /* harmony export */   "R8": () => (/* reexport safe */ _playlist__WEBPACK_IMPORTED_MODULE_5__.R8),
 /* harmony export */   "We": () => (/* reexport safe */ _auth__WEBPACK_IMPORTED_MODULE_0__.We),
@@ -295,8 +296,10 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony import */ var _playlist__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(9570);
 /* harmony import */ var _stream__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(1687);
 /* harmony import */ var _audit__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(9522);
-var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_auth__WEBPACK_IMPORTED_MODULE_0__, _schedule__WEBPACK_IMPORTED_MODULE_1__, _textToAudio__WEBPACK_IMPORTED_MODULE_2__, _user__WEBPACK_IMPORTED_MODULE_3__, _voice__WEBPACK_IMPORTED_MODULE_4__, _playlist__WEBPACK_IMPORTED_MODULE_5__, _stream__WEBPACK_IMPORTED_MODULE_6__, _audit__WEBPACK_IMPORTED_MODULE_7__]);
-([_auth__WEBPACK_IMPORTED_MODULE_0__, _schedule__WEBPACK_IMPORTED_MODULE_1__, _textToAudio__WEBPACK_IMPORTED_MODULE_2__, _user__WEBPACK_IMPORTED_MODULE_3__, _voice__WEBPACK_IMPORTED_MODULE_4__, _playlist__WEBPACK_IMPORTED_MODULE_5__, _stream__WEBPACK_IMPORTED_MODULE_6__, _audit__WEBPACK_IMPORTED_MODULE_7__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+/* harmony import */ var _satellite__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(4403);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_auth__WEBPACK_IMPORTED_MODULE_0__, _schedule__WEBPACK_IMPORTED_MODULE_1__, _textToAudio__WEBPACK_IMPORTED_MODULE_2__, _user__WEBPACK_IMPORTED_MODULE_3__, _voice__WEBPACK_IMPORTED_MODULE_4__, _playlist__WEBPACK_IMPORTED_MODULE_5__, _stream__WEBPACK_IMPORTED_MODULE_6__, _audit__WEBPACK_IMPORTED_MODULE_7__, _satellite__WEBPACK_IMPORTED_MODULE_8__]);
+([_auth__WEBPACK_IMPORTED_MODULE_0__, _schedule__WEBPACK_IMPORTED_MODULE_1__, _textToAudio__WEBPACK_IMPORTED_MODULE_2__, _user__WEBPACK_IMPORTED_MODULE_3__, _voice__WEBPACK_IMPORTED_MODULE_4__, _playlist__WEBPACK_IMPORTED_MODULE_5__, _stream__WEBPACK_IMPORTED_MODULE_6__, _audit__WEBPACK_IMPORTED_MODULE_7__, _satellite__WEBPACK_IMPORTED_MODULE_8__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+
 
 
 
@@ -586,6 +589,111 @@ const {
   }
 } = api;
 /* unused harmony default export */ var __WEBPACK_DEFAULT_EXPORT__ = ((/* unused pure expression or super */ null && (api)));
+__webpack_async_result__();
+} catch(e) { __webpack_async_result__(e); } });
+
+/***/ }),
+
+/***/ 7555:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Lr": () => (/* binding */ useDeleteSatelliteMutation)
+/* harmony export */ });
+/* unused harmony export deleteSatellite */
+/* harmony import */ var _utils_apiHelpers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7640);
+/* harmony import */ var _rootApi__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6159);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_utils_apiHelpers__WEBPACK_IMPORTED_MODULE_0__, _rootApi__WEBPACK_IMPORTED_MODULE_1__]);
+([_utils_apiHelpers__WEBPACK_IMPORTED_MODULE_0__, _rootApi__WEBPACK_IMPORTED_MODULE_1__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+
+
+const api = _rootApi__WEBPACK_IMPORTED_MODULE_1__/* .rootApi.injectEndpoints */ .e.injectEndpoints({
+  endpoints: builder => ({
+    deleteSatellite: builder.mutation({
+      query: id => _utils_apiHelpers__WEBPACK_IMPORTED_MODULE_0__/* .http["delete"] */ .dJ["delete"](`/satellite/${id}`),
+      invalidatesTags: (result, error, id) => [{
+        type: _rootApi__WEBPACK_IMPORTED_MODULE_1__/* .Tags.Satellite */ .$.Satellite,
+        id
+      }, {
+        type: _rootApi__WEBPACK_IMPORTED_MODULE_1__/* .Tags.Satellite */ .$.Satellite,
+        id: 'LIST'
+      }]
+    })
+  })
+});
+const {
+  useDeleteSatelliteMutation,
+  endpoints: {
+    deleteSatellite
+  }
+} = api;
+/* unused harmony default export */ var __WEBPACK_DEFAULT_EXPORT__ = ((/* unused pure expression or super */ null && (api)));
+__webpack_async_result__();
+} catch(e) { __webpack_async_result__(e); } });
+
+/***/ }),
+
+/***/ 2787:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "cG": () => (/* binding */ useGetSatelliteListQuery)
+/* harmony export */ });
+/* unused harmony exports useLazyGetSatelliteListQuery, getSatelliteList */
+/* harmony import */ var _utils_apiHelpers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7640);
+/* harmony import */ var _rootApi__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6159);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_utils_apiHelpers__WEBPACK_IMPORTED_MODULE_0__, _rootApi__WEBPACK_IMPORTED_MODULE_1__]);
+([_utils_apiHelpers__WEBPACK_IMPORTED_MODULE_0__, _rootApi__WEBPACK_IMPORTED_MODULE_1__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+
+
+const api = _rootApi__WEBPACK_IMPORTED_MODULE_1__/* .rootApi.injectEndpoints */ .e.injectEndpoints({
+  endpoints: builder => ({
+    getSatelliteList: builder.query({
+      query: () => _utils_apiHelpers__WEBPACK_IMPORTED_MODULE_0__/* .http.get */ .dJ.get(`/satellite`),
+      providesTags: result => result ? [...result.map(({
+        _id
+      }) => ({
+        type: _rootApi__WEBPACK_IMPORTED_MODULE_1__/* .Tags.Satellite */ .$.Satellite,
+        id: _id
+      })), {
+        type: _rootApi__WEBPACK_IMPORTED_MODULE_1__/* .Tags.Satellite */ .$.Satellite,
+        id: 'LIST'
+      }] : [{
+        type: _rootApi__WEBPACK_IMPORTED_MODULE_1__/* .Tags.Satellite */ .$.Satellite,
+        id: 'LIST'
+      }]
+    })
+  })
+});
+const {
+  useGetSatelliteListQuery,
+  useLazyGetSatelliteListQuery,
+  endpoints: {
+    getSatelliteList
+  }
+} = api;
+/* unused harmony default export */ var __WEBPACK_DEFAULT_EXPORT__ = ((/* unused pure expression or super */ null && (api)));
+__webpack_async_result__();
+} catch(e) { __webpack_async_result__(e); } });
+
+/***/ }),
+
+/***/ 4403:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Lr": () => (/* reexport safe */ _deleteSatellite__WEBPACK_IMPORTED_MODULE_1__.Lr),
+/* harmony export */   "cG": () => (/* reexport safe */ _getSatelliteList__WEBPACK_IMPORTED_MODULE_0__.cG)
+/* harmony export */ });
+/* harmony import */ var _getSatelliteList__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2787);
+/* harmony import */ var _deleteSatellite__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7555);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_getSatelliteList__WEBPACK_IMPORTED_MODULE_0__, _deleteSatellite__WEBPACK_IMPORTED_MODULE_1__]);
+([_getSatelliteList__WEBPACK_IMPORTED_MODULE_0__, _deleteSatellite__WEBPACK_IMPORTED_MODULE_1__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+
+
 __webpack_async_result__();
 } catch(e) { __webpack_async_result__(e); } });
 
@@ -1718,6 +1826,7 @@ let Tags;
   Tags["SongList"] = "Sound/Songlist";
   Tags["Setting"] = "Setting/Setting";
   Tags["History"] = "Audit/History";
+  Tags["Satellite"] = "Satellite";
 })(Tags || (Tags = {}));
 
 const rootApi = (0,_reduxjs_toolkit_query_react__WEBPACK_IMPORTED_MODULE_0__.createApi)({
@@ -1745,7 +1854,8 @@ function getBackendURL() {
   } // Client-side: use the current origin's protocol and hostname with the backend port
 
 
-  const PORT = window.__ENV.NEXT_PUBLIC_SERVER_PORT || '8082';
+  const runtimeWindow = window;
+  const PORT = runtimeWindow.__ENV?.NEXT_PUBLIC_SERVER_PORT || "8080" || 0;
   return `${window.location.protocol}//${window.location.hostname}:${PORT}`;
 }
 

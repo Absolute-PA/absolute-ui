@@ -125,16 +125,17 @@ const MainLayout = ({
   const {
     data: setting
   } = (0,_store_api_setting__WEBPACK_IMPORTED_MODULE_8__/* .useGetSettingQuery */ .Rf)();
+  const navigationPages = (0,_utils_pages__WEBPACK_IMPORTED_MODULE_4__/* .getVisibleNavigationPages */ .wF)();
   const currentYear = new Date().getFullYear();
   const pageId = (0,react__WEBPACK_IMPORTED_MODULE_1__.useMemo)(() => router.pathname.split('/')[1] || 'home', [router.pathname]);
-  const items = _utils_pages__WEBPACK_IMPORTED_MODULE_4__/* .NAVIGATION_PAGES.filter */ .F.filter(item => item.roles ? item.roles.some(r => currentUser?.roles.includes(r)) : true).map(page => (0,_utils_antHelpers__WEBPACK_IMPORTED_MODULE_10__/* .getMenuItem */ .L)({
+  const items = navigationPages.filter(item => item.roles ? item.roles.some(r => currentUser?.roles.includes(r)) : true).map(page => (0,_utils_antHelpers__WEBPACK_IMPORTED_MODULE_10__/* .getMenuItem */ .L)({
     label: page.pageName,
     key: page.id,
     icon: page.icon
   }));
 
   const onClick = e => {
-    router.push(_utils_pages__WEBPACK_IMPORTED_MODULE_4__/* .NAVIGATION_PAGES.find */ .F.find(page => page.id === e.key)?.url ?? '/');
+    router.push(navigationPages.find(page => page.id === e.key)?.url ?? '/');
   };
 
   return (0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(antd__WEBPACK_IMPORTED_MODULE_2__.Layout, {
@@ -308,7 +309,7 @@ function App(_ref) {
         },
         children: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx(_ant_design_cssinjs__WEBPACK_IMPORTED_MODULE_2__.StyleProvider, {
           hashPriority: "high",
-          children: _utils_pages__WEBPACK_IMPORTED_MODULE_10__/* .NON_PROTECTED_PAGES.includes */ .e.includes(router.pathname) ? _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx(Component, _objectSpread({}, props.pageProps)) : _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx(_features_auth__WEBPACK_IMPORTED_MODULE_9__/* .ProtectedPage */ .ZF, {
+          children: _utils_pages__WEBPACK_IMPORTED_MODULE_10__/* .NON_PROTECTED_PAGES.includes */ .ek.includes(router.pathname) ? _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx(Component, _objectSpread({}, props.pageProps)) : _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx(_features_auth__WEBPACK_IMPORTED_MODULE_9__/* .ProtectedPage */ .ZF, {
             children: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx(_features_layout__WEBPACK_IMPORTED_MODULE_8__/* .MainLayout */ .Z, {
               children: _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx(Component, _objectSpread({}, props.pageProps))
             })

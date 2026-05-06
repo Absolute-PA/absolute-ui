@@ -12,27 +12,28 @@
     ]
   },
   "liveTalk.tsx -> @/features/talk/RecordSend": {
-    "id": 51909,
+    "id": 88594,
     "files": [
-      "static/chunks/361-bb18c090cf9906fe.js",
-      "static/chunks/722.d9355d9486fa9014.js",
-      "static/chunks/909.7108937687e86fd5.js"
+      "static/chunks/550-e1b12419e4643f20.js",
+      "static/chunks/926.a39fde9bc0630f15.js",
+      "static/chunks/594.bd3597e6444cda87.js"
     ]
   },
   "stream.tsx -> @/features/talk/RecordReceive": {
     "id": 98698,
     "files": [
-      "static/chunks/361-bb18c090cf9906fe.js",
-      "static/chunks/722.d9355d9486fa9014.js",
-      "static/chunks/50.b16a481ac5a17beb.js"
+      "static/chunks/550-e1b12419e4643f20.js",
+      "static/chunks/926.a39fde9bc0630f15.js",
+      "static/chunks/50.9464206eb71ec864.js"
     ]
   },
   "voice-record.tsx -> @/features/message/VoiceMessage": {
     "id": 33515,
     "files": [
-      "static/chunks/907-43fa5efdc471f2bc.js",
-      "static/chunks/80-5abe8fecaa107bcc.js",
-      "static/chunks/515.87a734cfc747dbec.js"
+      "static/chunks/579-74226434e79c53cd.js",
+      "static/chunks/575-4fa39bac5b0f0070.js",
+      "static/chunks/338-7699ea20a59d80ef.js",
+      "static/chunks/515.c7659f40cdc6e027.js"
     ]
   }
 }
