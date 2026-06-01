@@ -1,6 +1,7 @@
 node_modules
 ./newrelic_agent.log
 .env
+.env.device
 /public/__ENV.js
 
 # Ignore Mac DS_Store files
