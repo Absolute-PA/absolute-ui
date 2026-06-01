@@ -2,34 +2,40 @@
 git checkout main
 git fetch origin
 git reset --hard origin/main
-yarn 
+yarn
 
-# Define the source and destination file paths
-SOURCE_FILE=".env.production"
-DEST_FILE=".env"
-
-# Check if the source file exists
-if [ ! -f "$SOURCE_FILE" ]; then
-    echo "Error: $SOURCE_FILE does not exist."
+# Always start from build defaults so version info and new flags are always current.
+if [ ! -f ".env.production" ]; then
+    echo "Error: .env.production does not exist."
     exit 1
 fi
 
-# Loop through each line in the source file
-while IFS= read -r line; do
-    # Extract variable name and value
-    var_name=$(echo "$line" | cut -d '=' -f 1)
-    var_value=$(echo "$line" | cut -d '=' -f 2-)
+cp .env.production .env
+echo "Copied .env.production to .env."
 
-    # Check if the variable already exists in the destination file
-    if grep -q "^$var_name=" "$DEST_FILE"; then
-        echo "Variable '$var_name' already exists in $DEST_FILE. Skipping..."
-    else
-        # Append the variable to the destination file
-        echo "$var_name=$var_value" >> "$DEST_FILE"
-        echo "Inserted variable '$var_name' into $DEST_FILE."
-    fi
-done < "$SOURCE_FILE"
+# Apply device-specific overrides from .env.device (if present).
+# .env.device is created manually once per device for values that differ from
+# build defaults (e.g. NEXT_PUBLIC_SERVER_PORT, PORT). It is never committed
+# to git and is never modified by this script, so device values are always safe.
+DEVICE_ENV=".env.device"
+if [ -f "$DEVICE_ENV" ]; then
+    echo "Applying device overrides from $DEVICE_ENV..."
+    while IFS= read -r line || [ -n "$line" ]; do
+        # Skip blank lines and comments
+        [[ -z "$line" || "$line" == \#* ]] && continue
+        var_name=$(echo "$line" | cut -d '=' -f 1)
+        var_value=$(echo "$line" | cut -d '=' -f 2-)
+        if grep -q "^$var_name=" .env; then
+            sed -i "s|^$var_name=.*|$var_name=$var_value|" .env
+            echo "  Overrode $var_name"
+        else
+            echo "$var_name=$var_value" >> .env
+            echo "  Added $var_name"
+        fi
+    done < "$DEVICE_ENV"
+    echo "Device overrides applied."
+else
+    echo "No $DEVICE_ENV found — using build defaults only."
+fi
 
-echo "Copy completed."
-
-NEXT_PUBLIC_HTTPS=true node server.js
+node server.js
