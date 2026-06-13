@@ -1,22 +1,22 @@
 #!/bin/bash
 
-# Read device identity from the API's .env.device (UI dir may not have its own).
-API_DEVICE_ENV="../absolute-api/.env.device"
+# Read device identity and version pin from local .env.device.
+DEVICE_ENV=".env.device"
 CHANNEL="stable"
 PI_NAME=""
-if [ -f "$API_DEVICE_ENV" ]; then
-    _channel=$(grep "^CHANNEL=" "$API_DEVICE_ENV" | head -1 | cut -d'=' -f2-)
-    _pi_name=$(grep "^PI_NAME=" "$API_DEVICE_ENV" | head -1 | cut -d'=' -f2-)
+if [ -f "$DEVICE_ENV" ]; then
+    _channel=$(grep "^CHANNEL=" "$DEVICE_ENV" | head -1 | cut -d'=' -f2-)
+    _pi_name=$(grep "^PI_NAME=" "$DEVICE_ENV" | head -1 | cut -d'=' -f2-)
     [ -n "$_channel" ] && CHANNEL="$_channel"
     [ -n "$_pi_name" ] && PI_NAME="$_pi_name"
 fi
 
-# Resolve target version: .env.device pin key → hub manifest → "main".
+# Resolve target version: local .env.device pin → hub manifest → "main".
 HUB_URL="https://hub.absolutepa.com.au"
 TARGET_VERSION=""
 
-if [ -f "$API_DEVICE_ENV" ]; then
-    _pinned=$(grep "^TARGET_VERSION_UI=" "$API_DEVICE_ENV" | head -1 | cut -d'=' -f2-)
+if [ -f "$DEVICE_ENV" ]; then
+    _pinned=$(grep "^TARGET_VERSION_UI=" "$DEVICE_ENV" | head -1 | cut -d'=' -f2-)
     if [ -n "$_pinned" ]; then
         TARGET_VERSION="$_pinned"
         echo "Resolved ui version from .env.device pin: $TARGET_VERSION"
@@ -64,6 +64,7 @@ if [ -f "$DEVICE_ENV" ]; then
             sed -i "s|^$var_name=.*|$var_name=$var_value|" .env
             echo "  Overrode $var_name"
         else
+            [ -s .env ] && [ "$(tail -c1 .env)" != $'\n' ] && echo >> .env
             echo "$var_name=$var_value" >> .env
             echo "  Added $var_name"
         fi
@@ -82,7 +83,7 @@ if [ -n "$PI_NAME" ]; then
     && echo "Hub checkin OK: $PI_NAME ui@$TARGET_VERSION ($CHANNEL)" \
     || echo "Hub checkin failed (hub unreachable — startup continues)"
 else
-    echo "Hub checkin skipped — PI_NAME not set in $API_DEVICE_ENV"
+    echo "Hub checkin skipped — PI_NAME not set in $DEVICE_ENV"
 fi
 
 node server.js
