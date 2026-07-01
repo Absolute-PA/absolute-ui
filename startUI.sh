@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Always run from the repo root regardless of how PM2 invokes this script.
+cd "$(dirname "$(readlink -f "$0")")"
+
 # Read device identity and version pin from local .env.device.
 DEVICE_ENV=".env.device"
 CHANNEL="stable"
