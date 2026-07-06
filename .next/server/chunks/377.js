@@ -1849,13 +1849,13 @@ __webpack_async_result__();
 function getBackendURL() {
   if (true) {
     // Server-side rendering: use localhost with the backend port
-    const PORT = "8080" || 0;
+    const PORT = "8081" || 0;
     return `https://localhost:${PORT}`;
   } // Client-side: use the current origin's protocol and hostname with the backend port
 
 
   const runtimeWindow = window;
-  const PORT = runtimeWindow.__ENV?.NEXT_PUBLIC_SERVER_PORT || "8080" || 0;
+  const PORT = runtimeWindow.__ENV?.NEXT_PUBLIC_SERVER_PORT || "8081" || 0;
   return `${window.location.protocol}//${window.location.hostname}:${PORT}`;
 }
 

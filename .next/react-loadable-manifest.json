@@ -16,7 +16,7 @@
     "files": [
       "static/chunks/550-e1b12419e4643f20.js",
       "static/chunks/926.a39fde9bc0630f15.js",
-      "static/chunks/594.bd3597e6444cda87.js"
+      "static/chunks/594.5d09a1fde03552b3.js"
     ]
   },
   "stream.tsx -> @/features/talk/RecordReceive": {
@@ -24,7 +24,7 @@
     "files": [
       "static/chunks/550-e1b12419e4643f20.js",
       "static/chunks/926.a39fde9bc0630f15.js",
-      "static/chunks/50.9464206eb71ec864.js"
+      "static/chunks/50.e24564db57692281.js"
     ]
   },
   "voice-record.tsx -> @/features/message/VoiceMessage": {
